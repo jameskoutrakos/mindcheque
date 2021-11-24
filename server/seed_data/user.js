@@ -6,7 +6,7 @@ module.exports = [
     firstName: "James",
     lastName: "Koutrakos",
     email: "fakeemail@gmail.com",
-    dateOfBirth: 838252800,
+    dateOfBirth: "1996-07-25 11:45:00",
   },
   {
     userID: 2,
@@ -15,7 +15,7 @@ module.exports = [
     firstName: "George",
     lastName: "Ranieri",
     email: "dumbledore@gmail.com",
-    dateOfBirth: 948758400,
+    dateOfBirth: "2000-04-19 4:30:00",
   },
   {
     userID: 3,
@@ -24,6 +24,6 @@ module.exports = [
     firstName: "Kayla",
     lastName: "Lee",
     email: "dumbledore@gmail.com",
-    dateOfBirth: 948758400,
+    dateOfBirth: "2002-11-06 00:10:00",
   },
 ];

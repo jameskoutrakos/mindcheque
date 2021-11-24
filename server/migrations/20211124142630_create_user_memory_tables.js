@@ -7,7 +7,7 @@ exports.up = function (knex) {
       table.string("firstName").notNullable();
       table.string("lastName").notNullable();
       table.string("email").notNullable();
-      table.integer("dateOfBirth").notNullable();
+      table.datetime("dateOfBirth").notNullable();
     })
     .createTable("memory", (table) => {
       table.increments("memoryID").primary();
@@ -21,9 +21,9 @@ exports.up = function (knex) {
         .onDelete("CASCADE");
       table.string("title").notNullable();
       table.string("description", 1000).notNullable();
-      table.integer("dateOfMemory").notNullable();
-      table.timestamp("dateCreated").defaultTo(knex.fn.now());
-      table.timestamp("dateLastUpdated").defaultTo(knex.fn.now());
+      table.datetime("dateOfMemory").notNullable();
+      table.datetime("dateCreated").defaultTo(knex.fn.now());
+      table.datetime("dateLastUpdated").defaultTo(knex.fn.now());
       table.string("feeling").notNullable();
       table.boolean("helpfulThought").notNullable();
       table.string("relatedMoment").notNullable();
