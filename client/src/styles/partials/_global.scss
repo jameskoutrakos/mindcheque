@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+// Breakpoints and Screen Sizes
+
+$mobile-screensize: 375px;
+$tablet-screensize: 768px;
+$desktop-screensize: 1280px;
+
+@mixin tablet-breakpoint {
+  @media screen and (min-width: $tablet-screensize) {
+    @content;
+  }
+}
+
+@mixin desktop-breakpoint {
+  @media screen and (min-width: $desktop-screensize) {
+    @content;
+  }
+}
+
+// Convert pixels to rem
+
+@function pxToRem($px) {
+  @return $px / 16 + rem;
+}
