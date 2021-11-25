@@ -8,16 +8,46 @@
 
 .header {
   padding: 0 1rem;
+  background-color: lightgray;
   &__container {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     margin: 0 auto;
     padding: 1rem 0;
     width: 100%;
     min-width: $mobile-screensize;
     @include tablet-breakpoint {
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 2rem 0;
       max-width: $desktop-screensize;
     }
     @include desktop-breakpoint {
+    }
+  }
+
+  &__logo {
+    font-size: 2rem;
+    @include tablet-breakpoint {
+    }
+    @include desktop-breakpoint {
+      font-size: 2.5rem;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    margin: 0.5rem 0;
+  }
+
+  &__link {
+    font-size: 1rem;
+    @include tablet-breakpoint {
+      font-size: 1.5rem;
+    }
+    @include desktop-breakpoint {
+      font-size: 1.5rem;
     }
   }
 }

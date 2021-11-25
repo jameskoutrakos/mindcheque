@@ -6,6 +6,7 @@
   padding: 0 1rem;
   &__container {
     display: flex;
+    flex-direction: column;
     margin: 0 auto;
     padding: 1rem 0;
     width: 100%;
@@ -15,5 +16,10 @@
     }
     @include desktop-breakpoint {
     }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
   }
 }
