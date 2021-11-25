@@ -1,7 +1,11 @@
+import "./EditMemory.scss";
+
 function EditMemory() {
   return (
-    <section>
-      <h1>EditMemory</h1>
+    <section className="editMemory">
+      <article className="editMemory__container">
+        <h1>EditMemory</h1>
+      </article>
     </section>
   );
 }

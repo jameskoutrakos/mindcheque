@@ -1,3 +1,19 @@
-@use "./global" as *;
-@use "./colors" as *;
-@use "./type-kit" as *;
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/type-kit" as *;
+
+.memoryDetails {
+  padding: 0 1rem;
+  &__container {
+    display: flex;
+    margin: 0 auto;
+    padding: 1rem 0;
+    width: 100%;
+    min-width: $mobile-screensize;
+    @include tablet-breakpoint {
+      max-width: $desktop-screensize;
+    }
+    @include desktop-breakpoint {
+    }
+  }
+}

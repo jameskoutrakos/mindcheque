@@ -1,7 +1,11 @@
+import "./MemoryDetails.scss";
+
 function MemoryDetails() {
   return (
-    <section>
-      <h1>MemoryDetails</h1>
+    <section className="memoryDetails">
+      <article className="memoryDetails__container">
+        <h1>MemoryDetails</h1>
+      </article>
     </section>
   );
 }

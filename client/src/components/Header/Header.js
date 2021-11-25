@@ -1,7 +1,11 @@
+import "./Header.scss";
+
 function Header() {
   return (
-    <section>
-      <h1>Header</h1>
+    <section className="header">
+      <article className="header__container">
+        <h1>Header</h1>
+      </article>
     </section>
   );
 }

@@ -29,13 +29,13 @@ class App extends Component {
           />
           <Route
             exact
-            path="/profile/:userID/memories/:memoryID"
-            component={MemoryDetails}
+            path="/profile/:userID/memories/add-memory"
+            component={AddNewMemory}
           />
           <Route
             exact
-            path="/profile/:userID/memories/add-memory"
-            component={AddNewMemory}
+            path="/profile/:userID/memories/:memoryID"
+            component={MemoryDetails}
           />
           <Route
             exact

@@ -1,7 +1,11 @@
+import "./MemoryList.scss";
+
 function MemoryList() {
   return (
-    <section>
-      <h1>MemoryList</h1>
+    <section className="memoryList">
+      <article className="memoryList__container">
+        <h1>Memory List</h1>
+      </article>
     </section>
   );
 }

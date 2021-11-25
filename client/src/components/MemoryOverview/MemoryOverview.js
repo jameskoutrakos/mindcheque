@@ -1,7 +1,11 @@
+import "./MemoryOverview.scss";
+
 function MemoryOverview() {
   return (
-    <section>
-      <h1>MemoryOverview</h1>
+    <section className="memoryOverview">
+      <article className="memoryOverview__container">
+        <h1>Memory Overview</h1>
+      </article>
     </section>
   );
 }

@@ -1,7 +1,11 @@
+import "./DeleteMemory.scss";
+
 function DeleteMemory() {
   return (
-    <section>
-      <h1>DeleteMemory</h1>
+    <section className="deleteMemory">
+      <article className="deleteMemory__container">
+        <h1>DeleteMemory</h1>
+      </article>
     </section>
   );
 }

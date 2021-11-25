@@ -1,7 +1,11 @@
+import "./Landing.scss";
+
 function Landing() {
   return (
-    <section>
-      <h1>Landing</h1>
+    <section className="landing">
+      <article className="landing__container">
+        <h1>Landing</h1>
+      </article>
     </section>
   );
 }
