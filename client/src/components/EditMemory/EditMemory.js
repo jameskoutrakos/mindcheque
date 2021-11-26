@@ -66,7 +66,7 @@ class EditMemory extends Component {
   componentDidMount() {
     console.log("EDIT MEMORY MOUNTED");
     const { userID, memoryID } = this.props.match.params;
-    console.log("UserID: " + userID + " " + "MemoryID: " + memoryID);
+    console.log("UserID: ", userID, " ", "MemoryID: ", memoryID);
     this.getMemoryToEdit(userID, memoryID);
   }
 

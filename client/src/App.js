@@ -138,7 +138,16 @@ class App extends Component {
           <Route
             exact
             path="/profile/:userID/memories/add-memory"
-            component={AddNewMemory}
+            render={(routerProps) => (
+              <AddNewMemory
+                activeUser={this.state.activeUser}
+                getSingleUser={this.getSingleUser}
+                userMemories={this.state.userMemories}
+                getUserMemories={this.getUserMemories}
+                addMemoryByUser={this.addMemoryByUser}
+                {...routerProps}
+              />
+            )}
           />
           <Route
             exact

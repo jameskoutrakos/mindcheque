@@ -57,7 +57,7 @@ exports.getMemoryByUser = (req, res) => {
 exports.addMemoryByUser = (req, res) => {
   knex("memory")
     .insert({
-      userID: req.params.userID,
+      userID: req.body.userID,
       title: req.body.title,
       description: req.body.description,
       dateOfMemory: req.body.dateOfMemory,
@@ -79,7 +79,7 @@ exports.addMemoryByUser = (req, res) => {
         .send(
           `Ran into an error while trying to insert a new memory to this user: ${err}`
         );
-      console.log(req.body);
+      console.log("Didn't work ", req.body);
     });
 };
 
