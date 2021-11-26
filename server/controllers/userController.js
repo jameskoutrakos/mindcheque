@@ -56,12 +56,22 @@ exports.getMemoryByUser = (req, res) => {
 
 exports.addMemoryByUser = (req, res) => {
   knex("memory")
-    .insert(req.body)
+    .insert({
+      userID: req.params.userID,
+      title: req.body.title,
+      description: req.body.description,
+      dateOfMemory: req.body.dateOfMemory,
+      feeling: req.body.feeling,
+      helpfulThought: req.body.helpfulThought,
+      relatedMoment: req.body.relatedMoment,
+    })
     .then((data) => {
       res.status(201).json({
         message: "This memory to the user has been added successfully",
         data: data,
       });
+      console.log(req.body);
+      console.log(data);
     })
     .catch((err) => {
       res
@@ -69,6 +79,7 @@ exports.addMemoryByUser = (req, res) => {
         .send(
           `Ran into an error while trying to insert a new memory to this user: ${err}`
         );
+      console.log(req.body);
     });
 };
 
