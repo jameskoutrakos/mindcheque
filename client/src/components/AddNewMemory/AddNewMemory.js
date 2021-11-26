@@ -1,4 +1,5 @@
 import { Component } from "react";
+import { Link } from "react-router-dom";
 import "./AddNewMemory.scss";
 
 class AddNewMemory extends Component {
@@ -15,10 +16,12 @@ class AddNewMemory extends Component {
     };
 
     this.props.addMemoryByUser(this.props.match.params.userID, newMemory);
-    // history.push(`/profile/${getSingleUser(this.props.match.params.userID),}/memories`);
+    this.props.history.goBack();
   };
 
   render() {
+    const userID = this.props.match.params.userID;
+
     return (
       <section className="addNewMemory">
         <article className="addNewMemory__container">
@@ -65,7 +68,9 @@ class AddNewMemory extends Component {
               />
             </div>
             <div className="addNewMemory__form-button-container">
-              <button>Cancel</button>
+              <Link to={`/profile/${userID}/memories`}>
+                <button>Cancel</button>
+              </Link>
               <button>Add Memory</button>
             </div>
           </form>

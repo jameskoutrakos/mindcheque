@@ -5,30 +5,22 @@ import { Link } from "react-router-dom";
 
 class MemoryList extends Component {
   componentDidMount() {
+    const userID = this.props.match.params.userID;
     console.log("MEMORY LIST MOUNTED");
-    this.props.getSingleUser(this.props.match.params.userID);
-    this.props.getUserMemories(this.props.match.params.userID);
+    this.props.getSingleUser(userID);
+    this.props.getUserMemories(userID);
   }
 
-  //   componentDidUpdate(prevProps, prevState) {
-  //     const { id } = this.props.match.params;
-
-  //     if (id) {
-  //       if (prevState.activeUser !== id) {
-  //         this.props.getSingleUser(id);
-  //       }
-  //     } else if (!id) {
-  //       this.props.getSingleUser(1);
-  //     }
-  //   }
-
   render() {
-    const { firstName } = this.props.activeUser;
+    const { userID, firstName } = this.props.activeUser;
 
     return (
       <section className="memoryList">
         <article className="memoryList__container">
           <h1>{firstName}'s Memories</h1>
+          <Link to={`/profile/${userID}/memories/add-memory`}>
+            ADD NEW MEMORY
+          </Link>
           <ul>
             {this.props.userMemories.map((memory) => {
               return (

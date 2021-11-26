@@ -32,6 +32,7 @@ class MemoryDetails extends Component {
     return (
       <section className="memoryDetails">
         <article className="memoryDetails__container">
+          <Link to={`/profile/${userID}/memories`}>GO BACK</Link>
           <h1>{title}</h1>
           <p>{description}</p>
           <p>{dateOfMemory}</p>
