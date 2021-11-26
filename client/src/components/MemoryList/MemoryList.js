@@ -1,6 +1,7 @@
 import "./MemoryList.scss";
 
 import { Component } from "react";
+import { Link } from "react-router-dom";
 
 class MemoryList extends Component {
   componentDidMount() {
@@ -30,7 +31,15 @@ class MemoryList extends Component {
           <h1>{firstName}'s Memories</h1>
           <ul>
             {this.props.userMemories.map((memory) => {
-              return <li key={memory.memoryID}>{memory.title}</li>;
+              return (
+                <li key={memory.memoryID}>
+                  <Link
+                    to={`/profile/${memory.userID}/memories/${memory.memoryID}`}
+                  >
+                    {memory.title}
+                  </Link>
+                </li>
+              );
             })}
           </ul>
         </article>

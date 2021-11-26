@@ -115,10 +115,21 @@ class EditMemory extends Component {
         })
         .then((response) => {
           console.log(response.data);
-          // this.props.history.goBack();
+          this.props.history.goBack();
         });
     } else {
       alert("Failed to upload!");
+      console.log(
+        memoryID,
+        userID,
+        this.state.title,
+        this.state.description,
+        this.state.dateOfMemory,
+        this.setUpdateDate(),
+        this.state.feeling,
+        this.state.helpfulThought,
+        this.state.relatedMoment
+      );
     }
   };
 

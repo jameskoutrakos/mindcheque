@@ -4,7 +4,7 @@ import axios from "axios";
 
 import Header from "./components/Header/Header";
 import AddNewMemory from "./components/AddNewMemory/AddNewMemory";
-import DeleteMemory from "./components/DeleteMemory/DeleteMemory";
+// import DeleteMemory from "./components/DeleteMemory/DeleteMemory";
 import EditMemory from "./components/EditMemory/EditMemory";
 import Landing from "./components/Landing/Landing";
 import LogInSignUp from "./components/LogInSignUp/LogInSignUp";
@@ -156,19 +156,26 @@ class App extends Component {
               <MemoryDetails
                 currentMemory={this.state.currentMemory}
                 getCurrentMemory={this.getCurrentMemory}
+                deleteMemoryByUser={this.deleteMemoryByUser}
                 {...routerProps}
               />
             )}
           />
           <Route
-            exact
             path="/profile/:userID/memories/:memoryID/edit-memory"
             component={EditMemory}
           />
           <Route
             exact
             path="/profile/:userID/memories/:memoryID/delete-memory"
-            component={DeleteMemory}
+            render={(routerProps) => (
+              <MemoryDetails
+                // currentMemory={this.state.currentMemory}
+                // getCurrentMemory={this.getCurrentMemory}
+                deleteMemoryByUser={this.deleteMemoryByUser}
+                {...routerProps}
+              />
+            )}
           />
         </Switch>
         <Footer />

@@ -1,6 +1,7 @@
 import "./MemoryOverview.scss";
 
 import { Component } from "react";
+import { Link } from "react-router-dom";
 
 class MemoryOverview extends Component {
   componentDidMount() {
@@ -8,20 +9,8 @@ class MemoryOverview extends Component {
     this.props.getSingleUser(this.props.match.params.userID);
   }
 
-  //   componentDidUpdate(prevProps, prevState) {
-  //     const { id } = this.props.match.params;
-
-  //     if (id) {
-  //       if (prevState.activeUser !== id) {
-  //         this.props.getSingleUser(id);
-  //       }
-  //     } else if (!id) {
-  //       this.props.getSingleUser(1);
-  //     }
-  //   }
-
   render() {
-    const { firstName, lastName } = this.props.activeUser;
+    const { firstName, lastName, userID } = this.props.activeUser;
 
     return (
       <section className="memoryOverview">
@@ -29,6 +18,7 @@ class MemoryOverview extends Component {
           <h1>
             {firstName} {lastName}
           </h1>
+          <Link to={`/profile/${userID}/memories`}>Memory List</Link>
         </article>
       </section>
     );
