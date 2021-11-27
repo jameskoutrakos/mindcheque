@@ -16,4 +16,49 @@
     @include desktop-breakpoint {
     }
   }
+
+  &__box {
+    display: flex;
+    background-color: $color-mercury;
+    border-radius: 26px;
+    min-height: pxToRem(200);
+    margin: 0.5rem 0;
+    box-shadow: 2.5px 5px $color-box-shadow-black;
+    padding: 0.5rem;
+    &--header {
+      min-height: 0;
+      font-size: pxToRem(24);
+    }
+    &--view {
+      min-height: 0;
+      font-size: pxToRem(16);
+      text-decoration: none;
+      color: $color-black;
+      &:hover {
+        box-shadow: none;
+        transform: translateX(2.5px) translateY(5px);
+      }
+    }
+    &--add {
+      min-height: 0;
+      font-size: pxToRem(16);
+      text-decoration: none;
+      color: $color-black;
+      &:hover {
+        box-shadow: none;
+        transform: translateX(2.5px) translateY(5px);
+      }
+    }
+
+    &--logout {
+      min-height: 0;
+      font-size: pxToRem(16);
+      text-decoration: none;
+      color: $color-black;
+      &:hover {
+        box-shadow: none;
+        transform: translateX(2.5px) translateY(5px);
+      }
+    }
+  }
 }

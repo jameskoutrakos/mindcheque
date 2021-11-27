@@ -46,9 +46,13 @@ class DeleteMemory extends Component {
   render() {
     return (
       <div>
-        <button type="button" onClick={this.openModal}>
+        <p
+          type="button"
+          className="deleteMemory__prompt"
+          onClick={this.openModal}
+        >
           Delete Memory
-        </button>
+        </p>
         <Modal
           modal={this.state.modal}
           closeModal={this.closeModal}

@@ -15,6 +15,10 @@
     @include desktop-breakpoint {
     }
   }
+
+  &__prompt {
+    color: $color-white;
+  }
 }
 
 .overlay {

@@ -15,10 +15,29 @@ class MemoryOverview extends Component {
     return (
       <section className="memoryOverview">
         <article className="memoryOverview__container">
-          <h1>
-            {firstName} {lastName}
-          </h1>
-          <Link to={`/profile/${userID}/memories`}>Memory List</Link>
+          <div className="memoryOverview__box memoryOverview__box--header">
+            <h1>Welcome Back, {firstName}</h1>
+          </div>
+          <div className="memoryOverview__box"></div>
+          <Link
+            to={`/profile/${userID}/memories`}
+            className="memoryOverview__box memoryOverview__box--view"
+          >
+            <h2>VIEW ALL MEMORIES</h2>
+          </Link>
+          <Link
+            to={`/profile/${userID}/memories/add-memory`}
+            className="memoryOverview__box memoryOverview__box--add"
+          >
+            <h2>Add New Memory</h2>
+          </Link>
+          <div className="memoryOverview__box"></div>
+          <Link
+            to={`/login`}
+            className="memoryOverview__box memoryOverview__box--logout"
+          >
+            <h2>LOG OUT</h2>
+          </Link>
         </article>
       </section>
     );

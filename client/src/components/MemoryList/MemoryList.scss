@@ -6,10 +6,50 @@
   padding: 0 1rem;
   &__container {
     display: flex;
+    background-color: $color-mercury;
     flex-direction: column;
-    margin: 0 auto;
-    padding: 1rem 0;
+    margin: 1rem auto;
+    padding: 1rem;
+    border-radius: 10px;
     width: 100%;
+    @include tablet-breakpoint {
+      max-width: $desktop-maxwidth;
+    }
+    @include desktop-breakpoint {
+    }
+  }
+
+  &__li {
+    display: flex;
+    list-style: none;
+    text-decoration: none;
+    justify-content: space-between;
+    background-color: $color-white;
+    border: 1px solid $color-black;
+    border-radius: 10px;
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    color: $color-black;
+    &:hover {
+      background-color: #dedede;
+    }
+  }
+
+  &__box {
+    display: flex;
+    background-color: $color-mercury;
+    border-radius: 10px;
+    margin: 0.5rem 0;
+    box-shadow: 2.5px 5px $color-box-shadow-black;
+    padding: 0.5rem;
+    text-decoration: none;
+    color: $color-black;
+    margin: 1rem auto;
+    &:hover {
+      box-shadow: none;
+      transform: translateX(2.5px) translateY(5px);
+    }
+
     @include tablet-breakpoint {
       max-width: $desktop-maxwidth;
     }

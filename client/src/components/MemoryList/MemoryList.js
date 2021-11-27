@@ -17,24 +17,25 @@ class MemoryList extends Component {
     return (
       <section className="memoryList">
         <article className="memoryList__container">
-          <h1>{firstName}'s Memories</h1>
-          <Link to={`/profile/${userID}/memories/add-memory`}>
-            ADD NEW MEMORY
-          </Link>
+          <h2>{firstName}'s Memories</h2>
           <ul>
             {this.props.userMemories.map((memory) => {
               return (
-                <li key={memory.memoryID}>
-                  <Link
-                    to={`/profile/${memory.userID}/memories/${memory.memoryID}`}
-                  >
-                    {memory.title}
-                  </Link>
-                </li>
+                <Link
+                  key={memory.memoryID}
+                  to={`/profile/${memory.userID}/memories/${memory.memoryID}`}
+                  className="memoryList__li"
+                >
+                  <p>{memory.title}</p>
+                  <p> CLICK </p>
+                </Link>
               );
             })}
           </ul>
         </article>
+        <Link to={`/profile/${userID}`} className="memoryList__box">
+          <h4>RETURN TO MEMORY OVERVIEW</h4>
+        </Link>
       </section>
     );
   }

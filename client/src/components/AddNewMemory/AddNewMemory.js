@@ -68,7 +68,7 @@ class AddNewMemory extends Component {
               />
             </div>
             <div className="addNewMemory__form-button-container">
-              <Link to={`/profile/${userID}/memories`}>
+              <Link to={`/profile/${userID}/`}>
                 <button>Cancel</button>
               </Link>
               <button>Add Memory</button>
