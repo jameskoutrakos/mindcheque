@@ -26,7 +26,7 @@
     border-radius: 26px;
     margin: 0.5rem 0;
     box-shadow: 2.5px 5px $color-box-shadow-black;
-    padding: 0.5rem;
+    padding: 1rem;
 
     &--description {
       @include tablet-breakpoint {
@@ -55,6 +55,8 @@
     }
 
     &--goback {
+      text-decoration: none;
+      color: $color-black;
       @include tablet-breakpoint {
         flex-grow: 1;
       }
@@ -65,6 +67,8 @@
     }
 
     &--edit {
+      text-decoration: none;
+      color: $color-black;
       @include tablet-breakpoint {
         flex-grow: 1;
         margin-left: 2.5%;

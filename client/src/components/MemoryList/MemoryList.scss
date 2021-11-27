@@ -3,12 +3,13 @@
 @use "../../styles/partials/type-kit" as *;
 
 .memoryList {
-  padding: 0 1rem;
+  padding: 1rem;
+  background-color: $color-mercury;
   &__container {
     display: flex;
-    background-color: $color-mercury;
+    background-color: #ffffff;
     flex-direction: column;
-    margin: 1rem auto;
+    margin: 0 auto 1rem;
     padding: 1rem;
     border-radius: 10px;
     width: 100%;
@@ -37,14 +38,13 @@
 
   &__box {
     display: flex;
-    background-color: $color-mercury;
+    background-color: $color-white;
     border-radius: 10px;
-    margin: 0.5rem 0;
     box-shadow: 2.5px 5px $color-box-shadow-black;
-    padding: 0.5rem;
+    padding: 1rem;
     text-decoration: none;
     color: $color-black;
-    margin: 1rem auto;
+    margin: 0 auto;
     &:hover {
       box-shadow: none;
       transform: translateX(2.5px) translateY(5px);

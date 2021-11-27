@@ -4,6 +4,7 @@
 
 .addNewMemory {
   padding: 0 1rem;
+  background-color: $color-mercury;
   &__container {
     display: flex;
     flex-direction: column;
@@ -20,5 +21,131 @@
   &__form {
     display: flex;
     flex-direction: column;
+    @include tablet-breakpoint {
+      max-width: $desktop-maxwidth;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+    @include desktop-breakpoint {
+    }
+  }
+
+  &__form-button-container {
+    display: flex;
+    flex-direction: column;
+    @include tablet-breakpoint {
+      flex-direction: row;
+    }
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    background-color: $color-white;
+    border-radius: 26px;
+    margin: 0.5rem 0;
+    box-shadow: 2.5px 5px $color-box-shadow-black;
+    padding: 1rem;
+
+    &--description {
+      @include tablet-breakpoint {
+        width: 100%;
+      }
+    }
+
+    &--feeling {
+      @include tablet-breakpoint {
+        width: 48%;
+        margin-right: 2%;
+      }
+    }
+
+    &--helpful {
+      @include tablet-breakpoint {
+        width: 48%;
+        margin-left: 2%;
+      }
+    }
+
+    &--related {
+      @include tablet-breakpoint {
+        width: 100%;
+      }
+    }
+
+    &--cancel {
+      cursor: pointer;
+      @include tablet-breakpoint {
+        flex-grow: 1;
+        margin-right: 25%;
+      }
+      &:hover {
+        box-shadow: none;
+        transform: translateX(2.5px) translateY(5px);
+      }
+    }
+
+    &--confirm {
+      background-color: #12a632;
+      cursor: pointer;
+      @include tablet-breakpoint {
+        flex-grow: 1;
+        margin-left: 25%;
+      }
+      &:hover {
+        box-shadow: none;
+        transform: translateX(2.5px) translateY(5px);
+      }
+    }
+  }
+
+  &__box-header-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @include tablet-breakpoint {
+      flex-direction: row;
+    }
+  }
+
+  &__date-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__header {
+    @include tablet-breakpoint {
+      font-size: pxToRem(28);
+      width: 100%;
+      margin-right: 10%;
+    }
+  }
+
+  &__date-text {
+    @include tablet-breakpoint {
+      font-size: pxToRem(18);
+    }
+  }
+
+  &__subheader {
+    @include tablet-breakpoint {
+      font-weight: 600;
+    }
+    &--time-header {
+      font-weight: 700;
+      font-size: pxToRem(12);
+    }
+  }
+
+  &__body {
+    @include tablet-breakpoint {
+      font-size: pxToRem(14);
+    }
+  }
+
+  &__time-text {
+    @include tablet-breakpoint {
+      font-size: pxToRem(14);
+    }
   }
 }

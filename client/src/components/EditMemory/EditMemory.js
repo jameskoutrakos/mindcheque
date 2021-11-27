@@ -138,6 +138,7 @@ class EditMemory extends Component {
       title,
       description,
       dateOfMemory,
+      dateCreated,
       dateLastUpdated,
       feeling,
       helpfulThought,
@@ -147,68 +148,105 @@ class EditMemory extends Component {
     return (
       <section className="editMemory">
         <article className="editMemory__container">
-          <h1>EditMemory</h1>
           <form>
             <div className="editMemory__form">
-              <label>Title</label>
-              <input
-                type="text"
-                name="title"
-                value={title}
-                onChange={(e) => this.handleChange(e)}
-                placeholder="Please enter a memory title"
-              />
-              <label>Description</label>
-              <input
-                type="text"
-                name="description"
-                value={description}
-                onChange={(e) => this.handleChange(e)}
-                placeholder="Please enter a description of your memory"
-              />
-              <label>Date of Memory</label>
-              <input
-                type="text"
-                name="dateOfMemory"
-                value={dateOfMemory}
-                onChange={(e) => this.handleChange(e)}
-                placeholder="Enter the date of your memory (Ex. 2021-01-25)"
-              />
-              <label>Feeling</label>
-              <input
-                type="text"
-                name="feeling"
-                value={feeling}
-                onChange={(e) => this.handleChange(e)}
-                placeholder="Select a feeling"
-              />
-              <label>Helpful Thought?</label>
-              <input
-                type="text"
-                name="helpfulThought"
-                value={helpfulThought}
-                onChange={(e) => this.handleChange(e)}
-                placeholder="Was this a helpful thought?"
-              />
-              <label>Related Moment</label>
-              <input
-                type="text"
-                name="relatedMoment"
-                value={relatedMoment}
-                onChange={(e) => this.handleChange(e)}
-                placeholder="Write something here that reminds you of this moment (i.e. a song, a place, or a person)"
-              />
+              <div className="editMemory__box editMemory__box--description">
+                <div className="editMemory__box-header-wrapper">
+                  <input
+                    className="editMemory__header"
+                    type="text"
+                    name="title"
+                    value={title}
+                    onChange={(e) => this.handleChange(e)}
+                    placeholder="Please enter a memory title"
+                  />
+
+                  <div className="editMemory__date-wrapper">
+                    <p class="editMemory__subheader">Date of Memory</p>
+                    <input
+                      className="editMemory__date-text"
+                      type="text"
+                      name="dateOfMemory"
+                      value={dateOfMemory}
+                      onChange={(e) => this.handleChange(e)}
+                      placeholder="Enter the date of your memory (Ex. 2021-01-25)"
+                    />
+                  </div>
+                </div>
+
+                <p class="editMemory__subheader">Description</p>
+                <textarea
+                  type="text"
+                  name="description"
+                  value={description}
+                  onChange={(e) => this.handleChange(e)}
+                  placeholder="Please enter a description of your memory"
+                ></textarea>
+              </div>
+
+              <div className="editMemory__box editMemory__box--feeling">
+                <p class="editMemory__subheader">Feeling</p>
+                <input
+                  type="text"
+                  name="feeling"
+                  value={feeling}
+                  onChange={(e) => this.handleChange(e)}
+                  placeholder="Select a feeling"
+                />
+              </div>
+
+              <div className="editMemory__box editMemory__box--helpful">
+                <p class="editMemory__subheader">Helpful Thought?</p>
+                <input
+                  type="text"
+                  name="helpfulThought"
+                  value={helpfulThought}
+                  onChange={(e) => this.handleChange(e)}
+                  placeholder="Was this a helpful thought?"
+                />
+              </div>
+
+              <div className="editMemory__box editMemory__box--related">
+                <p class="editMemory__subheader">Related Moment</p>
+                <input
+                  type="text"
+                  name="relatedMoment"
+                  value={relatedMoment}
+                  onChange={(e) => this.handleChange(e)}
+                  placeholder="Write something here that reminds you of this moment (i.e. a song, a place, or a person)"
+                />
+              </div>
             </div>
+
             <div className="editMemory__form-button-container">
-              <button type="secondary" onClick={this.handleCancel}>
-                Cancel
-              </button>
-              <button type="primary" onClick={this.handleSubmit}>
-                Save
-              </button>
-              <h6>
-                Memory was last updated on: {dateLastUpdated.slice(0, 10)}
-              </h6>
+              <div
+                onClick={this.handleCancel}
+                className="editMemory__box editMemory__box--cancel"
+              >
+                <p>Cancel</p>
+              </div>
+
+              <div
+                onClick={this.handleSubmit}
+                className="editMemory__box editMemory__box--confirm"
+              >
+                <p>Save</p>
+              </div>
+
+              <div className="editMemory__box editMemory__box--update">
+                <p className="editMemory__subheader editMemory__subheader--time-header">
+                  Memory was created by you on:{" "}
+                </p>
+                <p className="editMemory__time-text">
+                  {dateCreated.slice(0, 10)}
+                </p>
+                <p className="editMemory__subheader editMemory__subheader--time-header">
+                  Memory was last updated on:{" "}
+                </p>
+                <p className="editMemory__time-text">
+                  {dateLastUpdated.slice(0, 10)}
+                </p>
+              </div>
             </div>
           </form>
         </article>

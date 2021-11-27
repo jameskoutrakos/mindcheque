@@ -12,7 +12,7 @@ function Header() {
           <Link to="/" className="header__link">
             HOME
           </Link>
-          <p className="header__link"> | </p>
+          <p className="header__link-divider"> | </p>
           <Link to="/login" className="header__link">
             LOG IN
           </Link>

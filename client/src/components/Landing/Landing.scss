@@ -4,6 +4,7 @@
 
 .landing {
   padding: 0 1rem;
+  background-color: $color-mercury;
   &__container {
     display: flex;
     flex-direction: column;
@@ -21,15 +22,17 @@
 
   &__box {
     display: flex;
-    background-color: $color-mercury;
+    background-color: $color-white;
     border-radius: 26px;
     min-height: pxToRem(200);
     margin: 0.5rem 0;
     box-shadow: 2.5px 5px $color-box-shadow-black;
-    padding: 0.5rem;
+    padding: 1rem;
     &:hover {
       box-shadow: none;
       transform: translateX(2.5px) translateY(5px);
+      // background-color: $color-header;
+      // border: 2.5px solid $color-black;
     }
     &--1 {
       display: flex;

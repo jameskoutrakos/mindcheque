@@ -18,26 +18,34 @@ class MemoryOverview extends Component {
           <div className="memoryOverview__box memoryOverview__box--header">
             <h1>Welcome Back, {firstName}</h1>
           </div>
-          <div className="memoryOverview__box"></div>
-          <Link
-            to={`/profile/${userID}/memories`}
-            className="memoryOverview__box memoryOverview__box--view"
-          >
-            <h2>VIEW ALL MEMORIES</h2>
-          </Link>
-          <Link
-            to={`/profile/${userID}/memories/add-memory`}
-            className="memoryOverview__box memoryOverview__box--add"
-          >
-            <h2>Add New Memory</h2>
-          </Link>
-          <div className="memoryOverview__box"></div>
-          <Link
-            to={`/login`}
-            className="memoryOverview__box memoryOverview__box--logout"
-          >
-            <h2>LOG OUT</h2>
-          </Link>
+
+          <div className="memoryOverview__wrapper-main">
+            <div className="memoryOverview__wrapper memoryOverview__wrapper--left">
+              <div className="memoryOverview__box memoryOverview__box--dashboard"></div>
+              <Link
+                to={`/profile/${userID}/memories`}
+                className="memoryOverview__box memoryOverview__box--view"
+              >
+                <h2>VIEW ALL MEMORIES</h2>
+              </Link>
+            </div>
+
+            <div className="memoryOverview__wrapper memoryOverview__wrapper--right">
+              <Link
+                to={`/profile/${userID}/memories/add-memory`}
+                className="memoryOverview__box memoryOverview__box--add"
+              >
+                <h2>Add New Memory</h2>
+              </Link>
+              <div className="memoryOverview__box"></div>
+              <Link
+                to={`/login`}
+                className="memoryOverview__box memoryOverview__box--logout"
+              >
+                <h2>LOG OUT</h2>
+              </Link>
+            </div>
+          </div>
         </article>
       </section>
     );

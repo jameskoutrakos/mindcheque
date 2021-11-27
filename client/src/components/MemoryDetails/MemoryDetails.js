@@ -27,7 +27,7 @@ class MemoryDetails extends Component {
       relatedMoment,
     } = this.props.currentMemory;
 
-    const dateOfMemory = this.props.currentMemory.dateOfMemory.slice(0, 10);
+    const dateOfMemory = this.props.currentMemory.dateOfMemory;
 
     return (
       <section className="memoryDetails">

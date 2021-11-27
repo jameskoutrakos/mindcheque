@@ -2,10 +2,6 @@
 @use "../../styles/partials/colors" as *;
 @use "../../styles/partials/type-kit" as *;
 
-* {
-  border: 1px dotted green;
-}
-
 .header {
   padding: 0 1rem;
   background-color: $color-header;
@@ -43,7 +39,6 @@
   }
 
   &__link {
-    font-size: 1rem;
     text-decoration: none;
     color: $color-white;
     @include tablet-breakpoint {
@@ -52,5 +47,11 @@
     @include desktop-breakpoint {
       font-size: 1.5rem;
     }
+  }
+
+  &__link-divider {
+    font-size: 1rem;
+    color: $color-white;
+    margin: 0 0.5rem;
   }
 }
