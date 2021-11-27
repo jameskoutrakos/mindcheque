@@ -8,6 +8,7 @@
 
 $mobile-screensize: 375px;
 $tablet-screensize: 768px;
+$desktop-maxwidth: 1025px;
 $desktop-screensize: 1280px;
 
 @mixin tablet-breakpoint {

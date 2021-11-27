@@ -8,20 +8,19 @@
 
 .header {
   padding: 0 1rem;
-  background-color: lightgray;
+  background-color: $color-header;
   &__container {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 0 auto;
-    padding: 1rem 0;
+    // padding: pxToRem(30.39) pxToRem(16) pxToRem(88);
     width: 100%;
-    min-width: $mobile-screensize;
     @include tablet-breakpoint {
       flex-direction: row;
       justify-content: space-between;
       padding: 2rem 0;
-      max-width: $desktop-screensize;
+      max-width: $desktop-maxwidth;
     }
     @include desktop-breakpoint {
     }
@@ -29,6 +28,8 @@
 
   &__logo {
     font-size: 2rem;
+    text-decoration: none;
+    color: $color-white;
     @include tablet-breakpoint {
     }
     @include desktop-breakpoint {
@@ -43,6 +44,8 @@
 
   &__link {
     font-size: 1rem;
+    text-decoration: none;
+    color: $color-white;
     @include tablet-breakpoint {
       font-size: 1.5rem;
     }

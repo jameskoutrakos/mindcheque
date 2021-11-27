@@ -6,14 +6,37 @@
   padding: 0 1rem;
   &__container {
     display: flex;
+    flex-direction: column;
+    // position: relative;
+    // top: pxToRem(-96);
     margin: 0 auto;
     padding: 1rem 0;
     width: 100%;
-    min-width: $mobile-screensize;
     @include tablet-breakpoint {
-      max-width: $desktop-screensize;
+      max-width: $desktop-maxwidth;
     }
     @include desktop-breakpoint {
+    }
+  }
+
+  &__box {
+    display: flex;
+    background-color: $color-mercury;
+    border-radius: 26px;
+    height: pxToRem(200);
+    margin: 0.5rem 0;
+    box-shadow: 2.5px 5px 4px $color-box-shadow-black;
+    &:hover {
+      box-shadow: none;
+      transform: translateX(2.5px) translateY(5px);
+    }
+    &--1 {
+    }
+    &--2 {
+    }
+    &--3 {
+    }
+    &--4 {
     }
   }
 }
