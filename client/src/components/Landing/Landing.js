@@ -6,20 +6,40 @@ function Landing() {
     <section className="landing">
       <article className="landing__container">
         <div className="landing__box landing__box--1">
-          <h2 className="landing__box-1-title">Create Your Own</h2>
-          <h2 className="landing__box-1-title landing__box-1-title--bold">
-            Memory Bank
+          <h2 className="landing__box-title landing__box-title--underline-1">
+            Welcome to{" "}
+            <span className="landing__box-title--bold">MindCheque</span>
           </h2>
+          <p className="landing__box-body">
+            Home to your very own memory bank, one that can store your thoughts
+            and memories for you to look back on for days, months, and years to
+            come!
+          </p>
         </div>
-        <Link to="/login" className="landing__box landing__box--2">
-          <h3 className="landing__box-2-title">Create an Account or Log In</h3>
+
+        <div className="landing__box landing__box--2">
+          <h2 className="landing__box-title landing__box-title--underline-2">
+            Invest in yourself
+          </h2>
+          <p className="landing__box-body">
+            by banking these memories like you’re banking cheques. Document the
+            good things that happen, every small win, and then return to these
+            memories whenever you feel down or need to remind yourself that you
+            can do it!
+          </p>
+        </div>
+
+        <Link to="/login" className="landing__box landing__box--3">
+          <h2 className="landing__box-title landing__box-title--underline-3">
+            Create an Account or Log In
+          </h2>
+          <p className="landing__box-body">
+            by banking these memories like you’re banking cheques. Document the
+            good things that happen, every small win, and then return to these
+            memories whenever you feel down or need to remind yourself that you
+            can do it!
+          </p>
         </Link>
-        <div className="landing__box landing__box--3">
-          <h3 className="landing__box-3-title">Make New Memories</h3>
-        </div>
-        <div className="landing__box landing__box--4">
-          <h3 className="landing__box-4-title">Bank Your Memories For Later</h3>
-        </div>
       </article>
     </section>
   );

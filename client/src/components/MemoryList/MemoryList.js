@@ -17,7 +17,9 @@ class MemoryList extends Component {
     return (
       <section className="memoryList">
         <article className="memoryList__container">
-          <h2>{firstName}'s Memories</h2>
+          <div className="memoryList__header-box">
+            <h2>{firstName}'s Memories</h2>
+          </div>
           <ul>
             {this.props.userMemories.map((memory) => {
               return (
@@ -26,7 +28,10 @@ class MemoryList extends Component {
                   to={`/profile/${memory.userID}/memories/${memory.memoryID}`}
                   className="memoryList__li"
                 >
-                  <p>{memory.title}</p>
+                  <p>
+                    {memory.title}
+                    <p>{memory.dateOfMemory}</p>
+                  </p>
                   <p> CLICK </p>
                 </Link>
               );

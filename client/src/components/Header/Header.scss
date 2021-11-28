@@ -22,7 +22,15 @@
     }
   }
 
+  &__logo-wrapper {
+    max-width: 15rem;
+  }
+
   &__logo {
+    max-width: inherit;
+  }
+
+  &__logo-text {
     font-size: 2rem;
     text-decoration: none;
     color: $color-white;

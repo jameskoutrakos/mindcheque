@@ -162,10 +162,10 @@ class EditMemory extends Component {
                   />
 
                   <div className="editMemory__date-wrapper">
-                    <p class="editMemory__subheader">Date of Memory</p>
+                    <p className="editMemory__subheader">Date of Memory</p>
                     <input
                       className="editMemory__date-text"
-                      type="text"
+                      type="date"
                       name="dateOfMemory"
                       value={dateOfMemory}
                       onChange={(e) => this.handleChange(e)}
@@ -185,29 +185,39 @@ class EditMemory extends Component {
               </div>
 
               <div className="editMemory__box editMemory__box--feeling">
-                <p class="editMemory__subheader">Feeling</p>
-                <input
-                  type="text"
+                <p className="editMemory__subheader">
+                  Select a feeling that best describes this memory:
+                </p>
+                <select
+                  id="feeling"
                   name="feeling"
                   value={feeling}
                   onChange={(e) => this.handleChange(e)}
-                  placeholder="Select a feeling"
-                />
+                >
+                  <option value="Proud">Proud</option>
+                  <option value="Excited">Excited</option>
+                  <option value="Happy">Happy</option>
+                  <option value="Alright">Alright</option>
+                  <option value="Anxious">Anxious</option>
+                  <option value="Upset">Upset</option>
+                </select>
               </div>
 
               <div className="editMemory__box editMemory__box--helpful">
-                <p class="editMemory__subheader">Helpful Thought?</p>
-                <input
-                  type="text"
+                <p className="editMemory__subheader">Helpful Thought?</p>
+                <select
+                  id="helpfulThought"
                   name="helpfulThought"
                   value={helpfulThought}
                   onChange={(e) => this.handleChange(e)}
-                  placeholder="Was this a helpful thought?"
-                />
+                >
+                  <option value="1">Yes</option>
+                  <option value="0">No</option>
+                </select>
               </div>
 
               <div className="editMemory__box editMemory__box--related">
-                <p class="editMemory__subheader">Related Moment</p>
+                <p className="editMemory__subheader">Related Moment</p>
                 <input
                   type="text"
                   name="relatedMoment"

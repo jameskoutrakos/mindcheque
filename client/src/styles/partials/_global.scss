@@ -1,3 +1,5 @@
+@use "./colors" as *;
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -8,6 +10,15 @@
 input {
   border-radius: 10px;
   padding: 0.5rem;
+  background-color: $color-alabaster;
+}
+
+textarea {
+  border-radius: 10px;
+  padding: 0.5rem;
+  background-color: $color-alabaster;
+  height: 8rem;
+  resize: none;
 }
 
 // Breakpoints and Screen Sizes

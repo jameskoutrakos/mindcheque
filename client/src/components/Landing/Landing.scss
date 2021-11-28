@@ -4,7 +4,7 @@
 
 .landing {
   padding: 0 1rem;
-  background-color: $color-mercury;
+  background-color: $color-body;
   &__container {
     display: flex;
     flex-direction: column;
@@ -22,12 +22,14 @@
 
   &__box {
     display: flex;
+    flex-direction: column;
     background-color: $color-white;
     border-radius: 26px;
     min-height: pxToRem(200);
     margin: 0.5rem 0;
     box-shadow: 2.5px 5px $color-box-shadow-black;
     padding: 1rem;
+    transition: 0.3s;
     &:hover {
       box-shadow: none;
       transform: translateX(2.5px) translateY(5px);
@@ -39,38 +41,36 @@
       flex-direction: column;
     }
     &--2 {
-      text-decoration: none;
     }
     &--3 {
-    }
-    &--4 {
+      text-decoration: none;
     }
   }
 
-  &__box-1-title {
+  &__box-title {
     font-weight: 500;
-    font-size: pxToRem(40);
+    font-size: pxToRem(48);
     color: $color-black;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    // width: 50%;
     &--bold {
       font-weight: 700;
     }
+
+    &--underline-1 {
+      border-bottom: 3px solid $color-header;
+    }
+    &--underline-2 {
+      border-bottom: 3px solid $color-body;
+    }
+    &--underline-3 {
+      border-bottom: 3px solid $color-footer;
+    }
   }
 
-  &__box-2-title {
-    font-weight: 700;
-    font-size: pxToRem(28);
-    color: $color-black;
-  }
-
-  &__box-3-title {
-    font-weight: 700;
-    font-size: pxToRem(28);
-    color: $color-black;
-  }
-
-  &__box-4-title {
-    font-weight: 700;
-    font-size: pxToRem(28);
+  &__box-body {
+    font-size: pxToRem(18);
     color: $color-black;
   }
 }

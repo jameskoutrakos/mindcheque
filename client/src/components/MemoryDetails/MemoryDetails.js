@@ -23,11 +23,11 @@ class MemoryDetails extends Component {
       dateCreated,
       dateLastUpdated,
       feeling,
-      helpfulThought,
       relatedMoment,
     } = this.props.currentMemory;
 
     const dateOfMemory = this.props.currentMemory.dateOfMemory;
+    const helpfulThought = this.props.currentMemory.helpfulThought;
 
     return (
       <section className="memoryDetails">

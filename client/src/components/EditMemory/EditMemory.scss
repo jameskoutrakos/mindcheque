@@ -3,12 +3,15 @@
 @use "../../styles/partials/type-kit" as *;
 
 .editMemory {
-  padding: 0 1rem;
+  padding: 1rem;
+  background-color: $color-body;
   &__container {
     display: flex;
     flex-direction: column;
     margin: 0 auto;
-    padding: 1rem 0;
+    padding: 1rem;
+    border-radius: 25px;
+    background-color: $color-mercury;
     width: 100%;
     @include tablet-breakpoint {
       max-width: $desktop-maxwidth;
@@ -40,7 +43,7 @@
   &__box {
     display: flex;
     flex-direction: column;
-    background-color: $color-mercury;
+    background-color: $color-white;
     border-radius: 26px;
     margin: 0.5rem 0;
     box-shadow: 2.5px 5px $color-box-shadow-black;
