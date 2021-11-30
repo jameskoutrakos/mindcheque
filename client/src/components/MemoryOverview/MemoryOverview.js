@@ -6,13 +6,17 @@ import { Link } from "react-router-dom";
 class MemoryOverview extends Component {
   componentDidMount() {
     console.log("MEMORY OVERVIEW MOUNTED");
-    const { getSingleUser } = this.props;
+    const { getSingleUser, getMostRecentMemory } = this.props;
+    const { userID } = this.props.match.params;
 
-    getSingleUser(this.props.match.params.userID);
+    getSingleUser(userID);
+    getMostRecentMemory(userID);
   }
 
   render() {
     const { firstName, lastName, userID } = this.props.activeUser;
+    const { memoryID, title, feeling, dateCreated } =
+      this.props.mostRecentMemory;
 
     return (
       <section className="memoryOverview">
@@ -25,12 +29,32 @@ class MemoryOverview extends Component {
 
           <div className="memoryOverview__wrapper-main">
             <div className="memoryOverview__wrapper memoryOverview__wrapper--left">
-              <div className="memoryOverview__box memoryOverview__box--dashboard"></div>
+              <Link
+                to={`/profile/${userID}/memories/${memoryID}`}
+                className="memoryOverview__box memoryOverview__box--recent"
+              >
+                <h2 className="memoryOverview__header">Recent Activity</h2>
+                <h3 className="memoryOverview__subheader">{title}</h3>
+                <p className="memoryOverview__body">
+                  You created this memory on:{" "}
+                  {dateCreated !== undefined && dateCreated.slice(0, 10)}
+                </p>
+                <p className="memoryOverview__body">
+                  You mentioned that this memory made you feel:{" "}
+                  <span className="memoryOverview__body--bold">
+                    {" "}
+                    {feeling}{" "}
+                  </span>
+                </p>
+                <p className="memoryOverview__body">
+                  Click here to view and/or edit your memory!
+                </p>
+              </Link>
               <Link
                 to={`/profile/${userID}/memories`}
                 className="memoryOverview__box memoryOverview__box--view"
               >
-                <h2>View All Memories</h2>
+                <h2 className="memoryOverview__header">View All Memories</h2>
               </Link>
             </div>
 
@@ -39,14 +63,14 @@ class MemoryOverview extends Component {
                 to={`/profile/${userID}/memories/add-memory`}
                 className="memoryOverview__box memoryOverview__box--add"
               >
-                <h2>Add New Memory</h2>
+                <h2 className="memoryOverview__header">Add New Memory</h2>
               </Link>
               <div className="memoryOverview__box"></div>
               <Link
                 to={`/profile`}
                 className="memoryOverview__box memoryOverview__box--logout"
               >
-                <h2>LOG OUT</h2>
+                <h2 className="memoryOverview__header">LOG OUT</h2>
               </Link>
             </div>
           </div>

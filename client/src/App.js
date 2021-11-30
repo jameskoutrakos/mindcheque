@@ -23,6 +23,7 @@ class App extends Component {
     memories: [],
     userMemories: [],
     currentMemory: [],
+    mostRecentMemory: [],
   };
 
   getAllUsers = () => {
@@ -74,6 +75,22 @@ class App extends Component {
       .then((response) => {
         this.setState({ userMemories: response.data });
         console.log(response.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
+  // Get most recent memory
+
+  getMostRecentMemory = (userID) => {
+    axios
+      .get(`${host}/profile/${userID}/recent-memory`)
+      .then((response) => {
+        this.setState({
+          mostRecentMemory: response.data[response.data.length - 1],
+        });
+        console.log(response.data[response.data.length - 1]);
       })
       .catch((error) => {
         console.log(error);
@@ -157,6 +174,8 @@ class App extends Component {
               <MemoryOverview
                 activeUser={this.state.activeUser}
                 getSingleUser={this.getSingleUser}
+                mostRecentMemory={this.state.mostRecentMemory}
+                getMostRecentMemory={this.getMostRecentMemory}
                 {...routerProps}
               />
             )}

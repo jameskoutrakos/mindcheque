@@ -7,6 +7,8 @@ router.route("/login").post(userController.findUser);
 
 router.route("/:userID").get(userController.getSingleUser);
 
+router.route("/:userID/recent-memory").get(userController.userMemories);
+
 router.route("/:userID/memories").get(userController.userMemories);
 
 router.route("/:userID/memories/:memoryID").get(userController.getMemoryByUser);
