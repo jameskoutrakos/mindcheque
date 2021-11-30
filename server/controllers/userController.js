@@ -57,7 +57,7 @@ exports.addNewUser = (req, res) => {
         .send(
           `Ran into an error while trying to insert a new memory to this user: ${err}`
         );
-      console.log("Didn't work ", req.body);
+      console.log("NEW USER NO WORK", req.body);
     });
 };
 

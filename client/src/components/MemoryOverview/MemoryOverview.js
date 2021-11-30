@@ -6,7 +6,9 @@ import { Link } from "react-router-dom";
 class MemoryOverview extends Component {
   componentDidMount() {
     console.log("MEMORY OVERVIEW MOUNTED");
-    this.props.getSingleUser(this.props.match.params.userID);
+    const { getSingleUser } = this.props;
+
+    getSingleUser(this.props.match.params.userID);
   }
 
   render() {

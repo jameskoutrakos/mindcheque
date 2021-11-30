@@ -43,6 +43,9 @@ class App extends Component {
       .then((response) => {
         this.getAllUsers();
         console.log("Add User: ", response.data);
+        alert(
+          "Account created! Please log in using the 'Returning User' form above!"
+        );
       })
       .catch((error) => {
         console.log(error);

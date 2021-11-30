@@ -23,7 +23,6 @@ class LogInSignUp extends Component {
     };
 
     this.props.addNewUser(newUser);
-    alert("Account created successfully! Please log in to your account!");
   };
 
   logInUser = (e) => {
@@ -35,7 +34,7 @@ class LogInSignUp extends Component {
     };
 
     axios
-      .post(`${host}/profile/`, userCreds)
+      .post(`${host}/profile/login`, userCreds)
       .then((response) => {
         const foundUserID = response.data;
         alert("Log In Success, now redirecting...");
