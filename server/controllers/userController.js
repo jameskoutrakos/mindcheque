@@ -13,6 +13,26 @@ exports.index = (req, res) => {
     });
 };
 
+exports.findUser = (req, res) => {
+  knex("user")
+    .select("*")
+    .where({
+      username: req.body.usernameLogIn,
+      password: req.body.passwordLogIn,
+    })
+    .then((data) => {
+      res.status(200).json(data[0].userID);
+    })
+    .catch((err) => {
+      res
+        .status(400)
+        .send(
+          `Ran into an error while trying to insert a new memory to this user: ${err}`
+        );
+      console.log("Log In NO WORK: ", req.body);
+    });
+};
+
 exports.addNewUser = (req, res) => {
   knex("user")
     .insert({

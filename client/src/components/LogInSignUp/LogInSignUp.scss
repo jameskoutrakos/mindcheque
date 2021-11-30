@@ -19,6 +19,12 @@
     }
     @include desktop-breakpoint {
     }
+
+    &--option {
+      flex-direction: row;
+      justify-content: center;
+      width: 5rem;
+    }
   }
 
   &__box {

@@ -35,7 +35,7 @@
       box-shadow: none;
       transform: translateX(2.5px) translateY(5px);
       // background-color: $color-header;
-      // border: 2.5px solid $color-black;
+      border: 2.5px solid $color-black;
     }
     &--1 {
       display: flex;
@@ -54,11 +54,15 @@
 
   &__box-title {
     font-weight: 500;
-    font-size: pxToRem(48);
+    font-size: pxToRem(36);
     color: $color-black;
     padding-bottom: 0.5rem;
     margin-bottom: 1rem;
     // width: 50%;
+    @include tablet-breakpoint {
+      font-size: pxToRem(48);
+    }
+
     &--bold {
       font-weight: 700;
     }
@@ -77,5 +81,6 @@
   &__box-body {
     font-size: pxToRem(18);
     color: $color-black;
+    width: 90%;
   }
 }
