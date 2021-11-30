@@ -5,6 +5,7 @@
 .memoryDetails {
   padding: 1rem;
   background-color: $color-body;
+  min-height: 80vh;
   &__container {
     display: flex;
     flex-direction: column;
@@ -55,23 +56,31 @@
       @include tablet-breakpoint {
         width: 100%;
       }
+
+      &--hidden {
+        display: none;
+      }
     }
 
     &--goback {
       text-decoration: none;
       color: $color-black;
+      transition: 0.3s;
       @include tablet-breakpoint {
         flex-grow: 1;
       }
       &:hover {
         box-shadow: none;
         transform: translateX(2.5px) translateY(5px);
+        background-color: $color-secondary-1-1;
+        color: $color-white;
       }
     }
 
     &--edit {
       text-decoration: none;
       color: $color-black;
+      transition: 0.3s;
       @include tablet-breakpoint {
         flex-grow: 1;
         margin-left: 2.5%;
@@ -80,18 +89,23 @@
       &:hover {
         box-shadow: none;
         transform: translateX(2.5px) translateY(5px);
+        background-color: $color-secondary-1-1;
+        color: $color-white;
       }
     }
 
     &--delete {
-      background-color: #e95959;
       cursor: pointer;
+      transition: 0.3s;
+      padding: 0;
       @include tablet-breakpoint {
         flex-grow: 1;
       }
       &:hover {
         box-shadow: none;
         transform: translateX(2.5px) translateY(5px);
+        background-color: #e95959;
+        color: $color-white;
       }
     }
   }

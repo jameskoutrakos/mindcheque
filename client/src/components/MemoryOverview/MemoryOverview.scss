@@ -5,6 +5,7 @@
 .memoryOverview {
   padding: 1rem;
   background-color: $color-body;
+  min-height: 80vh;
   &__container {
     display: flex;
     flex-direction: column;
@@ -63,9 +64,12 @@
       font-size: pxToRem(16);
       text-decoration: none;
       color: $color-black;
+      transition: 0.3s;
       &:hover {
         box-shadow: none;
         transform: translateX(2.5px) translateY(5px);
+        background-color: $color-secondary-1-1;
+        color: $color-white;
       }
     }
     &--add {
@@ -73,9 +77,12 @@
       font-size: pxToRem(16);
       text-decoration: none;
       color: $color-black;
+      transition: 0.3s;
       &:hover {
         box-shadow: none;
         transform: translateX(2.5px) translateY(5px);
+        background-color: $color-secondary-1-1;
+        color: $color-white;
       }
     }
 
@@ -84,9 +91,12 @@
       font-size: pxToRem(16);
       text-decoration: none;
       color: $color-black;
+      transition: 0.3s;
       &:hover {
         box-shadow: none;
         transform: translateX(2.5px) translateY(5px);
+        background-color: #e95959;
+        color: $color-white;
       }
     }
   }

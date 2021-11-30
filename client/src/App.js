@@ -1,5 +1,5 @@
 import { Component } from "react";
-import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 import axios from "axios";
 
 import Header from "./components/Header/Header";
@@ -18,10 +18,35 @@ const host = "http://localhost:8080";
 class App extends Component {
   // Set initial state
   state = {
+    allUsers: [],
     activeUser: [],
     memories: [],
     userMemories: [],
     currentMemory: [],
+  };
+
+  getAllUsers = () => {
+    axios
+      .get(`${host}/profile/`)
+      .then((response) => {
+        this.setState({ allUsers: response.data });
+        console.log("All Users: ", response.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
+  addNewUser = (newUser) => {
+    axios
+      .post(`${host}/profile/`, newUser)
+      .then((response) => {
+        this.getAllUsers();
+        console.log("Add User: ", response.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
   // Get active user by userID
@@ -110,7 +135,18 @@ class App extends Component {
         <Header />
         <Switch>
           <Route exact path="/" component={Landing} />
-          <Route exact path="/login" component={LogInSignUp} />
+          <Route
+            exact
+            path="/profile"
+            render={(routerProps) => (
+              <LogInSignUp
+                allUsers={this.state.allUsers}
+                getAllUsers={this.getAllUsers}
+                addNewUser={this.addNewUser}
+                {...routerProps}
+              />
+            )}
+          />
           <Route
             exact
             path="/profile/:userID"

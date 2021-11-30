@@ -16,7 +16,9 @@ class MemoryOverview extends Component {
       <section className="memoryOverview">
         <article className="memoryOverview__container">
           <div className="memoryOverview__box memoryOverview__box--header">
-            <h1>Welcome Back, {firstName}</h1>
+            <h1>
+              Welcome Back, {firstName} {lastName}
+            </h1>
           </div>
 
           <div className="memoryOverview__wrapper-main">
@@ -26,7 +28,7 @@ class MemoryOverview extends Component {
                 to={`/profile/${userID}/memories`}
                 className="memoryOverview__box memoryOverview__box--view"
               >
-                <h2>VIEW ALL MEMORIES</h2>
+                <h2>View All Memories</h2>
               </Link>
             </div>
 
@@ -39,7 +41,7 @@ class MemoryOverview extends Component {
               </Link>
               <div className="memoryOverview__box"></div>
               <Link
-                to={`/login`}
+                to={`/profile`}
                 className="memoryOverview__box memoryOverview__box--logout"
               >
                 <h2>LOG OUT</h2>

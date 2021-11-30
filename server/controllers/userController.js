@@ -13,6 +13,34 @@ exports.index = (req, res) => {
     });
 };
 
+exports.addNewUser = (req, res) => {
+  knex("user")
+    .insert({
+      username: req.body.username,
+      password: req.body.password,
+      firstName: req.body.firstName,
+      lastName: req.body.lastName,
+      email: req.body.email,
+      dateOfBirth: req.body.dateOfBirth,
+    })
+    .then((data) => {
+      res.status(201).json({
+        message: "This user has been added successfully",
+        data: data,
+      });
+      console.log(req.body);
+      console.log(data);
+    })
+    .catch((err) => {
+      res
+        .status(400)
+        .send(
+          `Ran into an error while trying to insert a new memory to this user: ${err}`
+        );
+      console.log("Didn't work ", req.body);
+    });
+};
+
 exports.getSingleUser = (req, res) => {
   knex("user")
     .where({ userID: req.params.userID })

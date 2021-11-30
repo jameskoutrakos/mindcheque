@@ -29,7 +29,7 @@ function Landing() {
           </p>
         </div>
 
-        <Link to="/login" className="landing__box landing__box--3">
+        <Link to="/profile" className="landing__box landing__box--3">
           <h2 className="landing__box-title landing__box-title--underline-3">
             Create an Account or Log In
           </h2>

@@ -5,6 +5,7 @@
 .editMemory {
   padding: 1rem;
   background-color: $color-body;
+  min-height: 80vh;
   &__container {
     display: flex;
     flex-direction: column;
@@ -77,12 +78,15 @@
 
     &--cancel {
       cursor: pointer;
+      transition: 0.3s;
       @include tablet-breakpoint {
         flex-grow: 1;
       }
       &:hover {
         box-shadow: none;
         transform: translateX(2.5px) translateY(5px);
+        background-color: $color-secondary-1-1;
+        color: $color-white;
       }
     }
 
@@ -93,8 +97,8 @@
     }
 
     &--confirm {
-      background-color: #12a632;
       cursor: pointer;
+      transition: 0.3s;
       @include tablet-breakpoint {
         flex-grow: 1;
         margin-left: 2.5%;
@@ -103,6 +107,8 @@
       &:hover {
         box-shadow: none;
         transform: translateX(2.5px) translateY(5px);
+        background-color: #12a632;
+        color: $color-white;
       }
     }
   }

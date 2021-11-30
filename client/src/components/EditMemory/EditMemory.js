@@ -77,19 +77,6 @@ class EditMemory extends Component {
     console.log("handleChange", e.target.name);
   };
 
-  isFormValid = () => {
-    if (
-      !this.state.title ||
-      !this.state.description ||
-      !this.state.dateOfMemory ||
-      !this.state.feeling ||
-      !this.state.helpfulThought
-    ) {
-      return false;
-    }
-    return true;
-  };
-
   handleCancel = (e) => {
     e.preventDefault();
     this.props.history.goBack();
@@ -100,37 +87,23 @@ class EditMemory extends Component {
     console.log("UserID: " + userID);
     console.log("MemoryID: " + memoryID);
     e.preventDefault();
-    if (this.isFormValid()) {
-      axios
-        .put(`${host}/profile/${userID}/memories/${memoryID}/edit-memory`, {
-          memoryID: memoryID,
-          userID: userID,
-          title: this.state.title,
-          description: this.state.description,
-          dateOfMemory: this.state.dateOfMemory,
-          dateLastUpdated: this.setUpdateDate(),
-          feeling: this.state.feeling,
-          helpfulThought: this.state.helpfulThought,
-          relatedMoment: this.state.relatedMoment,
-        })
-        .then((response) => {
-          console.log(response.data);
-          this.props.history.goBack();
-        });
-    } else {
-      alert("Failed to upload!");
-      console.log(
-        memoryID,
-        userID,
-        this.state.title,
-        this.state.description,
-        this.state.dateOfMemory,
-        this.setUpdateDate(),
-        this.state.feeling,
-        this.state.helpfulThought,
-        this.state.relatedMoment
-      );
-    }
+
+    axios
+      .put(`${host}/profile/${userID}/memories/${memoryID}/edit-memory`, {
+        memoryID: memoryID,
+        userID: userID,
+        title: this.state.title,
+        description: this.state.description,
+        dateOfMemory: this.state.dateOfMemory,
+        dateLastUpdated: this.setUpdateDate(),
+        feeling: this.state.feeling,
+        helpfulThought: this.state.helpfulThought,
+        relatedMoment: this.state.relatedMoment,
+      })
+      .then((response) => {
+        console.log(response.data);
+        this.props.history.goBack();
+      });
   };
 
   render() {
@@ -174,7 +147,7 @@ class EditMemory extends Component {
                   </div>
                 </div>
 
-                <p class="editMemory__subheader">Description</p>
+                <p className="editMemory__subheader">Description</p>
                 <textarea
                   type="text"
                   name="description"

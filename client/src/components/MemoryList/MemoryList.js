@@ -20,7 +20,7 @@ class MemoryList extends Component {
           <div className="memoryList__header-box">
             <h2>{firstName}'s Memories</h2>
           </div>
-          <ul>
+          <ul className="memoryList__ul">
             {this.props.userMemories.map((memory) => {
               return (
                 <Link
@@ -28,19 +28,22 @@ class MemoryList extends Component {
                   to={`/profile/${memory.userID}/memories/${memory.memoryID}`}
                   className="memoryList__li"
                 >
-                  <p>
-                    {memory.title}
-                    <p>{memory.dateOfMemory}</p>
-                  </p>
+                  <div>
+                    <p>{memory.title}</p>
+                    <p>
+                      {memory.dateOfMemory !== undefined &&
+                        memory.dateOfMemory.slice(0, 10)}
+                    </p>
+                  </div>
                   <p> CLICK </p>
                 </Link>
               );
             })}
           </ul>
+          <Link to={`/profile/${userID}`} className="memoryList__box">
+            <h4>Return to Memory Overview</h4>
+          </Link>
         </article>
-        <Link to={`/profile/${userID}`} className="memoryList__box">
-          <h4>RETURN TO MEMORY OVERVIEW</h4>
-        </Link>
       </section>
     );
   }

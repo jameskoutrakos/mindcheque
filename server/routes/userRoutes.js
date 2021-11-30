@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const userController = require("../controllers/userController");
 
-router.route("/").get(userController.index);
+router.route("/").get(userController.index).post(userController.addNewUser);
 
 router.route("/:userID").get(userController.getSingleUser);
 

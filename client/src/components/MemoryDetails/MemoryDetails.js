@@ -3,7 +3,7 @@ import "./MemoryDetails.scss";
 import DeleteMemory from "../DeleteMemory/DeleteMemory";
 
 import { Component } from "react";
-import { Link, Route } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 class MemoryDetails extends Component {
   componentDidMount() {
@@ -14,21 +14,35 @@ class MemoryDetails extends Component {
       this.props.match.params.memoryID
     );
   }
+
+  // toggleRelatedClass = () => {
+  //   if (this.props.getCurrentMemory.relatedMoment === "") {
+  //     return "memoryDetails__box memoryDetails__box--related memoryDetails__box--related--hidden";
+  //   } else if (this.props.getCurrentMemory.relatedMoment == "") {
+  //     return "memoryDetails__box memoryDetails__box--related";
+  //   }
+  // };
+
+  toggleRelatedClass = (isRelatedMoment) => {
+    return isRelatedMoment
+      ? "memoryDetails__box memoryDetails__box--related"
+      : "memoryDetails__box memoryDetails__box--related memoryDetails__box--related--hidden";
+  };
+
   render() {
-    const {
-      memoryID,
-      userID,
-      title,
-      description,
-      dateCreated,
-      dateLastUpdated,
-      feeling,
-      relatedMoment,
-    } = this.props.currentMemory;
+    const { memoryID, userID, title, description, feeling, relatedMoment } =
+      this.props.currentMemory;
 
     const dateOfMemory = this.props.currentMemory.dateOfMemory;
     const helpfulThought = this.props.currentMemory.helpfulThought;
 
+    const helpfulText = () => {
+      if (helpfulThought === 1) {
+        return "Yes, this is a helpful memory for me.";
+      } else {
+        return "No, this memory brings back some uncomfortable thoughts.";
+      }
+    };
     return (
       <section className="memoryDetails">
         <article className="memoryDetails__container">
@@ -37,7 +51,9 @@ class MemoryDetails extends Component {
               <h1 className="memoryDetails__header">{title}</h1>
               <div className="memoryDetails__date-wrapper">
                 <p className="memoryDetails__subheader">Date of Memory</p>
-                <p className="memoryDetails__date-text">{dateOfMemory}</p>
+                <p className="memoryDetails__date-text">
+                  {dateOfMemory !== undefined && dateOfMemory.slice(0, 10)}
+                </p>
               </div>
             </div>
             <p className="memoryDetails__subheader">Description</p>
@@ -50,10 +66,10 @@ class MemoryDetails extends Component {
             <p className="memoryDetails__body">{feeling}</p>
           </div>
           <div className="memoryDetails__box memoryDetails__box--helpful">
-            <p className="memoryDetails__subheader">Helpful Thought?</p>
-            <p className="memoryDetails__body">{helpfulThought}</p>
+            <p className="memoryDetails__subheader">Helpful Memory?</p>
+            <p className="memoryDetails__body">{helpfulText()}</p>
           </div>
-          <div className="memoryDetails__box memoryDetails__box--related">
+          <div className={this.toggleRelatedClass(relatedMoment)}>
             <p className="memoryDetails__subheader">Related Thought</p>
             <p className="memoryDetails__body">{relatedMoment}</p>
           </div>

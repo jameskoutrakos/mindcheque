@@ -3,7 +3,7 @@ import "./DeleteMemory.scss";
 
 function Modal({ modal, closeModal, props }) {
   console.log(props);
-  const { userID, memoryID, title, history, deleteMemoryByUser } = props;
+  const { userID, memoryID, history, deleteMemoryByUser } = props;
   const handleClick = (e) => {
     e.preventDefault();
     deleteMemoryByUser(userID, memoryID);
@@ -18,9 +18,24 @@ function Modal({ modal, closeModal, props }) {
       }
     `}
     >
-      <h4>Delete {title}?</h4>
-      <button onClick={closeModal}>Cancel</button>
-      <button onClick={handleClick}>Delete</button>
+      <article className="deleteMemory">
+        <div className="deleteMemory__container">
+          <div className="deleteMemory__button-container">
+            <p
+              className="deleteMemory__button deleteMemory__button--cancel"
+              onClick={closeModal}
+            >
+              Cancel
+            </p>
+            <p
+              className="deleteMemory__button deleteMemory__button--delete"
+              onClick={handleClick}
+            >
+              Confirm Delete
+            </p>
+          </div>
+        </div>
+      </article>
     </div>
   );
 }
@@ -45,7 +60,7 @@ class DeleteMemory extends Component {
 
   render() {
     return (
-      <div>
+      <>
         <p
           type="button"
           className="deleteMemory__prompt"
@@ -58,7 +73,7 @@ class DeleteMemory extends Component {
           closeModal={this.closeModal}
           props={this.props}
         />
-      </div>
+      </>
     );
   }
 }

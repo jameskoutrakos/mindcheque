@@ -25,7 +25,7 @@ class AddNewMemory extends Component {
     return (
       <section className="addNewMemory">
         <article className="addNewMemory__container">
-          <h1>AddNewMemory</h1>
+          <h1>Let's make a new memory</h1>
           <form onSubmit={this.addMemory}>
             <div className="addNewMemory__form">
               <div className="addNewMemory__box addNewMemory__box--description">
@@ -38,7 +38,7 @@ class AddNewMemory extends Component {
                   />
 
                   <div className="addNewMemory__date-wrapper">
-                    <p class="addNewMemory__subheader">Date Of Memory</p>
+                    <p className="addNewMemory__subheader">Date Of Memory</p>
                     <input
                       type="date"
                       className="addNewMemory__date-text"
@@ -48,7 +48,7 @@ class AddNewMemory extends Component {
                   </div>
                 </div>
 
-                <p class="addNewMemory__subheader">Description</p>
+                <p className="addNewMemory__subheader">Description</p>
                 <textarea
                   type="text"
                   name="description"
@@ -57,7 +57,7 @@ class AddNewMemory extends Component {
               </div>
 
               <div className="addNewMemory__box addNewMemory__box--feeling">
-                <p class="addNewMemory__subheader">
+                <p className="addNewMemory__subheader">
                   How did this make memory make you feel?
                 </p>
                 <select id="feeling" name="feeling">
@@ -71,7 +71,7 @@ class AddNewMemory extends Component {
               </div>
 
               <div className="addNewMemory__box addNewMemory__box--helpful">
-                <p class="addNewMemory__subheader">
+                <p className="addNewMemory__subheader">
                   Is this a helpful thought? Will is it a positive or negative
                   thought (Yes or No)?
                 </p>
@@ -82,7 +82,7 @@ class AddNewMemory extends Component {
               </div>
 
               <div className="addNewMemory__box addNewMemory__box--related">
-                <p class="addNewMemory__subheader">Related Moment</p>
+                <p className="addNewMemory__subheader">Related Moment</p>
                 <input
                   type="text"
                   name="relatedMoment"
