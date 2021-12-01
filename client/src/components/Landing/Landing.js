@@ -23,9 +23,10 @@ function Landing() {
           </div>
 
           <p className="landing__box-body">
-            Home to your very own memory bank, one that can store your thoughts
-            and memories for you to look back on for days, months, and years to
-            come!
+            A website designed and curated with the user in mind, a tool for
+            those who sometimes feel anxious, or want a way to track their
+            day-to-day. MindCheque is a resource that can be used to depoist
+            your thoughts and memories into your very own memory bank.
           </p>
         </div>
 
@@ -56,10 +57,9 @@ function Landing() {
             />
           </div>
           <p className="landing__box-body">
-            by banking these memories like you’re banking cheques. Document the
-            good things that happen, every small win, and then return to these
-            memories whenever you feel down or need to remind yourself that you
-            can do it!
+            Start now by creating an account! It's really easy to do too. Simply
+            click on this box and you will be able to create a new account or
+            log in to your existing account.
           </p>
         </Link>
       </article>
