@@ -19,7 +19,7 @@ function Header() {
             HOME
           </Link>
           <Link to="/profile" className="header__link">
-            PROFILE
+            ACCOUNT
           </Link>
         </nav>
       </article>

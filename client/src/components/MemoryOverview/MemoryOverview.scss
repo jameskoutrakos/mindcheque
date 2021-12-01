@@ -68,11 +68,13 @@
       text-decoration: none;
       color: $color-black;
       transition: 0.3s;
-      &:hover {
-        box-shadow: none;
-        transform: translateX(2.5px) translateY(5px);
-        background-color: $color-secondary-1-1;
-        color: $color-white;
+      &--memory {
+        &:hover {
+          box-shadow: none;
+          transform: translateX(2.5px) translateY(5px);
+          background-color: $color-secondary-1-1;
+          color: $color-white;
+        }
       }
     }
     &--view {
@@ -124,15 +126,78 @@
     width: 90%;
     font-size: pxToRem(20);
     border-top: 3px solid $color-body;
-    border-bottom: 1px solid $color-footer;
+    border-bottom: 3px dotted $color-body;
     margin: 1rem 0;
     padding: 1rem 0;
   }
 
   &__body {
     margin: 0.5rem 0;
+
     &--bold {
       font-weight: 700;
+      text-decoration: none;
     }
+
+    &--link {
+      font-weight: 700;
+      text-decoration: none;
+      color: $color-black;
+      transition: 0.15s;
+      &:hover {
+        color: $color-secondary-1-1;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__title-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__img {
+    width: 2rem;
+    height: 2rem;
+    transition: 0.15s;
+    &--smile {
+      background-image: url("../../assets/icons/smile-black.svg");
+    }
+    &--memory {
+      background-image: url("../../assets/icons/memory-black.svg");
+      &:hover {
+        background-image: url("../../assets/icons/memory-white.svg");
+      }
+    }
+    &--memory-no-hover {
+      background-image: url("../../assets/icons/memory-black.svg");
+    }
+    &--view {
+      background-image: url("../../assets/icons/list-black.svg");
+      &:hover {
+        background-image: url("../../assets/icons/list-white.svg");
+      }
+    }
+    &--add {
+      background-image: url("../../assets/icons/add-black.svg");
+      &:hover {
+        background-image: url("../../assets/icons/add-white.svg");
+      }
+    }
+    &--logout {
+      background-image: url("../../assets/icons/logout-black.svg");
+      &:hover {
+        background-image: url("../../assets/icons/logout-white.svg");
+      }
+    }
+  }
+
+  &__days {
+    font-size: pxToRem(24);
+    border-top: 3px solid $color-body;
+    border-bottom: 3px dotted $color-body;
+    margin: 1rem 0;
+    padding: 1rem 0;
+    text-align: left;
   }
 }

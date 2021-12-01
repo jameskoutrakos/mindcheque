@@ -10,8 +10,8 @@
     flex-direction: column;
     align-items: center;
     margin: 0 auto;
-    // padding: pxToRem(30.39) pxToRem(16) pxToRem(88);
     width: 100%;
+    padding: 1rem 0 0;
     @include tablet-breakpoint {
       flex-direction: row;
       justify-content: space-between;
@@ -24,6 +24,10 @@
 
   &__logo-wrapper {
     max-width: 15rem;
+    transition: 0.3s;
+    &:hover {
+      max-width: 16rem;
+    }
   }
 
   &__logo {
@@ -49,13 +53,15 @@
   &__link {
     text-decoration: none;
     color: $color-white;
-    padding: 1rem;
+    padding: 0.5rem;
+    margin: 0 0.5rem;
     transition: 0.3s;
     &:hover {
       background-color: $color-body;
       border-radius: 5px;
     }
     @include tablet-breakpoint {
+      padding: 1rem;
       font-size: 1.5rem;
     }
     @include desktop-breakpoint {

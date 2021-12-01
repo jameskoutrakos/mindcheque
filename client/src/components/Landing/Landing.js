@@ -1,15 +1,27 @@
 import { Link } from "react-router-dom";
 import "./Landing.scss";
 
+import smileBlack from "../../assets/icons/smile-black.svg";
+import memoryBlack from "../../assets/icons/memory-black.svg";
+import nextBlack from "../../assets/icons/next-black.svg";
+
 function Landing() {
   return (
     <section className="landing">
       <article className="landing__container">
         <div className="landing__box landing__box--1">
-          <h2 className="landing__box-title landing__box-title--underline-1">
-            Welcome to{" "}
-            <span className="landing__box-title--bold">MindCheque</span>
-          </h2>
+          <div className="landing__title-wrapper landing__box-title--underline-1">
+            <h2 className="landing__box-title">
+              Welcome to{" "}
+              <span className="landing__box-title--bold">MindCheque</span>
+            </h2>
+            <img
+              className="landing__img"
+              src={smileBlack}
+              alt="a smiley face icon"
+            />
+          </div>
+
           <p className="landing__box-body">
             Home to your very own memory bank, one that can store your thoughts
             and memories for you to look back on for days, months, and years to
@@ -18,9 +30,14 @@ function Landing() {
         </div>
 
         <div className="landing__box landing__box--2">
-          <h2 className="landing__box-title landing__box-title--underline-2">
-            Invest in yourself
-          </h2>
+          <div className="landing__title-wrapper landing__box-title--underline-2">
+            <h2 className="landing__box-title">Invest in yourself</h2>
+            <img
+              className="landing__img"
+              src={memoryBlack}
+              alt="a memory icon"
+            />
+          </div>
           <p className="landing__box-body">
             by banking these memories like you’re banking cheques. Document the
             good things that happen, every small win, and then return to these
@@ -30,9 +47,14 @@ function Landing() {
         </div>
 
         <Link to="/profile" className="landing__box landing__box--3">
-          <h2 className="landing__box-title landing__box-title--underline-3">
-            Create an Account or Log In
-          </h2>
+          <div className="landing__title-wrapper landing__box-title--underline-3">
+            <h2 className="landing__box-title">Create an Account or Log In</h2>
+            <img
+              className="landing__img landing__img--chevron"
+              src={nextBlack}
+              alt="the next icon"
+            />
+          </div>
           <p className="landing__box-body">
             by banking these memories like you’re banking cheques. Document the
             good things that happen, every small win, and then return to these

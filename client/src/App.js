@@ -50,6 +50,9 @@ class App extends Component {
       })
       .catch((error) => {
         console.log(error);
+        alert(
+          "You may have missed something in the Sign Up form, please check that every field is populated correctly."
+        );
       });
   };
 

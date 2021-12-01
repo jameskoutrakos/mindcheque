@@ -70,6 +70,14 @@ class LogInSignUp extends Component {
   //   });
   // };
 
+  // Confirm Password Input
+  // <p>Confirm Password</p>
+  // <input
+  //   type="password"
+  //   name="confirmPassword"
+  //   placeholder="Confirm the password"
+  // />
+
   render() {
     return (
       <section className="logInSignUp">
@@ -147,12 +155,6 @@ class LogInSignUp extends Component {
                 type="password"
                 name="password"
                 placeholder="Enter a password"
-              />
-              <p>Confirm Password</p>
-              <input
-                type="password"
-                name="confirmPassword"
-                placeholder="Confirm the password"
               />
               <p>Date of Birth</p>
               <input type="date" name="dob" />
