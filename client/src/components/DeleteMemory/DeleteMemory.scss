@@ -3,18 +3,27 @@
 @use "../../styles/partials/type-kit" as *;
 
 .deleteMemory {
+  height: 100%;
+  width: 100%;
+  display: flex;
   &__title {
     color: $color-white;
     font-size: 1rem;
   }
   &__button-container {
     display: flex;
-    margin: 1rem auto;
+    margin: 0 auto;
+    height: 100%;
+    width: 100%;
   }
   &__button {
     width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: $color-white;
     text-align: center;
+    vertical-align: middle;
     &--cancel {
       background-color: $color-secondary-1-1;
     }
@@ -28,7 +37,8 @@
 }
 
 .overlay {
-  position: fixed;
+  position: absolute;
+  overflow: hidden;
   left: 0;
   top: 0;
   right: 0;

@@ -13,27 +13,23 @@ function Modal({ modal, closeModal, props }) {
 
   return (
     <div
-      className={`overlay ${
-        modal ? "overlay overlay--visible" : "overlay overlay--hidden"
-      }
+      className={`overlay ${modal ? "overlay--visible" : "overlay--hidden"}
     `}
     >
       <article className="deleteMemory">
-        <div className="deleteMemory__container">
-          <div className="deleteMemory__button-container">
-            <p
-              className="deleteMemory__button deleteMemory__button--cancel"
-              onClick={closeModal}
-            >
-              Cancel
-            </p>
-            <p
-              className="deleteMemory__button deleteMemory__button--delete"
-              onClick={handleClick}
-            >
-              Confirm Delete
-            </p>
-          </div>
+        <div className="deleteMemory__button-container">
+          <p
+            className="deleteMemory__button deleteMemory__button--cancel"
+            onClick={closeModal}
+          >
+            Cancel
+          </p>
+          <p
+            className="deleteMemory__button deleteMemory__button--delete"
+            onClick={handleClick}
+          >
+            Confirm Delete
+          </p>
         </div>
       </article>
     </div>
