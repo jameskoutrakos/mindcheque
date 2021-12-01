@@ -14,6 +14,7 @@
     border-radius: 25px;
     background-color: $color-mercury;
     width: 100%;
+    box-shadow: 2.5px 5px $color-box-shadow-black;
     @include tablet-breakpoint {
       max-width: $desktop-maxwidth;
       flex-direction: row;

@@ -25,7 +25,7 @@ class AddNewMemory extends Component {
     return (
       <section className="addNewMemory">
         <article className="addNewMemory__container">
-          <h1>Let's make a new memory</h1>
+          <h1>Let's make a new memory!</h1>
           <form onSubmit={this.addMemory}>
             <div className="addNewMemory__form">
               <div className="addNewMemory__box addNewMemory__box--description">
@@ -34,7 +34,7 @@ class AddNewMemory extends Component {
                     type="text"
                     className="addNewMemory__header addNewMemory__input"
                     name="title"
-                    placeholder="Write a title for your memory here"
+                    placeholder="Write a title for your memory here."
                   />
 
                   <div className="addNewMemory__date-wrapper">
@@ -77,8 +77,7 @@ class AddNewMemory extends Component {
 
               <div className="addNewMemory__box addNewMemory__box--helpful">
                 <p className="addNewMemory__input-label">
-                  Is this a helpful thought? Will is it a positive or negative
-                  thought (Yes or No)?
+                  Is this a helpful memory?
                 </p>
                 <select
                   className="addNewMemory__input"
@@ -96,7 +95,7 @@ class AddNewMemory extends Component {
                   className="addNewMemory__input"
                   type="text"
                   name="relatedMoment"
-                  placeholder="What reminds you of this moment? A song? A place? A person?"
+                  placeholder="What reminds you of this moment? A song? A place? A person? Feel free to leave this spot blank if it is not applicable to this memory."
                 />
               </div>
             </div>
@@ -105,10 +104,10 @@ class AddNewMemory extends Component {
                 to={`/profile/${userID}/`}
                 className="addNewMemory__box addNewMemory__box--cancel"
               >
-                <p>Cancel</p>
+                <p className="addNewMemory__body">Cancel</p>
               </Link>
               <button className="addNewMemory__box addNewMemory__box--confirm">
-                <p>Add Memory</p>
+                <p className="addNewMemory__body">Add Memory</p>
               </button>
             </div>
           </form>

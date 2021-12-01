@@ -95,7 +95,7 @@ class LogInSignUp extends Component {
         </article> */}
 
         <article className="logInSignUp__container">
-          <h2>Returning User</h2>
+          <h2 className="logInSignUp__title">Returning User</h2>
           <form onSubmit={this.logInUser}>
             <div className="logIn__form">
               <p className="logInSignUp__input-label">Username</p>
@@ -125,7 +125,7 @@ class LogInSignUp extends Component {
         </article>
 
         <article className="logInSignUp__container">
-          <h2>Create an Account</h2>
+          <h2 className="logInSignUp__title">Create an Account</h2>
           <form onSubmit={this.signUpUser}>
             <div className="signUp__form">
               <p className="logInSignUp__input-label">First Name</p>

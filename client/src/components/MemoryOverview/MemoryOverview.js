@@ -52,7 +52,7 @@ class MemoryOverview extends Component {
             <div className="memoryOverview__box memoryOverview__box--header">
               <div className="memoryOverview__title-wrapper">
                 <h1>
-                  Welcome Back, {firstName} {lastName}
+                  Welcome back, {firstName} {lastName}
                 </h1>
                 <div className="memoryOverview__img memoryOverview__img--smile"></div>
               </div>
@@ -140,7 +140,7 @@ class MemoryOverview extends Component {
             <div className="memoryOverview__box memoryOverview__box--header">
               <div className="memoryOverview__title-wrapper">
                 <h1>
-                  Welcome Back, {firstName} {lastName}
+                  Welcome, {firstName} {lastName}
                 </h1>
                 <div className="memoryOverview__img memoryOverview__img--smile"></div>
               </div>

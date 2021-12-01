@@ -4,6 +4,7 @@ import { Component } from "react";
 import { Link } from "react-router-dom";
 
 import chevronBlack from "../../assets/icons/next-black.svg";
+import arrowBlack from "../../assets/icons/arrow-black.svg";
 
 class MemoryList extends Component {
   componentDidMount() {
@@ -31,8 +32,8 @@ class MemoryList extends Component {
                   className="memoryList__li"
                 >
                   <div>
-                    <p>{memory.title}</p>
-                    <p>
+                    <p className="memoryList__title">{memory.title}</p>
+                    <p className="memoryList__date">
                       {memory.dateOfMemory !== undefined &&
                         memory.dateOfMemory.slice(0, 10)}
                     </p>
@@ -47,7 +48,8 @@ class MemoryList extends Component {
             })}
           </ul>
           <Link to={`/profile/${userID}`} className="memoryList__box">
-            <h4>Return to Memory Overview</h4>
+            <div className="memoryList__img memoryList__img--back-arrow"></div>
+            <p className="memoryList__return-text">Return to Memory Overview</p>
           </Link>
         </article>
       </section>

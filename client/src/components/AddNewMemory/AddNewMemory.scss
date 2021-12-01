@@ -14,6 +14,7 @@
     border-radius: 25px;
     background-color: $color-mercury;
     width: 100%;
+    box-shadow: 2.5px 5px $color-box-shadow-black;
     @include tablet-breakpoint {
       max-width: $desktop-maxwidth;
     }
@@ -79,6 +80,9 @@
     &--cancel {
       cursor: pointer;
       transition: 0.3s;
+      text-decoration: none;
+      border: none;
+      color: $color-black;
       @include tablet-breakpoint {
         flex-grow: 1;
         margin-right: 25%;
@@ -94,6 +98,9 @@
     &--confirm {
       cursor: pointer;
       transition: 0.3s;
+      text-decoration: none;
+      border: none;
+      color: $color-black;
       @include tablet-breakpoint {
         flex-grow: 1;
         margin-left: 25%;
@@ -101,7 +108,7 @@
       &:hover {
         box-shadow: none;
         transform: translateX(2.5px) translateY(5px);
-        background-color: #12a632;
+        background-color: $color-footer;
         color: $color-white;
       }
     }

@@ -12,9 +12,10 @@
     margin: 0 auto 1rem;
     padding: 1rem;
     border-radius: 25px;
-    background-color: $color-mercury;
+    background-color: $color-white;
     width: 100%;
     box-shadow: 2.5px 5px $color-box-shadow-black;
+    // border: 5px solid $color-white;
     @include tablet-breakpoint {
       max-width: $desktop-maxwidth;
     }
@@ -49,10 +50,19 @@
     }
     &--submit {
       margin-top: 1.5rem;
+      background-color: $color-mercury;
+      font-weight: 700;
       &:hover {
         background-color: $color-secondary-1-1;
       }
     }
+  }
+
+  &__title {
+    font-size: 1.5rem;
+    border-bottom: 2px solid $color-body;
+    padding-bottom: 0.5rem;
+    border-radius: 2px;
   }
 
   &__input-label {
@@ -63,6 +73,7 @@
   &__input {
     border: none;
     border-bottom: 2px solid $color-header;
+    background-color: $color-mercury;
   }
 }
 

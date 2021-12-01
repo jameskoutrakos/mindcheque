@@ -77,7 +77,7 @@ class MemoryDetails extends Component {
             to={`/profile/${userID}/memories`}
             className="memoryDetails__box memoryDetails__box--goback"
           >
-            <p>GO BACK</p>
+            <p>Return To Memory List</p>
           </Link>
           <Link
             to={`/profile/${userID}/memories/${memoryID}/edit-memory`}

@@ -131,7 +131,7 @@ class EditMemory extends Component {
                     name="title"
                     value={title}
                     onChange={(e) => this.handleChange(e)}
-                    placeholder="Please enter a memory title"
+                    placeholder="Write a title for your memory here."
                   />
 
                   <div className="editMemory__date-wrapper">
@@ -154,7 +154,7 @@ class EditMemory extends Component {
                   name="description"
                   value={description}
                   onChange={(e) => this.handleChange(e)}
-                  placeholder="Please enter a description of your memory"
+                  placeholder="Write a description of your memory, how did you feel? What happened?"
                 ></textarea>
               </div>
 
@@ -179,7 +179,9 @@ class EditMemory extends Component {
               </div>
 
               <div className="editMemory__box editMemory__box--helpful">
-                <p className="editMemory__input-label">Helpful Thought?</p>
+                <p className="editMemory__input-label">
+                  Is this a helpful memory?
+                </p>
                 <select
                   className="editMemory__input"
                   id="helpfulThought"
@@ -200,7 +202,7 @@ class EditMemory extends Component {
                   name="relatedMoment"
                   value={relatedMoment}
                   onChange={(e) => this.handleChange(e)}
-                  placeholder="Write something here that reminds you of this moment (i.e. a song, a place, or a person)"
+                  placeholder="What reminds you of this moment? A song? A place? A person? Feel free to leave this spot blank if it is not applicable to this memory."
                 />
               </div>
             </div>
@@ -210,14 +212,14 @@ class EditMemory extends Component {
                 onClick={this.handleCancel}
                 className="editMemory__box editMemory__box--cancel"
               >
-                <p>Cancel</p>
+                <p className="editMemory__call-to-action">Cancel Changes</p>
               </div>
 
               <div
                 onClick={this.handleSubmit}
                 className="editMemory__box editMemory__box--confirm"
               >
-                <p>Save</p>
+                <p className="editMemory__call-to-action">Save Changes</p>
               </div>
 
               <div className="editMemory__box editMemory__box--update">

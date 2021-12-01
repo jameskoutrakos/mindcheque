@@ -69,12 +69,15 @@
 
     &--underline-1 {
       border-bottom: 3px solid $color-header;
+      border-radius: 3px;
     }
     &--underline-2 {
       border-bottom: 3px solid $color-body;
+      border-radius: 3px;
     }
     &--underline-3 {
       border-bottom: 3px solid $color-footer;
+      border-radius: 3px;
     }
   }
 
