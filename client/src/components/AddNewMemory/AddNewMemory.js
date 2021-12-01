@@ -32,24 +32,25 @@ class AddNewMemory extends Component {
                 <div className="addNewMemory__box-header-wrapper">
                   <input
                     type="text"
-                    className="addNewMemory__header"
+                    className="addNewMemory__header addNewMemory__input"
                     name="title"
                     placeholder="Write a title for your memory here"
                   />
 
                   <div className="addNewMemory__date-wrapper">
-                    <p className="addNewMemory__subheader">Date Of Memory</p>
+                    <p className="addNewMemory__input-label">Date Of Memory</p>
                     <input
                       type="date"
-                      className="addNewMemory__date-text"
+                      className="addNewMemory__date-text addNewMemory__input"
                       name="dateOfMemory"
                       placeholder="The date this memory occured (ex: 2012-02-12)"
                     />
                   </div>
                 </div>
 
-                <p className="addNewMemory__subheader">Description</p>
+                <p className="addNewMemory__input-label">Description</p>
                 <textarea
+                  className="addNewMemory__input"
                   type="text"
                   name="description"
                   placeholder="Write a description of your memory, how did you feel? What happened?"
@@ -57,10 +58,14 @@ class AddNewMemory extends Component {
               </div>
 
               <div className="addNewMemory__box addNewMemory__box--feeling">
-                <p className="addNewMemory__subheader">
+                <p className="addNewMemory__input-label">
                   How did this make memory make you feel?
                 </p>
-                <select id="feeling" name="feeling">
+                <select
+                  className="addNewMemory__input"
+                  id="feeling"
+                  name="feeling"
+                >
                   <option value="Proud">Proud</option>
                   <option value="Excited">Excited</option>
                   <option value="Happy">Happy</option>
@@ -71,19 +76,24 @@ class AddNewMemory extends Component {
               </div>
 
               <div className="addNewMemory__box addNewMemory__box--helpful">
-                <p className="addNewMemory__subheader">
+                <p className="addNewMemory__input-label">
                   Is this a helpful thought? Will is it a positive or negative
                   thought (Yes or No)?
                 </p>
-                <select id="helpfulThought" name="helpfulThought">
+                <select
+                  className="addNewMemory__input"
+                  id="helpfulThought"
+                  name="helpfulThought"
+                >
                   <option value="1">Yes</option>
                   <option value="0">No</option>
                 </select>
               </div>
 
               <div className="addNewMemory__box addNewMemory__box--related">
-                <p className="addNewMemory__subheader">Related Moment</p>
+                <p className="addNewMemory__input-label">Related Moment</p>
                 <input
+                  className="addNewMemory__input"
                   type="text"
                   name="relatedMoment"
                   placeholder="What reminds you of this moment? A song? A place? A person?"

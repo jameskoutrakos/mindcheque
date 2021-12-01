@@ -3,6 +3,8 @@ import "./MemoryList.scss";
 import { Component } from "react";
 import { Link } from "react-router-dom";
 
+import chevronBlack from "../../assets/icons/next-black.svg";
+
 class MemoryList extends Component {
   componentDidMount() {
     const userID = this.props.match.params.userID;
@@ -35,7 +37,11 @@ class MemoryList extends Component {
                         memory.dateOfMemory.slice(0, 10)}
                     </p>
                   </div>
-                  <p> CLICK </p>
+                  <img
+                    className="memoryList__img"
+                    src={chevronBlack}
+                    alt={`select here to see the memory titled ${memory.title}`}
+                  />
                 </Link>
               );
             })}

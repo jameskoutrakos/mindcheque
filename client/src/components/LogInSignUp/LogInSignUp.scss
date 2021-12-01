@@ -49,9 +49,19 @@
     &--submit {
       margin-top: 1.5rem;
       &:hover {
-        background-color: #12a632;
+        background-color: $color-secondary-1-1;
       }
     }
+  }
+
+  &__input-label {
+    font-weight: 600;
+    padding: 0.5rem 0;
+  }
+
+  &__input {
+    border: none;
+    border-bottom: 2px solid $color-header;
   }
 }
 

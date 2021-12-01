@@ -98,14 +98,16 @@ class LogInSignUp extends Component {
           <h2>Returning User</h2>
           <form onSubmit={this.logInUser}>
             <div className="logIn__form">
-              <p>Username</p>
+              <p className="logInSignUp__input-label">Username</p>
               <input
+                className="logInSignUp__input"
                 type="text"
                 name="usernameLogIn"
                 placeholder="Enter your username"
               />
-              <p>Password</p>
+              <p className="logInSignUp__input-label">Password</p>
               <input
+                className="logInSignUp__input"
                 type="password"
                 name="passwordLogIn"
                 placeholder="Enter your password"
@@ -126,38 +128,45 @@ class LogInSignUp extends Component {
           <h2>Create an Account</h2>
           <form onSubmit={this.signUpUser}>
             <div className="signUp__form">
-              <p>First Name</p>
+              <p className="logInSignUp__input-label">First Name</p>
               <input
+                className="logInSignUp__input"
                 type="text"
                 name="firstName"
-                placeholder="Enter your email address"
+                placeholder="Enter your first name"
               />
-              <p>Last Name</p>
+              <p className="logInSignUp__input-label">Last Name</p>
               <input
+                className="logInSignUp__input"
                 type="text"
                 name="lastName"
-                placeholder="Enter your email address"
+                placeholder="Enter your last name"
               />
-              <p>Email</p>
+              <p className="logInSignUp__input-label">Email</p>
               <input
+                className="logInSignUp__input"
                 type="email"
                 name="email"
                 placeholder="Enter your email address"
               />
-              <p>Username</p>
+              <p className="logInSignUp__input-label" p>
+                Username
+              </p>
               <input
+                className="logInSignUp__input"
                 type="text"
                 name="username"
                 placeholder="Enter a new user name"
               />
-              <p>Password</p>
+              <p className="logInSignUp__input-label">Password</p>
               <input
+                className="logInSignUp__input"
                 type="password"
                 name="password"
                 placeholder="Enter a password"
               />
-              <p>Date of Birth</p>
-              <input type="date" name="dob" />
+              <p className="logInSignUp__input-label">Date of Birth</p>
+              <input className="logInSignUp__input" type="date" name="dob" />
               <button className="logInSignUp__box logInSignUp__box--submit">
                 Create Account
               </button>

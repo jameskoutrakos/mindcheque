@@ -126,7 +126,7 @@ class EditMemory extends Component {
               <div className="editMemory__box editMemory__box--description">
                 <div className="editMemory__box-header-wrapper">
                   <input
-                    className="editMemory__header"
+                    className="editMemory__header editMemory__input"
                     type="text"
                     name="title"
                     value={title}
@@ -135,9 +135,9 @@ class EditMemory extends Component {
                   />
 
                   <div className="editMemory__date-wrapper">
-                    <p className="editMemory__subheader">Date of Memory</p>
+                    <p className="editMemory__input-label">Date of Memory</p>
                     <input
-                      className="editMemory__date-text"
+                      className="editMemory__date-text editMemory__input"
                       type="date"
                       name="dateOfMemory"
                       value={dateOfMemory}
@@ -147,8 +147,9 @@ class EditMemory extends Component {
                   </div>
                 </div>
 
-                <p className="editMemory__subheader">Description</p>
+                <p className="editMemory__input-label">Description</p>
                 <textarea
+                  className="editMemory__input"
                   type="text"
                   name="description"
                   value={description}
@@ -158,10 +159,11 @@ class EditMemory extends Component {
               </div>
 
               <div className="editMemory__box editMemory__box--feeling">
-                <p className="editMemory__subheader">
+                <p className="editMemory__input-label">
                   Select a feeling that best describes this memory:
                 </p>
                 <select
+                  className="editMemory__input"
                   id="feeling"
                   name="feeling"
                   value={feeling}
@@ -177,8 +179,9 @@ class EditMemory extends Component {
               </div>
 
               <div className="editMemory__box editMemory__box--helpful">
-                <p className="editMemory__subheader">Helpful Thought?</p>
+                <p className="editMemory__input-label">Helpful Thought?</p>
                 <select
+                  className="editMemory__input"
                   id="helpfulThought"
                   name="helpfulThought"
                   value={helpfulThought}
@@ -190,8 +193,9 @@ class EditMemory extends Component {
               </div>
 
               <div className="editMemory__box editMemory__box--related">
-                <p className="editMemory__subheader">Related Moment</p>
+                <p className="editMemory__input-label">Related Moment</p>
                 <input
+                  className="editMemory__input"
                   type="text"
                   name="relatedMoment"
                   value={relatedMoment}
