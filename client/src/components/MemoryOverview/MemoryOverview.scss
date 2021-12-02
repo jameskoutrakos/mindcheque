@@ -74,7 +74,7 @@
         &:hover {
           box-shadow: none;
           transform: translateX(2.5px) translateY(5px);
-          background-color: $color-button-hover;
+          background-color: $color-input-border;
           color: $color-white;
         }
       }

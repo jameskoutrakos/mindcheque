@@ -45,25 +45,30 @@
     &:hover {
       box-shadow: none;
       transform: translateX(2.5px) translateY(5px);
-      background-color: $color-button-hover;
-      color: $color-white;
+      background-color: $color-login-hover;
     }
     &--submit {
       margin-top: 1.5rem;
-      background-color: $color-button-default;
+      background-color: $color-login-default;
       font-weight: 700;
       &:hover {
-        background-color: $color-button-hover;
+        background-color: $color-login-hover;
+        // color: $color-white;
       }
     }
   }
 
   &__title {
     font-size: 1.5rem;
-    border-bottom: 2px solid $color-body;
-    padding-bottom: 0.5rem;
-    margin: 0 0.5rem;
-    border-radius: 2px;
+    // padding-bottom: 0.5rem;
+    // margin: 0 0.5rem;
+    // border-radius: 2px;
+    background-color: $color-box;
+    color: $color-black;
+    border-radius: 26px;
+    margin: 0.5rem 0;
+    // box-shadow: 2.5px 5px $color-box-shadow-black;
+    padding: 1rem;
   }
 
   &__input-label {

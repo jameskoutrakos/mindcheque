@@ -58,7 +58,8 @@
     transition: 0.3s;
     border-radius: 50px;
     &:hover {
-      background-color: $color-body;
+      color: $color-black;
+      background-color: $color-nav-link;
     }
     @include tablet-breakpoint {
       padding: 1rem;
