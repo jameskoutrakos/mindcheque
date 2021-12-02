@@ -81,6 +81,7 @@
       justify-content: center;
       cursor: pointer;
       transition: 0.3s;
+      color: $color-black;
       @include tablet-breakpoint {
         flex-grow: 1;
       }
@@ -102,6 +103,8 @@
       justify-content: center;
       cursor: pointer;
       transition: 0.3s;
+      background-color: $color-primary-0;
+      color: $color-white;
       @include tablet-breakpoint {
         flex-grow: 1;
         margin-left: 2.5%;
@@ -110,8 +113,7 @@
       &:hover {
         box-shadow: none;
         transform: translateX(2.5px) translateY(5px);
-        background-color: $color-footer;
-        color: $color-white;
+        background-color: darken($color: $color-primary-0, $amount: 15);
       }
     }
   }

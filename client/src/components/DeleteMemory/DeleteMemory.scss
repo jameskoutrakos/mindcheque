@@ -26,9 +26,17 @@
     vertical-align: middle;
     &--cancel {
       background-color: $color-secondary-1-1;
+      transition: 0.3s;
+      &:hover {
+        background-color: darken($color: $color-secondary-1-1, $amount: 15);
+      }
     }
     &--delete {
       background-color: #e95959;
+      transition: 0.3s;
+      &:hover {
+        background-color: darken($color: #e95959, $amount: 15);
+      }
     }
   }
   &__prompt {

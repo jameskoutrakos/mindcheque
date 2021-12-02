@@ -82,6 +82,8 @@
       text-decoration: none;
       color: $color-black;
       transition: 0.3s;
+      color: $color-white;
+      background-color: $color-secondary-1-1;
       @include tablet-breakpoint {
         flex-grow: 1;
         margin-left: 2.5%;
@@ -90,7 +92,7 @@
       &:hover {
         box-shadow: none;
         transform: translateX(2.5px) translateY(5px);
-        background-color: $color-secondary-1-1;
+        background-color: darken($color: $color-secondary-1-1, $amount: 25);
         color: $color-white;
       }
     }
@@ -100,14 +102,15 @@
       cursor: pointer;
       transition: 0.3s;
       padding: 0;
+      color: $color-white;
+      background-color: #e95959;
       @include tablet-breakpoint {
         flex-grow: 1;
       }
       &:hover {
         box-shadow: none;
         transform: translateX(2.5px) translateY(5px);
-        background-color: #e95959;
-        color: $color-white;
+        background-color: darken($color: #e95959, $amount: 25);
       }
     }
   }
@@ -147,6 +150,10 @@
   &__body {
     @include tablet-breakpoint {
       font-size: pxToRem(14);
+    }
+    &--return {
+      font-size: pxToRem(16);
+      font-weight: 700;
     }
   }
 }

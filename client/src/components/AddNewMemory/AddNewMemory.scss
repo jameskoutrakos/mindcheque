@@ -100,7 +100,8 @@
       transition: 0.3s;
       text-decoration: none;
       border: none;
-      color: $color-black;
+      background-color: $color-primary-0;
+      color: $color-white;
       @include tablet-breakpoint {
         flex-grow: 1;
         margin-left: 25%;
@@ -108,8 +109,7 @@
       &:hover {
         box-shadow: none;
         transform: translateX(2.5px) translateY(5px);
-        background-color: $color-footer;
-        color: $color-white;
+        background-color: darken($color: $color-primary-0, $amount: 15);
       }
     }
   }

@@ -158,9 +158,10 @@
   }
 
   &__img {
-    width: 2rem;
-    height: 2rem;
+    min-width: 2rem;
+    min-height: 2rem;
     transition: 0.15s;
+    background-repeat: no-repeat;
     &--smile {
       background-image: url("../../assets/icons/smile-black.svg");
     }
