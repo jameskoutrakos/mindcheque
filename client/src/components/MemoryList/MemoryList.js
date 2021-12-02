@@ -4,7 +4,6 @@ import { Component } from "react";
 import { Link } from "react-router-dom";
 
 import chevronBlack from "../../assets/icons/next-black.svg";
-import arrowBlack from "../../assets/icons/arrow-black.svg";
 
 class MemoryList extends Component {
   componentDidMount() {

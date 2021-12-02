@@ -38,7 +38,7 @@ class MemoryOverview extends Component {
   };
 
   render() {
-    const { firstName, lastName, userID, dateOfBirth } = this.props.activeUser;
+    const { firstName, lastName, userID } = this.props.activeUser;
 
     const daysUntilBirthday = this.birthdayCountdown();
 
@@ -124,7 +124,7 @@ class MemoryOverview extends Component {
                   className="memoryOverview__box memoryOverview__box--logout"
                 >
                   <div className="memoryOverview__title-wrapper">
-                    <h2 className="memoryOverview__header">LOG OUT</h2>
+                    <h2 className="memoryOverview__header">Log Out</h2>
                     <div className="memoryOverview__img memoryOverview__img--logout"></div>
                   </div>
                 </Link>
@@ -209,7 +209,7 @@ class MemoryOverview extends Component {
                   className="memoryOverview__box memoryOverview__box--logout"
                 >
                   <div className="memoryOverview__title-wrapper">
-                    <h2 className="memoryOverview__header">LOG OUT</h2>
+                    <h2 className="memoryOverview__header">Log Out</h2>
                     <div className="memoryOverview__img memoryOverview__img--logout"></div>
                   </div>
                 </Link>

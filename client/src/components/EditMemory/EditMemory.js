@@ -173,6 +173,7 @@ class EditMemory extends Component {
                   <option value="Excited">Excited</option>
                   <option value="Happy">Happy</option>
                   <option value="Alright">Alright</option>
+                  <option value="OK">OK</option>
                   <option value="Anxious">Anxious</option>
                   <option value="Upset">Upset</option>
                 </select>

@@ -1,6 +1,6 @@
 import axios from "axios";
 import { Component } from "react";
-import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 import "./LogInSignUp.scss";
 
 const host = "http://localhost:8080";
@@ -37,14 +37,27 @@ class LogInSignUp extends Component {
       .post(`${host}/profile/login`, userCreds)
       .then((response) => {
         const foundUserID = response.data;
-        alert("Log In Success, now redirecting...");
+        Swal.fire({
+          position: "top-end",
+          icon: "success",
+          title: "Log-in successful! Redirecting now...",
+          showConfirmButton: false,
+          timer: 1000,
+        });
+        // alert("Log In Success, now redirecting...");
         this.props.history.push(`/profile/${foundUserID}`);
       })
       .catch((error) => {
         console.log(error);
-        alert(
-          "Username and/or password is incorrect, please review log-in credentials."
-        );
+        Swal.fire({
+          title: "Oops! Log-in failed.",
+          text: "Please review your log-in credentials and try again.",
+          icon: "error",
+          confirmButtonColor: "#2a7d8c",
+        });
+        // alert(
+        //   "Username and/or password is incorrect, please review log-in credentials."
+        // );
       });
   };
 

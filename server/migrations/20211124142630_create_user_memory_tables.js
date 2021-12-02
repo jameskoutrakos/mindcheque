@@ -20,7 +20,7 @@ exports.up = function (knex) {
         .onUpdate("CASCADE")
         .onDelete("CASCADE");
       table.string("title");
-      table.string("description", 1000);
+      table.string("description", 5000);
       table.datetime("dateOfMemory");
       table.datetime("dateCreated").defaultTo(knex.fn.now());
       table.datetime("dateLastUpdated").defaultTo(knex.fn.now());

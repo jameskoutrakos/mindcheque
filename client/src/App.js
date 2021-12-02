@@ -1,6 +1,7 @@
 import { Component } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import axios from "axios";
+import Swal from "sweetalert2";
 
 import Header from "./components/Header/Header";
 import AddNewMemory from "./components/AddNewMemory/AddNewMemory";
@@ -44,15 +45,27 @@ class App extends Component {
       .then((response) => {
         this.getAllUsers();
         console.log("Add User: ", response.data);
-        alert(
-          "Account created! Please log in using the 'Returning User' form above!"
-        );
+        Swal.fire({
+          title: "Your account has been created!",
+          text: "To proceed, please log-in using the 'Returning User' form at the top of the page.",
+          icon: "success",
+          confirmButtonColor: "#2a7d8c",
+        });
+        // alert(
+        //   "Account created! Please log in using the 'Returning User' form above!"
+        // );
       })
       .catch((error) => {
         console.log(error);
-        alert(
-          "You may have missed something in the Sign Up form, please check that every field is populated correctly."
-        );
+        Swal.fire({
+          title: "Uh-oh! A field may be missing!",
+          text: "Please review your information and see that all fields are filled before submitting.",
+          icon: "error",
+          confirmButtonColor: "#2a7d8c",
+        });
+        // alert(
+        //   "You may have missed something in the Sign Up form, please check that every field is populated correctly."
+        // );
       });
   };
 
