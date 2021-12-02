@@ -3,6 +3,15 @@ import { Link } from "react-router-dom";
 import "./AddNewMemory.scss";
 
 class AddNewMemory extends Component {
+  state = {
+    description: "",
+    charLimit: 5000,
+  };
+
+  handleOnChange = (e) => {
+    this.setState({ [e.target.name]: e.target.value });
+  };
+
   addMemory = (e) => {
     e.preventDefault();
     let newMemory = {
@@ -53,8 +62,14 @@ class AddNewMemory extends Component {
                   className="addNewMemory__input"
                   type="text"
                   name="description"
+                  value={this.state.description}
+                  onChange={this.handleOnChange}
                   placeholder="Write a description of your memory, how did you feel? What happened?"
                 ></textarea>
+                <p className="addNewMemory__body addNewMemory__body--counter">
+                  {" "}
+                  Remaining Characters: {this.state.description.length} / 5000
+                </p>
               </div>
 
               <div className="addNewMemory__box addNewMemory__box--feeling">

@@ -17,6 +17,7 @@ class EditMemory extends Component {
     helpfulThought: "",
     relatedMoment: "",
     errors: {},
+    charLimit: 5000,
   };
 
   setUpdateDate = () => {
@@ -156,6 +157,10 @@ class EditMemory extends Component {
                   onChange={(e) => this.handleChange(e)}
                   placeholder="Write a description of your memory, how did you feel? What happened?"
                 ></textarea>
+                <p className="editNewMemory__body editNewMemory__body--counter">
+                  {" "}
+                  Remaining Characters: {this.state.description.length} / 5000
+                </p>
               </div>
 
               <div className="editMemory__box editMemory__box--feeling">

@@ -160,6 +160,13 @@
     @include tablet-breakpoint {
       font-size: pxToRem(14);
     }
+    &--counter {
+      margin: 0.5rem 0 0;
+      font-size: pxToRem(12);
+      @include tablet-breakpoint {
+        font-size: pxToRem(16);
+      }
+    }
   }
 
   &__time-text {
