@@ -94,19 +94,6 @@ class LogInSignUp extends Component {
   render() {
     return (
       <section className="logInSignUp">
-        {/* <article className="logInSignUp__container">
-          <h1>Testing out logins</h1>
-          <Link to="/profile/1" className="logInSignUp__box">
-            User 1
-          </Link>
-          <Link to="/profile/2" className="logInSignUp__box">
-            User 2
-          </Link>
-          <Link to="/profile/3" className="logInSignUp__box">
-            User 3
-          </Link>
-        </article> */}
-
         <article className="logInSignUp__container">
           <h2 className="logInSignUp__title">Returning User</h2>
           <form onSubmit={this.logInUser}>

@@ -12,7 +12,7 @@
     margin: 0 auto;
     padding: 1rem;
     border-radius: 25px;
-    background-color: $color-mercury;
+    background-color: $color-container;
     width: 100%;
     box-shadow: 2.5px 5px $color-box-shadow-black;
     @include tablet-breakpoint {
@@ -27,7 +27,7 @@
   &__box {
     display: flex;
     flex-direction: column;
-    background-color: $color-white;
+    background-color: $color-box;
     border-radius: 26px;
     margin: 0.5rem 0;
     box-shadow: 2.5px 5px $color-box-shadow-black;
@@ -67,13 +67,14 @@
       text-decoration: none;
       color: $color-black;
       transition: 0.3s;
+      background-color: $color-button-default;
       @include tablet-breakpoint {
         flex-grow: 1;
       }
       &:hover {
         box-shadow: none;
         transform: translateX(2.5px) translateY(5px);
-        background-color: $color-secondary-1-1;
+        background-color: $color-button-hover;
         color: $color-white;
       }
     }
@@ -83,7 +84,7 @@
       color: $color-black;
       transition: 0.3s;
       color: $color-white;
-      background-color: $color-secondary-1-1;
+      background-color: $color-edit;
       @include tablet-breakpoint {
         flex-grow: 1;
         margin-left: 2.5%;
@@ -92,7 +93,7 @@
       &:hover {
         box-shadow: none;
         transform: translateX(2.5px) translateY(5px);
-        background-color: darken($color: $color-secondary-1-1, $amount: 25);
+        background-color: darken($color: $color-edit, $amount: 25);
         color: $color-white;
       }
     }
@@ -103,14 +104,14 @@
       transition: 0.3s;
       padding: 0;
       color: $color-white;
-      background-color: #e95959;
+      background-color: $color-delete;
       @include tablet-breakpoint {
         flex-grow: 1;
       }
       &:hover {
         box-shadow: none;
         transform: translateX(2.5px) translateY(5px);
-        background-color: darken($color: #e95959, $amount: 25);
+        background-color: darken($color: $color-delete, $amount: 25);
       }
     }
   }

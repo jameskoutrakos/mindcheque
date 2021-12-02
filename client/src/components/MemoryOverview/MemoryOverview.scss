@@ -12,7 +12,7 @@
     margin: 0 auto;
     padding: 1rem;
     border-radius: 25px;
-    background-color: $color-mercury;
+    background-color: $color-container;
     width: 100%;
     box-shadow: 2.5px 5px $color-box-shadow-black;
     @include tablet-breakpoint {
@@ -52,7 +52,7 @@
   &__box {
     display: flex;
     flex-direction: column;
-    background-color: $color-white;
+    background-color: $color-box;
     border-radius: 26px;
     min-height: pxToRem(200);
     margin: 0.5rem 0;
@@ -67,13 +67,14 @@
       min-height: 0;
       font-size: pxToRem(16);
       text-decoration: none;
+      background-color: $color-button-default;
       color: $color-black;
       transition: 0.3s;
       &--memory {
         &:hover {
           box-shadow: none;
           transform: translateX(2.5px) translateY(5px);
-          background-color: $color-secondary-1-1;
+          background-color: $color-button-hover;
           color: $color-white;
         }
       }
@@ -82,12 +83,13 @@
       min-height: 0;
       font-size: pxToRem(16);
       text-decoration: none;
+      background-color: $color-button-default;
       color: $color-black;
       transition: 0.3s;
       &:hover {
         box-shadow: none;
         transform: translateX(2.5px) translateY(5px);
-        background-color: $color-secondary-1-1;
+        background-color: $color-button-hover;
         color: $color-white;
       }
     }
@@ -95,12 +97,13 @@
       min-height: 0;
       font-size: pxToRem(16);
       text-decoration: none;
+      background-color: $color-button-default;
       color: $color-black;
       transition: 0.3s;
       &:hover {
         box-shadow: none;
         transform: translateX(2.5px) translateY(5px);
-        background-color: $color-secondary-1-1;
+        background-color: $color-button-hover;
         color: $color-white;
       }
     }
@@ -109,12 +112,13 @@
       min-height: 0;
       font-size: pxToRem(16);
       text-decoration: none;
+      background-color: $color-button-default;
       color: $color-black;
       transition: 0.3s;
       &:hover {
         box-shadow: none;
         transform: translateX(2.5px) translateY(5px);
-        background-color: #e95959;
+        background-color: $color-delete;
         color: $color-white;
       }
     }
@@ -146,7 +150,7 @@
       color: $color-black;
       transition: 0.15s;
       &:hover {
-        color: $color-secondary-1-1;
+        color: $color-button-hover;
         text-decoration: underline;
       }
     }

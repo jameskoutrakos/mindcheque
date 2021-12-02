@@ -12,7 +12,7 @@
     margin: 0 auto 1rem;
     padding: 1rem;
     border-radius: 25px;
-    background-color: $color-white;
+    background-color: $color-container;
     width: 100%;
     box-shadow: 2.5px 5px $color-box-shadow-black;
     // border: 5px solid $color-white;
@@ -32,7 +32,7 @@
   &__box {
     display: flex;
     flex-direction: column;
-    background-color: $color-white;
+    background-color: $color-box;
     text-decoration: none;
     color: $color-black;
     border-radius: 26px;
@@ -45,15 +45,15 @@
     &:hover {
       box-shadow: none;
       transform: translateX(2.5px) translateY(5px);
-      background-color: $color-secondary-1-1;
+      background-color: $color-button-hover;
       color: $color-white;
     }
     &--submit {
       margin-top: 1.5rem;
-      background-color: $color-mercury;
+      background-color: $color-button-default;
       font-weight: 700;
       &:hover {
-        background-color: $color-secondary-1-1;
+        background-color: $color-button-hover;
       }
     }
   }
@@ -62,6 +62,7 @@
     font-size: 1.5rem;
     border-bottom: 2px solid $color-body;
     padding-bottom: 0.5rem;
+    margin: 0 0.5rem;
     border-radius: 2px;
   }
 
@@ -72,8 +73,8 @@
 
   &__input {
     border: none;
-    border-bottom: 2px solid $color-header;
-    background-color: $color-mercury;
+    border: 2px solid $color-input-border;
+    background-color: $color-input;
   }
 }
 
@@ -81,6 +82,10 @@
   &__form {
     display: flex;
     flex-direction: column;
+    background-color: $color-box;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 25px;
   }
 }
 
@@ -88,5 +93,9 @@
   &__form {
     display: flex;
     flex-direction: column;
+    background-color: $color-box;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 25px;
   }
 }
