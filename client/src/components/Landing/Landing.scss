@@ -35,11 +35,6 @@
     box-shadow: 2.5px 5px $color-box-shadow-black;
     padding: 1rem;
     transition: 0.3s;
-    &:hover {
-      box-shadow: none;
-      transform: translateX(2.5px) translateY(5px);
-      // background-color: $color-header;
-    }
     // &--top-row {
     //   min-height: pxToRem(200);
     //   width: 100%;
@@ -55,6 +50,8 @@
       text-decoration: none;
       transition: 0.3s;
       &:hover {
+        box-shadow: none;
+        transform: translateX(2.5px) translateY(5px);
         background-color: $color-login-hover;
       }
     }
