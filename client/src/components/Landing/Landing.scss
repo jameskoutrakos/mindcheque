@@ -6,6 +6,9 @@
   padding: 0 1rem;
   background-color: $color-body;
   min-height: 80vh;
+  @include tablet-breakpoint {
+    padding: 1rem 2rem;
+  }
   &__container {
     display: flex;
     flex-direction: column;

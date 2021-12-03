@@ -160,7 +160,7 @@ class EditMemory extends Component {
                   onChange={(e) => this.handleChange(e)}
                   placeholder="Write a description of your memory, how did you feel? What happened?"
                 ></textarea>
-                <p className="editNewMemory__body editNewMemory__body--counter">
+                <p className="editMemory__body editMemory__body--counter">
                   {" "}
                   Remaining Characters: {this.state.description.length} / 5000
                 </p>
@@ -168,7 +168,7 @@ class EditMemory extends Component {
 
               <div className="editMemory__box editMemory__box--feeling">
                 <p className="editMemory__input-label">
-                  Select a feeling that best describes this memory:
+                  How did this memory make you feel?
                 </p>
                 <p className="editMemory__input-label">
                   Select a feeling that best summarizes your feelings around
@@ -188,6 +188,8 @@ class EditMemory extends Component {
                   <option value="OK">OK</option>
                   <option value="Anxious">Anxious</option>
                   <option value="Upset">Upset</option>
+                  <option value="Sad">Sad</option>
+                  <option value="Depressed">Depressed</option>
                 </select>
               </div>
 

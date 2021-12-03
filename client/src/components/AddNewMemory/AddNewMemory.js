@@ -77,7 +77,7 @@ class AddNewMemory extends Component {
 
               <div className="addNewMemory__box addNewMemory__box--feeling">
                 <p className="addNewMemory__input-label">
-                  How did this make memory make you feel?
+                  How did this memory make you feel?
                 </p>
                 <p className="addNewMemory__input-label">
                   Select a feeling that best summarizes your feelings around
@@ -95,6 +95,8 @@ class AddNewMemory extends Component {
                   <option value="OK">OK</option>
                   <option value="Anxious">Anxious</option>
                   <option value="Upset">Upset</option>
+                  <option value="Sad">Sad</option>
+                  <option value="Depressed">Depressed</option>
                 </select>
               </div>
 

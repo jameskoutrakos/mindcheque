@@ -5,6 +5,9 @@
 .header {
   padding: 0 1rem;
   background-color: $color-header;
+  @include tablet-breakpoint {
+    padding: 0 2rem;
+  }
   &__container {
     display: flex;
     flex-direction: column;
