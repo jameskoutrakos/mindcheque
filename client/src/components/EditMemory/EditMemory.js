@@ -126,16 +126,19 @@ class EditMemory extends Component {
             <div className="editMemory__form">
               <div className="editMemory__box editMemory__box--description">
                 <div className="editMemory__box-header-wrapper">
-                  <input
-                    className="editMemory__header editMemory__input"
-                    type="text"
-                    name="title"
-                    value={title}
-                    onChange={(e) => this.handleChange(e)}
-                    placeholder="Write a title for your memory here."
-                  />
+                  <div className="editMemory__text-wrapper editMemory__text-wrapper--title">
+                    <p className="editMemory__input-label">Title</p>
+                    <input
+                      className="editMemory__header editMemory__input"
+                      type="text"
+                      name="title"
+                      value={title}
+                      onChange={(e) => this.handleChange(e)}
+                      placeholder="Write a title for your memory here."
+                    />
+                  </div>
 
-                  <div className="editMemory__date-wrapper">
+                  <div className="editMemory__text-wrapper">
                     <p className="editMemory__input-label">Date of Memory</p>
                     <input
                       className="editMemory__date-text editMemory__input"

@@ -39,14 +39,17 @@ class AddNewMemory extends Component {
             <div className="addNewMemory__form">
               <div className="addNewMemory__box addNewMemory__box--description">
                 <div className="addNewMemory__box-header-wrapper">
-                  <input
-                    type="text"
-                    className="addNewMemory__header addNewMemory__input"
-                    name="title"
-                    placeholder="Write a title for your memory here."
-                  />
+                  <div className="addNewMemory__text-wrapper addNewMemory__text-wrapper--title">
+                    <p className="addNewMemory__input-label">Title</p>
+                    <input
+                      type="text"
+                      className="addNewMemory__header addNewMemory__input"
+                      name="title"
+                      placeholder="Write a title for your memory here."
+                    />
+                  </div>
 
-                  <div className="addNewMemory__date-wrapper">
+                  <div className="addNewMemory__text-wrapper">
                     <p className="addNewMemory__input-label">Date Of Memory</p>
                     <input
                       type="date"

@@ -123,16 +123,19 @@
     }
   }
 
-  &__date-wrapper {
+  &__text-wrapper {
     display: flex;
     flex-direction: column;
+    &--title {
+      width: 100%;
+      margin-right: 10%;
+    }
   }
 
   &__header {
     @include tablet-breakpoint {
       font-size: pxToRem(28);
       width: 100%;
-      margin-right: 10%;
     }
   }
 
