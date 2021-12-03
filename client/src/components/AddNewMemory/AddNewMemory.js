@@ -79,6 +79,10 @@ class AddNewMemory extends Component {
                 <p className="addNewMemory__input-label">
                   How did this make memory make you feel?
                 </p>
+                <p className="addNewMemory__input-label">
+                  Select a feeling that best summarizes your feelings around
+                  this memory from the list provided.
+                </p>
                 <select
                   className="addNewMemory__input"
                   id="feeling"
@@ -97,6 +101,10 @@ class AddNewMemory extends Component {
               <div className="addNewMemory__box addNewMemory__box--helpful">
                 <p className="addNewMemory__input-label">
                   Is this a helpful memory?
+                </p>
+                <p className="addNewMemory__input-label">
+                  This section is to identify if this memory is one that brings
+                  positive (Yes) feelings or negative (No) feelings.
                 </p>
                 <select
                   className="addNewMemory__input"

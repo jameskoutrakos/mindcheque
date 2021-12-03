@@ -16,7 +16,7 @@ function Landing() {
 
       <article className="landing__container">
         <div className="landing__box landing__box--1">
-          <div className="landing__title-wrapper landing__box-title--underline-1">
+          <div className="landing__title-wrapper landing__title-wrapper--underline-1">
             <h2 className="landing__box-title">
               Welcome to{" "}
               <span className="landing__box-title--bold">MindCheque</span>
@@ -37,7 +37,7 @@ function Landing() {
         </div>
 
         <div className="landing__box landing__box--2">
-          <div className="landing__title-wrapper landing__box-title--underline-2">
+          <div className="landing__title-wrapper landing__title-wrapper--underline-2">
             <h2 className="landing__box-title">Invest in yourself</h2>
             <img
               className="landing__img"
@@ -53,9 +53,60 @@ function Landing() {
           </p>
         </div>
 
-        <Link to="/profile" className="landing__box landing__box--3">
+        {/*} <Link to="/profile" className="landing__box landing__box--3">
           <div className="landing__title-wrapper landing__box-title--underline-3">
             <h2 className="landing__box-title">Create an Account or Log In</h2>
+            <img
+              className="landing__img landing__img--chevron"
+              src={nextBlack}
+              alt="the next icon"
+            />
+          </div>
+          <p className="landing__box-body">
+            Start now by creating an account! It's really easy to do too. Simply
+            click on this box and you will be able to create a new account or
+            log in to your existing account.
+          </p>
+</Link>*/}
+      </article>
+
+      <article className="landing__container landing__container--top-row">
+        <div className="landing__box landing__box--top-row">
+          <div className="landing__title-wrapper landing__title-wrapper--underline-3">
+            <h2 className="landing__mini-box-title">Why MindCheque?</h2>
+          </div>
+          <p className="landing__box-body">
+            The name <span className="landing__box-body--bold">MindCheque</span>{" "}
+            is a play on words.{" "}
+            <span className="landing__box-body--bold">Mind</span> being home to
+            your memories, and{" "}
+            <span className="landing__box-body--bold">Cheque</span> to
+            illustrate that it gives you the opportunity to 'check' yourself on
+            a daily, while making memory deposits like banking a 'cheque'.
+          </p>
+        </div>
+        <div className="landing__box landing__box--top-row landing__box--top-row--middle">
+          <div className="landing__title-wrapper landing__title-wrapper--underline-3">
+            <h2 className="landing__mini-box-title">Proven to Help!</h2>
+          </div>
+          <p className="landing__box-body">
+            {" "}
+            Studies have shown the positive impact of documenting your thoughts.
+          </p>
+          <p className="landing__box-body">
+            {" "}
+            Returning to the positive affirmations and proven progress that you
+            have succeeded in previously, will instill you with the confidence
+            to do it again and challenge you to keep improving yourself!
+          </p>
+        </div>
+
+        <Link
+          to="/profile"
+          className="landing__box landing__box--top-row landing__box--3"
+        >
+          <div className="landing__title-wrapper landing__title-wrapper--underline-3">
+            <h2 className="landing__mini-box-title">Sign Up or Log In</h2>
             <img
               className="landing__img landing__img--chevron"
               src={nextBlack}

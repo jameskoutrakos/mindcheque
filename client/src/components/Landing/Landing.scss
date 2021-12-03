@@ -19,10 +19,15 @@
     }
     @include desktop-breakpoint {
     }
-    // &--top-row {
-    //   flex-direction: row;
-    //   justify-content: space-between;
-    // }
+    &--top-row {
+      border-top: 2px dashed $color-header;
+      padding: 1rem 0;
+      flex-direction: column;
+      justify-content: space-between;
+      @include tablet-breakpoint {
+        flex-direction: row;
+      }
+    }
   }
 
   &__box {
@@ -35,11 +40,17 @@
     box-shadow: 2.5px 5px $color-box-shadow-black;
     padding: 1rem;
     transition: 0.3s;
-    // &--top-row {
-    //   min-height: pxToRem(200);
-    //   width: 100%;
-    //   margin: 0 1rem;
-    // }
+    &--top-row {
+      min-height: pxToRem(200);
+      width: 100%;
+      // border-radius: 15px;
+      &--middle {
+        @include tablet-breakpoint {
+          margin: 0.5rem 1rem;
+          min-height: pxToRem(300);
+        }
+      }
+    }
     &--1 {
       display: flex;
       flex-direction: column;
@@ -72,6 +83,31 @@
     &--bold {
       font-weight: 700;
     }
+  }
+
+  &__mini-box-title {
+    font-weight: 700;
+    font-size: pxToRem(16);
+    color: $color-black;
+    // width: 50%;
+
+    @include tablet-breakpoint {
+      padding: 1rem 0;
+      font-size: pxToRem(19);
+    }
+    @include desktop-breakpoint {
+      font-size: pxToRem(24);
+    }
+
+    &--bold {
+      font-weight: 700;
+    }
+  }
+
+  &__title-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
     &--underline-1 {
       border-bottom: 3px solid $color-header;
@@ -90,19 +126,13 @@
       }
     }
     &--underline-3 {
-      border-bottom: 3px solid $color-footer;
+      border-bottom: 3px dotted $color-footer;
       border-radius: 3px;
       padding-bottom: 0.5rem;
       @include tablet-breakpoint {
         padding-bottom: 0;
       }
     }
-  }
-
-  &__title-wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
   }
 
   &__img {
@@ -128,6 +158,9 @@
     @include tablet-breakpoint {
       margin-top: 1rem;
       font-size: pxToRem(18);
+    }
+    &--bold {
+      font-weight: 700;
     }
   }
 }

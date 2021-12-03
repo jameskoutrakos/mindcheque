@@ -170,6 +170,10 @@ class EditMemory extends Component {
                 <p className="editMemory__input-label">
                   Select a feeling that best describes this memory:
                 </p>
+                <p className="editMemory__input-label">
+                  Select a feeling that best summarizes your feelings around
+                  this memory from the list provided.
+                </p>
                 <select
                   className="editMemory__input"
                   id="feeling"
@@ -190,6 +194,10 @@ class EditMemory extends Component {
               <div className="editMemory__box editMemory__box--helpful">
                 <p className="editMemory__input-label">
                   Is this a helpful memory?
+                </p>
+                <p className="editMemory__input-label">
+                  This section is to identify if this memory is one that brings
+                  positive (Yes) feelings or negative (No) feelings.
                 </p>
                 <select
                   className="editMemory__input"
