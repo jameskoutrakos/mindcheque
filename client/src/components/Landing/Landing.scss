@@ -19,6 +19,10 @@
     }
     @include desktop-breakpoint {
     }
+    // &--top-row {
+    //   flex-direction: row;
+    //   justify-content: space-between;
+    // }
   }
 
   &__box {
@@ -36,6 +40,11 @@
       transform: translateX(2.5px) translateY(5px);
       // background-color: $color-header;
     }
+    // &--top-row {
+    //   min-height: pxToRem(200);
+    //   width: 100%;
+    //   margin: 0 1rem;
+    // }
     &--1 {
       display: flex;
       flex-direction: column;
@@ -46,7 +55,7 @@
       text-decoration: none;
       transition: 0.3s;
       &:hover {
-        background-color: $color-mercury;
+        background-color: $color-login-hover;
       }
     }
   }
@@ -70,14 +79,26 @@
     &--underline-1 {
       border-bottom: 3px solid $color-header;
       border-radius: 3px;
+      padding-bottom: 0.5rem;
+      @include tablet-breakpoint {
+        padding-bottom: 0;
+      }
     }
     &--underline-2 {
       border-bottom: 3px solid $color-body;
       border-radius: 3px;
+      padding-bottom: 0.5rem;
+      @include tablet-breakpoint {
+        padding-bottom: 0;
+      }
     }
     &--underline-3 {
       border-bottom: 3px solid $color-footer;
       border-radius: 3px;
+      padding-bottom: 0.5rem;
+      @include tablet-breakpoint {
+        padding-bottom: 0;
+      }
     }
   }
 
@@ -103,9 +124,13 @@
   }
 
   &__box-body {
-    font-size: pxToRem(18);
+    margin-top: 0.5rem;
+    font-size: pxToRem(14);
     color: $color-black;
     width: 90%;
-    margin-top: 1rem;
+    @include tablet-breakpoint {
+      margin-top: 1rem;
+      font-size: pxToRem(18);
+    }
   }
 }

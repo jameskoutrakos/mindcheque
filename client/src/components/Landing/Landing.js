@@ -8,6 +8,12 @@ import nextBlack from "../../assets/icons/next-black.svg";
 function Landing() {
   return (
     <section className="landing">
+      {/*<article className="landing__container landing__container--top-row">
+        <div className="landing__box landing__box--top-row"></div>
+        <div className="landing__box landing__box--top-row"></div>
+        <div className="landing__box landing__box--top-row"></div>
+  </article>*/}
+
       <article className="landing__container">
         <div className="landing__box landing__box--1">
           <div className="landing__title-wrapper landing__box-title--underline-1">
@@ -25,7 +31,7 @@ function Landing() {
           <p className="landing__box-body">
             A website designed and curated with the user in mind, a tool for
             those who sometimes feel anxious, or want a way to track their
-            day-to-day. MindCheque is a resource that can be used to depoist
+            day-to-day. MindCheque is a resource that can be used to deposit
             your thoughts and memories into your very own memory bank.
           </p>
         </div>

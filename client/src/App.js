@@ -51,6 +51,7 @@ class App extends Component {
           icon: "success",
           confirmButtonColor: "#2a7d8c",
         });
+        window.scrollTo({ top: 0, behavior: "smooth" });
         // alert(
         //   "Account created! Please log in using the 'Returning User' form above!"
         // );

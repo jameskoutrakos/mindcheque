@@ -44,8 +44,9 @@ class LogInSignUp extends Component {
           showConfirmButton: false,
           timer: 1000,
         });
-        // alert("Log In Success, now redirecting...");
-        this.props.history.push(`/profile/${foundUserID}`);
+        setTimeout(() => {
+          this.props.history.push(`/profile/${foundUserID}`);
+        }, 500);
       })
       .catch((error) => {
         console.log(error);
