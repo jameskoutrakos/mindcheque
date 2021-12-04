@@ -113,16 +113,16 @@ class EditMemory extends Component {
     } = this.state;
 
     return (
-      <section className="editMemory">
-        <article className="editMemory__container">
+      <section className="edit-memory">
+        <article className="edit-memory__container">
           <form>
-            <div className="editMemory__form">
-              <div className="editMemory__box editMemory__box--description">
-                <div className="editMemory__box-header-wrapper">
-                  <div className="editMemory__text-wrapper editMemory__text-wrapper--title">
-                    <p className="editMemory__input-label">Title</p>
+            <div className="edit-memory__form">
+              <div className="edit-memory__box edit-memory__box--description">
+                <div className="edit-memory__box-header-wrapper">
+                  <div className="edit-memory__text-wrapper edit-memory__text-wrapper--title">
+                    <p className="edit-memory__input-label">Title</p>
                     <input
-                      className="editMemory__header editMemory__input"
+                      className="edit-memory__header edit-memory__input"
                       type="text"
                       name="title"
                       value={title}
@@ -131,10 +131,10 @@ class EditMemory extends Component {
                     />
                   </div>
 
-                  <div className="editMemory__text-wrapper">
-                    <p className="editMemory__input-label">Date of Memory</p>
+                  <div className="edit-memory__text-wrapper">
+                    <p className="edit-memory__input-label">Date of Memory</p>
                     <input
-                      className="editMemory__date-text editMemory__input"
+                      className="edit-memory__date-text edit-memory__input"
                       type="date"
                       name="dateOfMemory"
                       value={dateOfMemory}
@@ -144,31 +144,31 @@ class EditMemory extends Component {
                   </div>
                 </div>
 
-                <p className="editMemory__input-label">Description</p>
+                <p className="edit-memory__input-label">Description</p>
                 <textarea
-                  className="editMemory__input"
+                  className="edit-memory__input"
                   type="text"
                   name="description"
                   value={description}
                   onChange={(e) => this.handleChange(e)}
                   placeholder="Write a description of your memory, how did you feel? What happened?"
                 ></textarea>
-                <p className="editMemory__body editMemory__body--counter">
+                <p className="edit-memory__body edit-memory__body--counter">
                   {" "}
-                  Remaining Characters: {this.state.description.length} / 5000
+                  Characters typed: {this.state.description.length} / 5000
                 </p>
               </div>
 
-              <div className="editMemory__box editMemory__box--feeling">
-                <p className="editMemory__input-label">
+              <div className="edit-memory__box edit-memory__box--feeling">
+                <p className="edit-memory__input-label">
                   How did this memory make you feel?
                 </p>
-                <p className="editMemory__input-label">
+                <p className="edit-memory__input-label">
                   Select a feeling that best summarizes your feelings around
                   this memory from the list provided.
                 </p>
                 <select
-                  className="editMemory__input"
+                  className="edit-memory__input"
                   id="feeling"
                   name="feeling"
                   value={feeling}
@@ -186,16 +186,16 @@ class EditMemory extends Component {
                 </select>
               </div>
 
-              <div className="editMemory__box editMemory__box--helpful">
-                <p className="editMemory__input-label">
+              <div className="edit-memory__box edit-memory__box--helpful">
+                <p className="edit-memory__input-label">
                   Is this a helpful memory?
                 </p>
-                <p className="editMemory__input-label">
+                <p className="edit-memory__input-label">
                   This section is to identify if this memory is one that brings
                   positive (Yes) feelings or negative (No) feelings.
                 </p>
                 <select
-                  className="editMemory__input"
+                  className="edit-memory__input"
                   id="helpfulThought"
                   name="helpfulThought"
                   value={helpfulThought}
@@ -206,10 +206,10 @@ class EditMemory extends Component {
                 </select>
               </div>
 
-              <div className="editMemory__box editMemory__box--related">
-                <p className="editMemory__input-label">Related Moment</p>
+              <div className="edit-memory__box edit-memory__box--related">
+                <p className="edit-memory__input-label">Related Moment</p>
                 <input
-                  className="editMemory__input"
+                  className="edit-memory__input"
                   type="text"
                   name="relatedMoment"
                   value={relatedMoment}
@@ -219,32 +219,32 @@ class EditMemory extends Component {
               </div>
             </div>
 
-            <div className="editMemory__form-button-container">
+            <div className="edit-memory__form-button-container">
               <div
                 onClick={this.handleCancel}
-                className="editMemory__box editMemory__box--cancel"
+                className="edit-memory__box edit-memory__box--cancel"
               >
-                <p className="editMemory__call-to-action">Cancel Changes</p>
+                <p className="edit-memory__call-to-action">Cancel Changes</p>
               </div>
 
               <div
                 onClick={this.handleSubmit}
-                className="editMemory__box editMemory__box--confirm"
+                className="edit-memory__box edit-memory__box--confirm"
               >
-                <p className="editMemory__call-to-action">Save Changes</p>
+                <p className="edit-memory__call-to-action">Save Changes</p>
               </div>
 
-              <div className="editMemory__box editMemory__box--update">
-                <p className="editMemory__subheader editMemory__subheader--time-header">
+              <div className="edit-memory__box edit-memory__box--update">
+                <p className="edit-memory__subheader edit-memory__subheader--time-header">
                   Memory was created by you on:{" "}
                 </p>
-                <p className="editMemory__time-text">
+                <p className="edit-memory__time-text">
                   {dateCreated.slice(0, 10)}
                 </p>
-                <p className="editMemory__subheader editMemory__subheader--time-header">
+                <p className="edit-memory__subheader edit-memory__subheader--time-header">
                   Memory was last updated on:{" "}
                 </p>
-                <p className="editMemory__time-text">
+                <p className="edit-memory__time-text">
                   {dateLastUpdated.slice(0, 10)}
                 </p>
               </div>

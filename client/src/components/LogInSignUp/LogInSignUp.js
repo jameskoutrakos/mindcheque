@@ -60,27 +60,27 @@ class LogInSignUp extends Component {
 
   render() {
     return (
-      <section className="logInSignUp">
-        <article className="logInSignUp__primary-wrapper">
-          <article className="logInSignUp__container">
-            <h2 className="logInSignUp__title">Returning User</h2>
+      <section className="log-in-sign-up">
+        <article className="log-in-sign-up__primary-wrapper">
+          <article className="log-in-sign-up__container">
+            <h2 className="log-in-sign-up__title">Returning User</h2>
             <form onSubmit={this.logInUser}>
-              <div className="logIn__form">
-                <p className="logInSignUp__input-label">Username</p>
+              <div className="log-in__form">
+                <p className="log-in-sign-up__input-label">Username</p>
                 <input
-                  className="logInSignUp__input"
+                  className="log-in-sign-up__input"
                   type="text"
                   name="usernameLogIn"
                   placeholder="Enter your username"
                 />
-                <p className="logInSignUp__input-label">Password</p>
+                <p className="log-in-sign-up__input-label">Password</p>
                 <input
-                  className="logInSignUp__input"
+                  className="log-in-sign-up__input"
                   type="password"
                   name="passwordLogIn"
                   placeholder="Enter your password"
                 />
-                <button className="logInSignUp__box logInSignUp__box--submit">
+                <button className="log-in-sign-up__box log-in-sign-up__box--submit">
                   {" "}
                   Log In{" "}
                 </button>
@@ -88,52 +88,56 @@ class LogInSignUp extends Component {
             </form>
           </article>
 
-          <article className="logInSignUp__container logInSignUp__container--option">
+          <article className="log-in-sign-up__container log-in-sign-up__container--option">
             <h2>OR</h2>
           </article>
 
-          <article className="logInSignUp__container">
-            <h2 className="logInSignUp__title">Create an Account</h2>
+          <article className="log-in-sign-up__container">
+            <h2 className="log-in-sign-up__title">Create an Account</h2>
             <form onSubmit={this.signUpUser}>
-              <div className="signUp__form">
-                <p className="logInSignUp__input-label">First Name</p>
+              <div className="sign-up__form">
+                <p className="log-in-sign-up__input-label">First Name</p>
                 <input
-                  className="logInSignUp__input"
+                  className="log-in-sign-up__input"
                   type="text"
                   name="firstName"
                   placeholder="Enter your first name"
                 />
-                <p className="logInSignUp__input-label">Last Name</p>
+                <p className="log-in-sign-up__input-label">Last Name</p>
                 <input
-                  className="logInSignUp__input"
+                  className="log-in-sign-up_input"
                   type="text"
                   name="lastName"
                   placeholder="Enter your last name"
                 />
-                <p className="logInSignUp__input-label">Email</p>
+                <p className="log-in-sign-up__input-label">Email</p>
                 <input
-                  className="logInSignUp__input"
+                  className="log-in-sign-up__input"
                   type="email"
                   name="email"
                   placeholder="Enter your email address"
                 />
-                <p className="logInSignUp__input-label">Username</p>
+                <p className="log-in-sign-up__input-label">Username</p>
                 <input
-                  className="logInSignUp__input"
+                  className="log-in-sign-up__input"
                   type="text"
                   name="username"
                   placeholder="Enter a new user name"
                 />
-                <p className="logInSignUp__input-label">Password</p>
+                <p className="log-in-sign-up__input-label">Password</p>
                 <input
-                  className="logInSignUp__input"
+                  className="log-in-sign-up__input"
                   type="password"
                   name="password"
                   placeholder="Enter a password"
                 />
-                <p className="logInSignUp__input-label">Date of Birth</p>
-                <input className="logInSignUp__input" type="date" name="dob" />
-                <button className="logInSignUp__box logInSignUp__box--submit">
+                <p className="log-in-sign-up__input-label">Date of Birth</p>
+                <input
+                  className="log-in-sign-up__input"
+                  type="date"
+                  name="dob"
+                />
+                <button className="log-in-sign-up__box log-in-sign-up__box--submit">
                   Create Account
                 </button>
               </div>

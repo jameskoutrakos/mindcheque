@@ -46,85 +46,85 @@ class MemoryOverview extends Component {
         this.props.mostRecentMemory;
 
       return (
-        <section className="memoryOverview">
-          <article className="memoryOverview__container">
-            <div className="memoryOverview__box memoryOverview__box--header">
-              <div className="memoryOverview__title-wrapper">
+        <section className="memory-overview">
+          <article className="memory-overview__container">
+            <div className="memory-overview__box memory-overview__box--header">
+              <div className="memory-overview__title-wrapper">
                 <h1>
                   Welcome back, {firstName} {lastName}
                 </h1>
-                <div className="memoryOverview__img memoryOverview__img--smile"></div>
+                <div className="memory-overview__img memory-overview__img--smile"></div>
               </div>
             </div>
 
-            <div className="memoryOverview__wrapper-main">
-              <div className="memoryOverview__wrapper memoryOverview__wrapper--left">
+            <div className="memory-overview__wrapper-main">
+              <div className="memory-overview__wrapper memory-overview__wrapper--left">
                 <Link
                   to={`/profile/${userID}/memories/${memoryID}`}
-                  className="memoryOverview__box memoryOverview__box--recent memoryOverview__box--recent--memory"
+                  className="memory-overview__box memory-overview__box--recent memory-overview__box--recent--memory"
                 >
-                  <div className="memoryOverview__title-wrapper">
-                    <h2 className="memoryOverview__header">Recent Activity</h2>
-                    <div className="memoryOverview__img memoryOverview__img--memory"></div>
+                  <div className="memory-overview__title-wrapper">
+                    <h2 className="memory-overview__header">Recent Activity</h2>
+                    <div className="memory-overview__img memory-overview__img--memory"></div>
                   </div>
-                  <h3 className="memoryOverview__subheader">{title}</h3>
-                  <p className="memoryOverview__body">
+                  <h3 className="memory-overview__subheader">{title}</h3>
+                  <p className="memory-overview__body">
                     You created this memory on:{" "}
                     {dateCreated !== undefined && dateCreated.slice(0, 10)}
                   </p>
-                  <p className="memoryOverview__body">
+                  <p className="memory-overview__body">
                     You mentioned that this memory made you feel:{" "}
-                    <span className="memoryOverview__body--bold">
+                    <span className="memory-overview__body--bold">
                       {" "}
                       {feeling}{" "}
                     </span>
                   </p>
-                  <p className="memoryOverview__body">
+                  <p className="memory-overview__body">
                     Click here to view and/or edit your memory!
                   </p>
                 </Link>
 
                 <Link
                   to={`/profile/${userID}/memories`}
-                  className="memoryOverview__box memoryOverview__box--view"
+                  className="memory-overview__box memory-overview__box--view"
                 >
-                  <div className="memoryOverview__title-wrapper">
-                    <h2 className="memoryOverview__header">
+                  <div className="memory-overview__title-wrapper">
+                    <h2 className="memory-overview__header">
                       View All Memories
                     </h2>
-                    <div className="memoryOverview__img memoryOverview__img--view"></div>
+                    <div className="memory-overview__img memory-overview__img--view"></div>
                   </div>
                 </Link>
               </div>
 
-              <div className="memoryOverview__wrapper memoryOverview__wrapper--right">
+              <div className="memory-overview__wrapper memory-overview__wrapper--right">
                 <Link
                   to={`/profile/${userID}/memories/add-memory`}
-                  className="memoryOverview__box memoryOverview__box--add"
+                  className="memory-overview__box memory-overview__box--add"
                 >
-                  <div className="memoryOverview__title-wrapper">
-                    <h2 className="memoryOverview__header">Add New Memory</h2>
-                    <div className="memoryOverview__img memoryOverview__img--add"></div>
+                  <div className="memory-overview__title-wrapper">
+                    <h2 className="memory-overview__header">Add New Memory</h2>
+                    <div className="memory-overview__img memory-overview__img--add"></div>
                   </div>
                 </Link>
-                <div className="memoryOverview__box memoryOverview__box--countdown">
-                  <h2 className="memoryOverview__header">Countdown</h2>
-                  <h1 className="memoryOverview__days">
+                <div className="memory-overview__box memory-overview__box--countdown">
+                  <h2 className="memory-overview__header">Countdown</h2>
+                  <h1 className="memory-overview__days">
                     {daysUntilBirthday && daysUntilBirthday[0]} days,{" "}
                     {daysUntilBirthday && daysUntilBirthday[1]} hours,{" "}
                     {daysUntilBirthday && daysUntilBirthday[2]} minutes
                   </h1>
-                  <p className="memoryOverview__body">
+                  <p className="memory-overview__body">
                     A friendly reminder, your birthday is coming up soon!
                   </p>
                 </div>
                 <Link
                   to={`/profile`}
-                  className="memoryOverview__box memoryOverview__box--logout"
+                  className="memory-overview__box memory-overview__box--logout"
                 >
-                  <div className="memoryOverview__title-wrapper">
-                    <h2 className="memoryOverview__header">Log Out</h2>
-                    <div className="memoryOverview__img memoryOverview__img--logout"></div>
+                  <div className="memory-overview__title-wrapper">
+                    <h2 className="memory-overview__header">Log Out</h2>
+                    <div className="memory-overview__img memory-overview__img--logout"></div>
                   </div>
                 </Link>
               </div>
@@ -134,34 +134,34 @@ class MemoryOverview extends Component {
       );
     } else {
       return (
-        <section className="memoryOverview">
-          <article className="memoryOverview__container">
-            <div className="memoryOverview__box memoryOverview__box--header">
-              <div className="memoryOverview__title-wrapper">
+        <section className="memory-overview">
+          <article className="memory-overview__container">
+            <div className="memory-overview__box memory-overview__box--header">
+              <div className="memory-overview__title-wrapper">
                 <h1>
                   Welcome, {firstName} {lastName}
                 </h1>
-                <div className="memoryOverview__img memoryOverview__img--smile"></div>
+                <div className="memory-overview__img memory-overview__img--smile"></div>
               </div>
             </div>
 
-            <div className="memoryOverview__wrapper-main">
-              <div className="memoryOverview__wrapper memoryOverview__wrapper--left">
-                <div className="memoryOverview__box memoryOverview__box--recent">
-                  <div className="memoryOverview__title-wrapper">
-                    <h2 className="memoryOverview__header">
+            <div className="memory-overview__wrapper-main">
+              <div className="memory-overview__wrapper memory-overview__wrapper--left">
+                <div className="memory-overview__box memory-overview__box--recent">
+                  <div className="memory-overview__title-wrapper">
+                    <h2 className="memory-overview__header">
                       Start making memories!
                     </h2>
-                    <div className="memoryOverview__img memoryOverview__img--memory-no-hover"></div>
+                    <div className="memory-overview__img memory-overview__img--memory-no-hover"></div>
                   </div>
-                  <h3 className="memoryOverview__subheader">
+                  <h3 className="memory-overview__subheader">
                     Your most recently deposited memory will display here.
                   </h3>
-                  <p className="memoryOverview__body">
+                  <p className="memory-overview__body">
                     Click on{" "}
                     <Link
                       to={`/profile/${userID}/memories/add-memory`}
-                      className="memoryOverview__body--link"
+                      className="memory-overview__body--link"
                     >
                       Add New Memory
                     </Link>{" "}
@@ -171,45 +171,45 @@ class MemoryOverview extends Component {
 
                 <Link
                   to={`/profile/${userID}/memories`}
-                  className="memoryOverview__box memoryOverview__box--view"
+                  className="memory-overview__box memory-overview__box--view"
                 >
-                  <div className="memoryOverview__title-wrapper">
-                    <h2 className="memoryOverview__header">
+                  <div className="memory-overview__title-wrapper">
+                    <h2 className="memory-overview__header">
                       View All Memories
                     </h2>
-                    <div className="memoryOverview__img memoryOverview__img--view"></div>
+                    <div className="memory-overview__img memory-overview__img--view"></div>
                   </div>
                 </Link>
               </div>
 
-              <div className="memoryOverview__wrapper memoryOverview__wrapper--right">
+              <div className="memory-overview__wrapper memory-overview__wrapper--right">
                 <Link
                   to={`/profile/${userID}/memories/add-memory`}
-                  className="memoryOverview__box memoryOverview__box--add"
+                  className="memory-overview__box memory-overview__box--add"
                 >
-                  <div className="memoryOverview__title-wrapper">
-                    <h2 className="memoryOverview__header">Add New Memory</h2>
-                    <div className="memoryOverview__img memoryOverview__img--add"></div>
+                  <div className="memory-overview__title-wrapper">
+                    <h2 className="memory-overview__header">Add New Memory</h2>
+                    <div className="memory-overview__img memory-overview__img--add"></div>
                   </div>
                 </Link>
-                <div className="memoryOverview__box memoryOverview__box--countdown">
-                  <h2 className="memoryOverview__header">Countdown</h2>
-                  <h1 className="memoryOverview__days">
+                <div className="memory-overview__box memory-overview__box--countdown">
+                  <h2 className="memory-overview__header">Countdown</h2>
+                  <h1 className="memory-overview__days">
                     {daysUntilBirthday && daysUntilBirthday[0]} days,{" "}
                     {daysUntilBirthday && daysUntilBirthday[1]} hours,{" "}
                     {daysUntilBirthday && daysUntilBirthday[2]} minutes
                   </h1>
-                  <p className="memoryOverview__body">
+                  <p className="memory-overview__body">
                     A friendly reminder, your birthday is coming up soon!
                   </p>
                 </div>
                 <Link
                   to={`/profile`}
-                  className="memoryOverview__box memoryOverview__box--logout"
+                  className="memory-overview__box memory-overview__box--logout"
                 >
-                  <div className="memoryOverview__title-wrapper">
-                    <h2 className="memoryOverview__header">Log Out</h2>
-                    <div className="memoryOverview__img memoryOverview__img--logout"></div>
+                  <div className="memory-overview__title-wrapper">
+                    <h2 className="memory-overview__header">Log Out</h2>
+                    <div className="memory-overview__img memory-overview__img--logout"></div>
                   </div>
                 </Link>
               </div>

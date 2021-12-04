@@ -15,8 +15,8 @@ class MemoryDetails extends Component {
 
   toggleRelatedClass = (isRelatedMoment) => {
     return isRelatedMoment
-      ? "memoryDetails__box memoryDetails__box--related"
-      : "memoryDetails__box memoryDetails__box--related memoryDetails__box--related--hidden";
+      ? "memory-details__box memory-details__box--related"
+      : "memory-details__box memory-details__box--related memory-details__box--related--hidden";
   };
 
   render() {
@@ -34,48 +34,50 @@ class MemoryDetails extends Component {
       }
     };
     return (
-      <section className="memoryDetails">
-        <article className="memoryDetails__container">
-          <div className="memoryDetails__box memoryDetails__box--description">
-            <div className="memoryDetails__box-header-wrapper">
-              <h1 className="memoryDetails__header">{title}</h1>
-              <div className="memoryDetails__date-wrapper">
-                <p className="memoryDetails__subheader">Date of Memory</p>
-                <p className="memoryDetails__date-text">
+      <section className="memory-details">
+        <article className="memory-details__container">
+          <div className="memory-details__box memory-details__box--description">
+            <div className="memory-details__box-header-wrapper">
+              <h1 className="memory-details__header">{title}</h1>
+              <div className="memory-details__date-wrapper">
+                <p className="memory-details__subheader">Date of Memory</p>
+                <p className="memory-details__date-text">
                   {dateOfMemory !== undefined && dateOfMemory.slice(0, 10)}
                 </p>
               </div>
             </div>
-            <p className="memoryDetails__subheader">Description</p>
-            <p className="memoryDetails__body">{description}</p>
+            <p className="memory-details__subheader">Description</p>
+            <p className="memory-details__body">{description}</p>
           </div>
-          <div className="memoryDetails__box memoryDetails__box--feeling">
-            <p className="memoryDetails__subheader">
+          <div className="memory-details__box memory-details__box--feeling">
+            <p className="memory-details__subheader">
               This memory makes me feel...
             </p>
-            <p className="memoryDetails__body">{feeling}</p>
+            <p className="memory-details__body">{feeling}</p>
           </div>
-          <div className="memoryDetails__box memoryDetails__box--helpful">
-            <p className="memoryDetails__subheader">Helpful Memory?</p>
-            <p className="memoryDetails__body">{helpfulText()}</p>
+          <div className="memory-details__box memory-details__box--helpful">
+            <p className="memory-details__subheader">Helpful Memory?</p>
+            <p className="memory-details__body">{helpfulText()}</p>
           </div>
           <div className={this.toggleRelatedClass(relatedMoment)}>
-            <p className="memoryDetails__subheader">Related Thought</p>
-            <p className="memoryDetails__body">{relatedMoment}</p>
+            <p className="memory-details__subheader">Related Thought</p>
+            <p className="memory-details__body">{relatedMoment}</p>
           </div>
           <Link
             to={`/profile/${userID}/memories`}
-            className="memoryDetails__box memoryDetails__box--goback"
+            className="memory-details__box memory-details__box--goback"
           >
-            <p className="memoryDetails__body--return">Return To Memory List</p>
+            <p className="memory-details__body--return">
+              Return To Memory List
+            </p>
           </Link>
           <Link
             to={`/profile/${userID}/memories/${memoryID}/edit-memory`}
-            className="memoryDetails__box memoryDetails__box--edit"
+            className="memory-details__box memory-details__box--edit"
           >
             <p>Edit Memory</p>
           </Link>
-          <div className="memoryDetails__box memoryDetails__box--delete">
+          <div className="memory-details__box memory-details__box--delete">
             <DeleteMemory
               userID={userID}
               memoryID={memoryID}

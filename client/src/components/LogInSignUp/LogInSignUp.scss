@@ -2,7 +2,7 @@
 @use "../../styles/partials/colors" as *;
 @use "../../styles/partials/type-kit" as *;
 
-.logInSignUp {
+.log-in-sign-up {
   background-color: $color-body;
   min-height: 80vh;
   padding: 1rem;
@@ -102,7 +102,7 @@
   }
 }
 
-.logIn {
+.log-in {
   &__form {
     display: flex;
     flex-direction: column;
@@ -113,7 +113,7 @@
   }
 }
 
-.signUp {
+.sign-up {
   &__form {
     display: flex;
     flex-direction: column;

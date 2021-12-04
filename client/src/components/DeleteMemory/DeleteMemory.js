@@ -15,16 +15,16 @@ function Modal({ modal, closeModal, props }) {
       className={`overlay ${modal ? "overlay--visible" : "overlay--hidden"}
     `}
     >
-      <article className="deleteMemory">
-        <div className="deleteMemory__button-container">
+      <article className="delete-memory">
+        <div className="delete-memory__button-container">
           <p
-            className="deleteMemory__button deleteMemory__button--cancel"
+            className="delete-memory__button delete-memory__button--cancel"
             onClick={closeModal}
           >
             Cancel
           </p>
           <p
-            className="deleteMemory__button deleteMemory__button--delete"
+            className="delete-memory__button delete-memory__button--delete"
             onClick={handleClick}
           >
             Confirm Delete
@@ -55,7 +55,7 @@ class DeleteMemory extends Component {
       <>
         <p
           type="button"
-          className="deleteMemory__prompt"
+          className="delete-memory__prompt"
           onClick={this.openModal}
         >
           Delete Memory
