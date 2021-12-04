@@ -55,6 +55,7 @@
     color: $color-black;
     transition: 0.3s;
     box-shadow: 2.5px 5px $color-box-shadow-black;
+    border: 3px dotted $color-confirm;
     &:hover {
       background-color: #dedede;
       box-shadow: none;
@@ -70,6 +71,7 @@
     border-radius: 10px;
     box-shadow: 2.5px 5px $color-box-shadow-black;
     padding: 1rem;
+    margin-top: 1rem;
     text-decoration: none;
     color: $color-black;
     transition: 0.3s;
