@@ -67,6 +67,7 @@ class MemoryDetails extends Component {
             to={`/profile/${userID}/memories`}
             className="memory-details__box memory-details__box--goback"
           >
+            <div className="memory-details__img memory-details__img--back-arrow"></div>
             <p className="memory-details__body--return">
               Return To Memory List
             </p>

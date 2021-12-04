@@ -11,11 +11,6 @@ function Landing() {
   return (
     <section className="landing">
       <article className="landing__container">
-        <img
-          className="landing__hero-img"
-          src={devicesPic}
-          alt="the memory overview page of the mindcheque website showin in an iMac, iPad Pro 11 inch, and iPhone 13 shell. To show off its flexible design."
-        />
         <div className="landing__box landing__box--1">
           <div className="landing__title-wrapper landing__title-wrapper--underline-1">
             <h2 className="landing__box-title">
@@ -39,7 +34,11 @@ function Landing() {
             and memories into your very own memory bank.
           </p>
         </div>
-
+        <img
+          className="landing__hero-img"
+          src={devicesPic}
+          alt="the memory overview page of the mindcheque website showin in an iMac, iPad Pro 11 inch, and iPhone 13 shell. To show off its flexible design."
+        />
         <div className="landing__box landing__box--2">
           <div className="landing__title-wrapper landing__title-wrapper--underline-2">
             <h2 className="landing__box-title">Invest in Yourself!</h2>

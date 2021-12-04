@@ -67,6 +67,9 @@
     }
 
     &--goback {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
       text-decoration: none;
       color: $color-black;
       transition: 0.3s;
@@ -158,6 +161,19 @@
     &--return {
       font-size: pxToRem(16);
       font-weight: 700;
+    }
+  }
+
+  &__img {
+    width: 1.5rem;
+    &--back-arrow {
+      margin-right: 0.5rem;
+      background-image: url("../../assets/icons/arrow-black.svg");
+      height: 1.5rem;
+      transition: 0.15s;
+      &:hover {
+        background-image: url("../../assets/icons/arrow-white.svg");
+      }
     }
   }
 }
