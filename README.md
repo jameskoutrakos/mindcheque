@@ -1,70 +1,96 @@
-# Getting Started with Create React App
+# **MindCheque**
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A website designed and curated with the user in mind, a tool for those who sometimes feel anxious, or want a way to track their day-to-day.
 
-## Available Scripts
+MindCheque is a resource that can be used to deposit your thoughts and memories into your very own memory bank.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## **🧠 ✅ | Why MindCheque?**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+The name **MindCheque** is a play on words.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+**Mind** being home to your memories, and **Cheque** to illustrate that it gives you the opportunity to 'check' yourself on the daily.
 
-### `npm test`
+Also, in making memory deposits like depositing a 'cheque'.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## **💡 | Features**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- A clean UI with bold colors and subtle animations that guide the user with ease from screen to screen.
+- Intentional UX design, made possible by collecting user research through interviews and user testing.
+- A complete MySQL database that holds all users and memories in their respective tables.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## **🖥 | Tech Stack**
 
-### `npm run eject`
+In creating MindCheque, I employed near all of the lessons and principles learned throughout my time at BrainStation. Below you will find the framework, packages, and server-side resources used to in my creation.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### **Back-end**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Node.js
+- Express
+- MySQL, Knex
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### **Front-end**
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- React
+- SASS
+- Addtional Packages: Axios, SweetAlert2
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## **💾 | Installation**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+First, you will need to access this application from your code editor (i.e. VS Code). From there, please follow the instructions on how to prepare for use.
 
-### Code Splitting
+### **Back-end**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+_URL path and port number for back-end: http://localhost.com:8080_
 
-### Analyzing the Bundle Size
+1. Open your terminal and cd into the `/server` folder.
+2. Run `$ npm install` to install all necessary node modules for the server-side.
+3. Open `knexfile.js` and validate the username and password present matches what you use for your MySQL databases (the username should be **root** and the **password** should be rootroot by default).
+4. Open your MySQL Workbench application and create a new schema titled `mindcheque`. Then perform the following commands from the terminal.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- `$ npx knex migrate:rollback` -> This is to ensure you are starting with a clean slate in your mindcheque schema.
 
-### Making a Progressive Web App
+- ` $ npx knex migrate:latest` -> This will create the two tables 'user' and 'memory'.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- ` $ npx knex seed:run` -> This will populate the tables with the sample users and memories provided.
 
-### Advanced Configuration
+5. Now that you have created the tables, seeded the data, and downloaded the necessary node modules, you can start server by entering the following terminal line:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- `$ node index.js`
 
-### Deployment
+With this, your server will be live! When troubleshooting, enter the command Ctrl+C to close the server and restart it with the terminal line detailed in step 5.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### **Front-end**
 
-### `npm run build` fails to minify
+_URL path and port number for back-end: http://localhost.com:3000_
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Now that we have the server live, let's move onto the front-end.
+
+1. Find the path to get to the `/client` folder and cd into it.
+2. Run `$ npm install` to install all necessary node modules for the client-side.
+3. Simply run the following line into your terminal while in the client folder,
+
+- `$ npm start`
+
+And with that (drumroll please 🥁🥁🥁)...
+
+you are immersed into the world of **MindCheque**. I hope you enjoy your visit!
+
+---
+
+## **🔮 | Future Plans**
+
+---
+
+## **☎️ | Contact the Creator**
+
+This web app was developed, designed, and created by James Koutrakos
+
+You can follow me on GitHub and LinkedIn, and view my portfolio here!

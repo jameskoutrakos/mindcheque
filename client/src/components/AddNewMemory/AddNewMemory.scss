@@ -103,7 +103,7 @@
       transition: 0.3s;
       text-decoration: none;
       border: none;
-      background-color: $color-confirm;
+      background-color: $color-add-hover;
       color: $color-white;
       @include tablet-breakpoint {
         flex-grow: 1;
@@ -112,7 +112,7 @@
       &:hover {
         box-shadow: none;
         transform: translateX(2.5px) translateY(5px);
-        background-color: darken($color: $color-confirm, $amount: 15);
+        background-color: darken($color: $color-add-hover, $amount: 15);
       }
     }
   }
