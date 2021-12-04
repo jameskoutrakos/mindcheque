@@ -10,6 +10,15 @@ class LogInSignUp extends Component {
     this.props.getAllUsers();
   }
 
+  toggleSignUpForm = () => {
+    const { validNewUser } = this.props;
+    if (validNewUser === false) {
+      return;
+    } else {
+      return "log-in-sign-up__container--hidden";
+    }
+  };
+
   signUpUser = (e) => {
     e.preventDefault();
     let newUser = {
@@ -88,11 +97,15 @@ class LogInSignUp extends Component {
             </form>
           </article>
 
-          <article className="log-in-sign-up__container log-in-sign-up__container--option">
+          <article
+            className={`log-in-sign-up__container log-in-sign-up__container--option ${this.toggleSignUpForm()}`}
+          >
             <h2>OR</h2>
           </article>
 
-          <article className="log-in-sign-up__container">
+          <article
+            className={`log-in-sign-up__container ${this.toggleSignUpForm()}`}
+          >
             <h2 className="log-in-sign-up__title">Create an Account</h2>
             <form onSubmit={this.signUpUser}>
               <div className="sign-up__form">

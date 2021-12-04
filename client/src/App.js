@@ -24,6 +24,7 @@ class App extends Component {
     userMemories: [],
     currentMemory: [],
     mostRecentMemory: [],
+    validNewUser: false,
   };
 
   // Import all user information from the server
@@ -48,10 +49,11 @@ class App extends Component {
         this.getAllUsers();
         Swal.fire({
           title: "Your account has been created!",
-          text: "To proceed, please log-in using the 'Returning User' form at the top of the page.",
+          text: "To proceed, please log-in using the 'Returning User' form.",
           icon: "success",
           confirmButtonColor: "#2a7d8c",
         });
+        this.setState({ validNewUser: true });
       })
       .catch((error) => {
         console.log(error);
@@ -61,6 +63,7 @@ class App extends Component {
           icon: "error",
           confirmButtonColor: "#2a7d8c",
         });
+        this.setState({ validNewUser: false });
       });
   };
 
@@ -164,6 +167,7 @@ class App extends Component {
                 allUsers={this.state.allUsers}
                 getAllUsers={this.getAllUsers}
                 addNewUser={this.addNewUser}
+                validNewUser={this.state.validNewUser}
                 {...routerProps}
               />
             )}
