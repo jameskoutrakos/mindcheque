@@ -6,7 +6,6 @@
   background-color: $color-body;
   min-height: 80vh;
   padding: 1rem;
-  // display: flex;
   @include tablet-breakpoint {
     padding: 1rem 2rem;
   }
@@ -72,21 +71,16 @@
       font-weight: 700;
       &:hover {
         background-color: $color-login-hover;
-        // color: $color-white;
       }
     }
   }
 
   &__title {
     font-size: 1.5rem;
-    // padding-bottom: 0.5rem;
-    // margin: 0 0.5rem;
-    // border-radius: 2px;
     background-color: $color-box;
     color: $color-black;
     border-radius: 26px;
     margin: 0.5rem 0;
-    // box-shadow: 2.5px 5px $color-box-shadow-black;
     padding: 1rem;
   }
 

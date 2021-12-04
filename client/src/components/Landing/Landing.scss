@@ -12,8 +12,6 @@
   &__container {
     display: flex;
     flex-direction: column;
-    // position: relative;
-    // top: pxToRem(-96);
     margin: 0 auto;
     padding: 1rem 0;
     width: 100%;
@@ -50,7 +48,6 @@
     &--top-row {
       min-height: pxToRem(200);
       width: 100%;
-      // border-radius: 15px;
       &--middle {
         @include tablet-breakpoint {
           margin: 0.5rem 1rem;
@@ -79,7 +76,6 @@
     font-weight: 500;
     font-size: pxToRem(24);
     color: $color-black;
-    // width: 50%;
     @include tablet-breakpoint {
       font-size: pxToRem(36);
     }
@@ -96,7 +92,6 @@
     font-weight: 700;
     font-size: pxToRem(16);
     color: $color-black;
-    // width: 50%;
 
     @include tablet-breakpoint {
       padding: 1rem 0;
