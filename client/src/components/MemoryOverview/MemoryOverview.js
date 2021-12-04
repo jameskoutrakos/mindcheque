@@ -5,13 +5,12 @@ import { Link } from "react-router-dom";
 
 class MemoryOverview extends Component {
   componentDidMount() {
-    console.log("MEMORY OVERVIEW MOUNTED");
     const { getSingleUser, getMostRecentMemory } = this.props;
     const { userID } = this.props.match.params;
 
     getSingleUser(userID);
     if (this.props.mostRecentMemory === []) {
-      console.log("YOU HAVE NO MEMORIES");
+      console.log("No memories found!");
     } else {
       getMostRecentMemory(userID);
     }

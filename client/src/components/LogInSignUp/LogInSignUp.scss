@@ -43,6 +43,9 @@
         margin: auto 1rem;
       }
     }
+    &--hidden {
+      display: none;
+    }
   }
 
   &__box {

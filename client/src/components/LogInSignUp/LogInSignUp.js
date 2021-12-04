@@ -7,7 +7,6 @@ const host = "http://localhost:8080";
 
 class LogInSignUp extends Component {
   componentDidMount() {
-    console.log("LOG IN MOUNTED");
     this.props.getAllUsers();
   }
 
@@ -118,9 +117,7 @@ class LogInSignUp extends Component {
                   name="email"
                   placeholder="Enter your email address"
                 />
-                <p className="logInSignUp__input-label" p>
-                  Username
-                </p>
+                <p className="logInSignUp__input-label">Username</p>
                 <input
                   className="logInSignUp__input"
                   type="text"

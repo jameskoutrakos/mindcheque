@@ -7,21 +7,11 @@ import { Link } from "react-router-dom";
 
 class MemoryDetails extends Component {
   componentDidMount() {
-    console.log("MEMORY DETAILS MOUNTED");
-    console.log(this.props);
     this.props.getCurrentMemory(
       this.props.match.params.userID,
       this.props.match.params.memoryID
     );
   }
-
-  // toggleRelatedClass = () => {
-  //   if (this.props.getCurrentMemory.relatedMoment === "") {
-  //     return "memoryDetails__box memoryDetails__box--related memoryDetails__box--related--hidden";
-  //   } else if (this.props.getCurrentMemory.relatedMoment == "") {
-  //     return "memoryDetails__box memoryDetails__box--related";
-  //   }
-  // };
 
   toggleRelatedClass = (isRelatedMoment) => {
     return isRelatedMoment

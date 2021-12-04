@@ -2,7 +2,6 @@ import { Component } from "react";
 import "./DeleteMemory.scss";
 
 function Modal({ modal, closeModal, props }) {
-  console.log(props);
   const { userID, memoryID, history, deleteMemoryByUser } = props;
   const handleClick = (e) => {
     e.preventDefault();
@@ -44,9 +43,6 @@ class DeleteMemory extends Component {
   openModal = (e) => {
     e.preventDefault();
     this.setState({ modal: true });
-    // this.props.history.push(
-    //   `/profile/${this.props.userID}/memories/${this.props.memoryID}/delete-memory`
-    // );
   };
 
   closeModal = (e) => {

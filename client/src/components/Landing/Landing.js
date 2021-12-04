@@ -10,12 +10,6 @@ import nextBlack from "../../assets/icons/next-black.svg";
 function Landing() {
   return (
     <section className="landing">
-      {/*<article className="landing__container landing__container--top-row">
-        <div className="landing__box landing__box--top-row"></div>
-        <div className="landing__box landing__box--top-row"></div>
-        <div className="landing__box landing__box--top-row"></div>
-  </article>*/}
-
       <article className="landing__container">
         <img
           className="landing__hero-img"
@@ -65,22 +59,6 @@ function Landing() {
             can do it!
           </p>
         </div>
-
-        {/*} <Link to="/profile" className="landing__box landing__box--3">
-          <div className="landing__title-wrapper landing__box-title--underline-3">
-            <h2 className="landing__box-title">Create an Account or Log In</h2>
-            <img
-              className="landing__img landing__img--chevron"
-              src={nextBlack}
-              alt="the next icon"
-            />
-          </div>
-          <p className="landing__box-body">
-            Start now by creating an account! It's really easy to do too. Simply
-            click on this box and you will be able to create a new account or
-            log in to your existing account.
-          </p>
-</Link>*/}
       </article>
 
       <article className="landing__container landing__container--top-row">

@@ -8,7 +8,6 @@ import chevronBlack from "../../assets/icons/next-black.svg";
 class MemoryList extends Component {
   componentDidMount() {
     const userID = this.props.match.params.userID;
-    console.log("MEMORY LIST MOUNTED");
     this.props.getSingleUser(userID);
     this.props.getUserMemories(userID);
   }

@@ -28,7 +28,6 @@ class EditMemory extends Component {
       (today.getMonth() + 1) +
       "-" +
       today.getDate();
-    console.log("Update Date: ", updateDate);
     return updateDate;
   };
 
@@ -47,7 +46,6 @@ class EditMemory extends Component {
           helpfulThought,
           relatedMoment,
         } = foundMemory;
-        console.log("FoundMemory: ", foundMemory);
         this.setState({
           title: title,
           description: description,
@@ -65,9 +63,7 @@ class EditMemory extends Component {
   };
 
   componentDidMount() {
-    console.log("EDIT MEMORY MOUNTED");
     const { userID, memoryID } = this.props.match.params;
-    console.log("UserID: ", userID, " ", "MemoryID: ", memoryID);
     this.getMemoryToEdit(userID, memoryID);
   }
 
@@ -85,8 +81,6 @@ class EditMemory extends Component {
 
   handleSubmit = (e) => {
     const { userID, memoryID } = this.props.match.params;
-    console.log("UserID: " + userID);
-    console.log("MemoryID: " + memoryID);
     e.preventDefault();
 
     axios
@@ -102,7 +96,6 @@ class EditMemory extends Component {
         relatedMoment: this.state.relatedMoment,
       })
       .then((response) => {
-        console.log(response.data);
         this.props.history.goBack();
       });
   };

@@ -5,7 +5,6 @@ import Swal from "sweetalert2";
 
 import Header from "./components/Header/Header";
 import AddNewMemory from "./components/AddNewMemory/AddNewMemory";
-// import DeleteMemory from "./components/DeleteMemory/DeleteMemory";
 import EditMemory from "./components/EditMemory/EditMemory";
 import Landing from "./components/Landing/Landing";
 import LogInSignUp from "./components/LogInSignUp/LogInSignUp";
@@ -27,24 +26,26 @@ class App extends Component {
     mostRecentMemory: [],
   };
 
+  // Import all user information from the server
+
   getAllUsers = () => {
     axios
       .get(`${host}/profile/`)
       .then((response) => {
         this.setState({ allUsers: response.data });
-        console.log("All Users: ", response.data);
       })
       .catch((error) => {
         console.log(error);
       });
   };
 
+  // Post a new user to the user table server-side
+
   addNewUser = (newUser) => {
     axios
       .post(`${host}/profile/`, newUser)
       .then((response) => {
         this.getAllUsers();
-        console.log("Add User: ", response.data);
         Swal.fire({
           title: "Your account has been created!",
           text: "To proceed, please log-in using the 'Returning User' form at the top of the page.",
@@ -70,7 +71,6 @@ class App extends Component {
       .get(`${host}/profile/${userID}`)
       .then((response) => {
         this.setState({ activeUser: response.data[0] });
-        console.log(response.data[0]);
       })
       .catch((error) => {
         console.log(error);
@@ -84,7 +84,6 @@ class App extends Component {
       .get(`${host}/profile/${userID}/memories`)
       .then((response) => {
         this.setState({ userMemories: response.data });
-        console.log(response.data);
       })
       .catch((error) => {
         console.log(error);
@@ -100,7 +99,6 @@ class App extends Component {
         this.setState({
           mostRecentMemory: response.data[response.data.length - 1],
         });
-        console.log(response.data[response.data.length - 1]);
       })
       .catch((error) => {
         console.log(error);
@@ -114,7 +112,6 @@ class App extends Component {
       .get(`${host}/profile/${userID}/memories/${memoryID}`)
       .then((response) => {
         this.setState({ currentMemory: response.data[0] });
-        console.log(response.data[0]);
       })
       .catch((error) => {
         console.log(error);
@@ -128,7 +125,6 @@ class App extends Component {
       .post(`${host}/profile/${userID}/memories/add-memory`, newMemory)
       .then((response) => {
         this.getUserMemories(userID);
-        console.log(response.data);
       })
       .catch((error) => {
         console.log(error);
@@ -142,7 +138,6 @@ class App extends Component {
       .delete(`${host}/profile/${userID}/memories/${memoryID}/delete-memory`)
       .then((response) => {
         this.getUserMemories(userID);
-        console.log(response.data);
       })
       .catch((error) => {
         console.log(error);
@@ -151,13 +146,9 @@ class App extends Component {
 
   // Component Lifecycle Methods
 
-  componentDidMount() {
-    console.log("APP MOUNTED");
-  }
+  componentDidMount() {}
 
-  componentDidUpdate() {
-    console.log("APP UPDATED");
-  }
+  componentDidUpdate() {}
 
   render() {
     return (
@@ -238,8 +229,6 @@ class App extends Component {
             path="/profile/:userID/memories/:memoryID/delete-memory"
             render={(routerProps) => (
               <MemoryDetails
-                // currentMemory={this.state.currentMemory}
-                // getCurrentMemory={this.getCurrentMemory}
                 deleteMemoryByUser={this.deleteMemoryByUser}
                 {...routerProps}
               />
