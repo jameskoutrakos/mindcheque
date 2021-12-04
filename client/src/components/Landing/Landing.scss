@@ -33,6 +33,10 @@
     }
   }
 
+  &__hero-img {
+    width: 100%;
+  }
+
   &__box {
     display: flex;
     flex-direction: column;
@@ -155,12 +159,26 @@
 
   &__box-body {
     margin-top: 0.5rem;
-    font-size: pxToRem(14);
+    font-size: pxToRem(16);
     color: $color-black;
     width: 90%;
     @include tablet-breakpoint {
       margin-top: 1rem;
       font-size: pxToRem(18);
+    }
+    &--bold {
+      font-weight: 700;
+    }
+  }
+
+  &__mini-box-body {
+    margin-top: 0.5rem;
+    font-size: pxToRem(14);
+    color: $color-black;
+    width: 90%;
+    @include tablet-breakpoint {
+      margin-top: 1rem;
+      font-size: pxToRem(16);
     }
     &--bold {
       font-weight: 700;

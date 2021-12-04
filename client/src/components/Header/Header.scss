@@ -29,7 +29,9 @@
     max-width: 15rem;
     transition: 0.3s;
     &:hover {
-      max-width: 16rem;
+      @include tablet-breakpoint {
+        max-width: 16rem;
+      }
     }
   }
 

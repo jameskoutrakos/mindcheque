@@ -51,9 +51,6 @@ class App extends Component {
           icon: "success",
           confirmButtonColor: "#2a7d8c",
         });
-        // alert(
-        //   "Account created! Please log in using the 'Returning User' form above!"
-        // );
       })
       .catch((error) => {
         console.log(error);
@@ -63,9 +60,6 @@ class App extends Component {
           icon: "error",
           confirmButtonColor: "#2a7d8c",
         });
-        // alert(
-        //   "You may have missed something in the Sign Up form, please check that every field is populated correctly."
-        // );
       });
   };
 

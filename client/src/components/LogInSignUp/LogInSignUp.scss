@@ -35,9 +35,11 @@
     &--option {
       flex-direction: row;
       justify-content: center;
-      width: 5rem;
+      width: 4.5rem;
+      border-radius: 100%;
+      background-color: $color-white;
       @include tablet-breakpoint {
-        height: 4rem;
+        width: 4.5rem;
         margin: auto 1rem;
       }
     }

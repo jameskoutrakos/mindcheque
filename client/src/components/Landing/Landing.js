@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import "./Landing.scss";
 
+import devicesPic from "../../assets/images/devices-with-bottom.png";
+
 import smileBlack from "../../assets/icons/smile-black.svg";
 import memoryBlack from "../../assets/icons/memory-black.svg";
 import nextBlack from "../../assets/icons/next-black.svg";
@@ -13,6 +15,14 @@ function Landing() {
         <div className="landing__box landing__box--top-row"></div>
         <div className="landing__box landing__box--top-row"></div>
   </article>*/}
+
+      <article className="landing__container">
+        <img
+          className="landing__hero-img"
+          src={devicesPic}
+          alt="the memory overview page of the mindcheque website showin in an iMac, iPad Pro 11 inch, and iPhone 13 shell. To show off its flexible design."
+        />
+      </article>
 
       <article className="landing__container">
         <div className="landing__box landing__box--1">
@@ -31,14 +41,17 @@ function Landing() {
           <p className="landing__box-body">
             A website designed and curated with the user in mind, a tool for
             those who sometimes feel anxious, or want a way to track their
-            day-to-day. MindCheque is a resource that can be used to deposit
-            your thoughts and memories into your very own memory bank.
+            day-to-day.
+          </p>
+          <p className="landing__box-body">
+            MindCheque is a resource that can be used to deposit your thoughts
+            and memories into your very own memory bank.
           </p>
         </div>
 
         <div className="landing__box landing__box--2">
           <div className="landing__title-wrapper landing__title-wrapper--underline-2">
-            <h2 className="landing__box-title">Invest in yourself</h2>
+            <h2 className="landing__box-title">Invest in Yourself!</h2>
             <img
               className="landing__img"
               src={memoryBlack}
@@ -46,7 +59,7 @@ function Landing() {
             />
           </div>
           <p className="landing__box-body">
-            by banking these memories like you’re banking cheques. Document the
+            Deposit these memories like you’re depositing cheques. Document the
             good things that happen, every small win, and then return to these
             memories whenever you feel down or need to remind yourself that you
             can do it!
@@ -75,29 +88,34 @@ function Landing() {
           <div className="landing__title-wrapper landing__title-wrapper--underline-3">
             <h2 className="landing__mini-box-title">Why MindCheque?</h2>
           </div>
-          <p className="landing__box-body">
-            The name <span className="landing__box-body--bold">MindCheque</span>{" "}
-            is a play on words.{" "}
-            <span className="landing__box-body--bold">Mind</span> being home to
-            your memories, and{" "}
-            <span className="landing__box-body--bold">Cheque</span> to
+          <p className="landing__mini-box-body">
+            The name{" "}
+            <span className="landing__mini-box-body--bold">MindCheque</span> is
+            a play on words.{" "}
+          </p>
+          <p className="landing__mini-box-body">
+            <span className="landing__mini-box-body--bold">Mind</span> being
+            home to your memories, and{" "}
+            <span className="landing__mini-box-body--bold">Cheque</span> to
             illustrate that it gives you the opportunity to 'check' yourself on
-            a daily, while making memory deposits like banking a 'cheque'.
+            the daily. Also, in making memory deposits like depositing a
+            'cheque'.
           </p>
         </div>
         <div className="landing__box landing__box--top-row landing__box--top-row--middle">
           <div className="landing__title-wrapper landing__title-wrapper--underline-3">
             <h2 className="landing__mini-box-title">Proven to Help!</h2>
           </div>
-          <p className="landing__box-body">
+          <p className="landing__mini-box-body">
             {" "}
             Studies have shown the positive impact of documenting your thoughts.
           </p>
-          <p className="landing__box-body">
+          <p className="landing__mini-box-body">
             {" "}
             Returning to the positive affirmations and proven progress that you
-            have succeeded in previously, will instill you with the confidence
-            to do it again and challenge you to keep improving yourself!
+            have succeeded in previously, you will be instilled with the
+            confidence to do it again and challenge you to keep improving
+            yourself!
           </p>
         </div>
 
@@ -113,10 +131,12 @@ function Landing() {
               alt="the next icon"
             />
           </div>
-          <p className="landing__box-body">
-            Start now by creating an account! It's really easy to do too. Simply
-            click on this box and you will be able to create a new account or
-            log in to your existing account.
+          <p className="landing__mini-box-body">
+            Start now by creating an account! It's really easy to do too.
+          </p>
+          <p className="landing__mini-box-body">
+            Simply click on this box and you will be able to create a new
+            account or log in to your existing account.
           </p>
         </Link>
       </article>
