@@ -19,7 +19,7 @@ class MemoryList extends Component {
       <section className="memory-list">
         <article className="memory-list__container">
           <div className="memory-list__header-box">
-            <h2>{firstName}'s Memories</h2>
+            <h2 className="memory-list__greeting">{firstName}'s Memories</h2>
           </div>
           <ul className="memory-list__ul">
             {this.props.userMemories.map((memory) => {

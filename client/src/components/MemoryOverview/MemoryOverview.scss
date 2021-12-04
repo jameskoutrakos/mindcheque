@@ -127,20 +127,44 @@
     }
   }
   &__header {
-    font-size: pxToRem(24);
+    font-size: pxToRem(20);
+    @include tablet-breakpoint {
+      font-size: pxToRem(24);
+    }
+    @include desktop-breakpoint {
+      font-size: pxToRem(26);
+    }
+  }
+
+  &__greeting {
+    font-size: pxToRem(20);
+    @include tablet-breakpoint {
+      font-size: pxToRem(26);
+    }
+    @include desktop-breakpoint {
+      font-size: pxToRem(30);
+    }
   }
 
   &__subheader {
     width: 90%;
-    font-size: pxToRem(20);
+    font-size: pxToRem(16);
     border-top: 3px solid $color-body;
     border-bottom: 3px dotted $color-body;
     margin: 1rem 0;
     padding: 1rem 0;
+    @include tablet-breakpoint {
+      font-size: pxToRem(20);
+    }
   }
 
   &__body {
     margin: 0.5rem 0;
+    font-size: pxToRem(14);
+
+    @include tablet-breakpoint {
+      font-size: pxToRem(16);
+    }
 
     &--bold {
       font-weight: 700;
@@ -156,6 +180,21 @@
         color: $color-button-hover;
         text-decoration: underline;
       }
+    }
+  }
+
+  &__days {
+    font-size: pxToRem(16);
+    border-top: 3px solid $color-body;
+    border-bottom: 3px dotted $color-body;
+    margin: 1rem 0;
+    padding: 1rem 0;
+    text-align: left;
+    @include tablet-breakpoint {
+      font-size: pxToRem(20);
+    }
+    @include desktop-breakpoint {
+      font-size: pxToRem(24);
     }
   }
 
@@ -199,14 +238,5 @@
         background-image: url("../../assets/icons/logout-white.svg");
       }
     }
-  }
-
-  &__days {
-    font-size: pxToRem(20);
-    border-top: 3px solid $color-body;
-    border-bottom: 3px dotted $color-body;
-    margin: 1rem 0;
-    padding: 1rem 0;
-    text-align: left;
   }
 }

@@ -50,7 +50,7 @@ class MemoryOverview extends Component {
           <article className="memory-overview__container">
             <div className="memory-overview__box memory-overview__box--header">
               <div className="memory-overview__title-wrapper">
-                <h1>
+                <h1 className="memory-overview__greeting">
                   Welcome back, {firstName} {lastName}
                 </h1>
                 <div className="memory-overview__img memory-overview__img--smile"></div>

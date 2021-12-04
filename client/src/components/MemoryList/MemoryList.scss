@@ -89,11 +89,26 @@
     }
   }
 
+  &__greeting {
+    font-size: pxToRem(20);
+    @include tablet-breakpoint {
+      font-size: pxToRem(26);
+    }
+  }
+
   &__title {
-    font-size: pxToRem(18);
+    font-size: pxToRem(16);
+    font-weight: 700;
+    @include tablet-breakpoint {
+      font-size: pxToRem(18);
+    }
   }
 
   &__date {
+    font-size: pxToRem(14);
+    @include tablet-breakpoint {
+      font-size: pxToRem(16);
+    }
   }
 
   &__return-text {
