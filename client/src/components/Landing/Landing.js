@@ -80,7 +80,20 @@ function Landing() {
             'cheque'.
           </p>
         </div>
+
         <div className="landing__box landing__box--top-row landing__box--top-row--middle">
+          <div className="landing__title-wrapper landing__title-wrapper--underline-3">
+            <h2 className="landing__mini-box-title">Invest in Yourself!</h2>
+          </div>
+          <p className="landing__mini-box-body">
+            Deposit these memories like you’re depositing cheques. Document the
+            good things that happen, every small win, and then return to these
+            memories whenever you feel down or need to remind yourself that you
+            can do it!
+          </p>
+        </div>
+
+        <div className="landing__box landing__box--top-row ">
           <div className="landing__title-wrapper landing__title-wrapper--underline-3">
             <h2 className="landing__mini-box-title">Proven to Help!</h2>
           </div>
@@ -94,18 +107,6 @@ function Landing() {
             have succeeded in previously, you will be instilled with the
             confidence to do it again and challenge you to keep improving
             yourself!
-          </p>
-        </div>
-
-        <div className="landing__box landing__box--top-row ">
-          <div className="landing__title-wrapper landing__title-wrapper--underline-3">
-            <h2 className="landing__mini-box-title">Invest in Yourself!</h2>
-          </div>
-          <p className="landing__mini-box-body">
-            Deposit these memories like you’re depositing cheques. Document the
-            good things that happen, every small win, and then return to these
-            memories whenever you feel down or need to remind yourself that you
-            can do it!
           </p>
         </div>
 
