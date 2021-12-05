@@ -63,8 +63,6 @@
       margin-bottom: 1.5rem;
     }
     &--2 {
-    }
-    &--3 {
       text-decoration: none;
       transition: 0.3s;
       box-shadow: 2.5px 5px $color-box-shadow-black;
@@ -73,6 +71,8 @@
         transform: translateX(2.5px) translateY(5px);
         background-color: $color-login-hover;
       }
+    }
+    &--3 {
     }
   }
 

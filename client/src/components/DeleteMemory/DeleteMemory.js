@@ -1,10 +1,18 @@
 import { Component } from "react";
+import Swal from "sweetalert2";
 import "./DeleteMemory.scss";
 
 function Modal({ modal, closeModal, props }) {
   const { userID, memoryID, history, deleteMemoryByUser } = props;
   const handleClick = (e) => {
     e.preventDefault();
+    Swal.fire({
+      position: "top-end",
+      icon: "success",
+      title: "Your memory has been deleted!",
+      showConfirmButton: false,
+      timer: 1500,
+    });
     deleteMemoryByUser(userID, memoryID);
     closeModal(e);
     history.push(`/profile/${userID}/memories/`);

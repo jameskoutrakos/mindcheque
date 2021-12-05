@@ -1,5 +1,6 @@
 import { Component } from "react";
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 import "./AddNewMemory.scss";
 
 class AddNewMemory extends Component {
@@ -24,8 +25,29 @@ class AddNewMemory extends Component {
       relatedMoment: e.target.relatedMoment.value,
     };
 
-    this.props.addMemoryByUser(this.props.match.params.userID, newMemory);
-    this.props.history.goBack();
+    if (
+      !e.target.title.value ||
+      !e.target.description.value ||
+      !e.target.dateOfMemory.value
+    ) {
+      Swal.fire({
+        title: "Oops! A field is missing!",
+        text: "Please check all fields for your new memory before submitting!",
+        icon: "error",
+        confirmButtonColor: "#2a7d8c",
+      });
+    } else {
+      Swal.fire({
+        position: "top-end",
+        title: "Your memory has been successfully added!",
+        text: "Redirecting you to the overview page.",
+        icon: "success",
+        showConfirmButton: false,
+        timer: 1500,
+      });
+      this.props.addMemoryByUser(this.props.match.params.userID, newMemory);
+      this.props.history.goBack();
+    }
   };
 
   render() {
@@ -119,7 +141,9 @@ class AddNewMemory extends Component {
               </div>
 
               <div className="add-memory__box add-memory__box--related">
-                <p className="add-memory__input-label">Related Moment</p>
+                <p className="add-memory__input-label">
+                  Related Moment (Optional)
+                </p>
                 <input
                   className="add-memory__input"
                   type="text"

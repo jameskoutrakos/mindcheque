@@ -22,7 +22,6 @@ function Landing() {
               alt="a smiley face icon"
             />
           </div>
-
           <p className="landing__box-body">
             A website designed and curated with the user in mind, a tool for
             those who sometimes feel anxious, or want a way to track their
@@ -38,7 +37,7 @@ function Landing() {
           src={devicesPic}
           alt="the memory overview page of the mindcheque website showin in an iMac, iPad Pro 11 inch, and iPhone 13 shell. To show off its flexible design."
         />
-        <Link to="/profile" className="landing__box landing__box--3">
+        <Link to="/profile" className="landing__box landing__box--2">
           <div className="landing__title-wrapper landing__title-wrapper--underline-2">
             <h2 className="landing__box-title">
               {" "}
@@ -60,7 +59,6 @@ function Landing() {
           </p>
         </Link>
       </article>
-
       <article className="landing__container landing__container--top-row">
         <div className="landing__box landing__box--top-row">
           <div className="landing__title-wrapper landing__title-wrapper--underline-3">
@@ -80,7 +78,6 @@ function Landing() {
             'cheque'.
           </p>
         </div>
-
         <div className="landing__box landing__box--top-row landing__box--top-row--middle">
           <div className="landing__title-wrapper landing__title-wrapper--underline-3">
             <h2 className="landing__mini-box-title">Invest in Yourself!</h2>
@@ -92,7 +89,6 @@ function Landing() {
             can do it!
           </p>
         </div>
-
         <div className="landing__box landing__box--top-row ">
           <div className="landing__title-wrapper landing__title-wrapper--underline-3">
             <h2 className="landing__mini-box-title">Proven to Help!</h2>
@@ -109,27 +105,6 @@ function Landing() {
             yourself!
           </p>
         </div>
-
-        {/*} <Link
-          to="/profile"
-          className="landing__box landing__box--top-row landing__box--3"
-        >
-          <div className="landing__title-wrapper landing__title-wrapper--underline-3">
-            <h2 className="landing__mini-box-title">Sign Up or Log In</h2>
-            <img
-              className="landing__img landing__img--chevron"
-              src={nextBlack}
-              alt="the next icon"
-            />
-          </div>
-          <p className="landing__mini-box-body">
-            Start now by creating an account! It's really easy to do too.
-          </p>
-          <p className="landing__mini-box-body">
-            Simply click on this box and you will be able to create a new
-            account or log in to your existing account.
-          </p>
-  </Link> */}
       </article>
     </section>
   );

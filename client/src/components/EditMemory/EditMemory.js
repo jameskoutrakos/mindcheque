@@ -1,5 +1,6 @@
 import axios from "axios";
 import { Component } from "react";
+import Swal from "sweetalert2";
 import "./EditMemory.scss";
 
 const host = "http://localhost:8080";
@@ -83,21 +84,41 @@ class EditMemory extends Component {
     const { userID, memoryID } = this.props.match.params;
     e.preventDefault();
 
-    axios
-      .put(`${host}/profile/${userID}/memories/${memoryID}/edit-memory`, {
-        memoryID: memoryID,
-        userID: userID,
-        title: this.state.title,
-        description: this.state.description,
-        dateOfMemory: this.state.dateOfMemory,
-        dateLastUpdated: this.setUpdateDate(),
-        feeling: this.state.feeling,
-        helpfulThought: this.state.helpfulThought,
-        relatedMoment: this.state.relatedMoment,
-      })
-      .then((response) => {
-        this.props.history.goBack();
+    if (
+      !this.state.title ||
+      !this.state.description ||
+      !this.state.dateOfMemory
+    ) {
+      Swal.fire({
+        title: "Oops! A field is missing!",
+        text: "Please check all fields for you save your changes.",
+        icon: "error",
+        confirmButtonColor: "#2a7d8c",
       });
+    } else {
+      Swal.fire({
+        position: "top-end",
+        title: "Your memory has been successfully updated!",
+        icon: "success",
+        showConfirmButton: false,
+        timer: 1000,
+      });
+      axios
+        .put(`${host}/profile/${userID}/memories/${memoryID}/edit-memory`, {
+          memoryID: memoryID,
+          userID: userID,
+          title: this.state.title,
+          description: this.state.description,
+          dateOfMemory: this.state.dateOfMemory,
+          dateLastUpdated: this.setUpdateDate(),
+          feeling: this.state.feeling,
+          helpfulThought: this.state.helpfulThought,
+          relatedMoment: this.state.relatedMoment,
+        })
+        .then((response) => {
+          this.props.history.goBack();
+        });
+    }
   };
 
   render() {
@@ -207,7 +228,9 @@ class EditMemory extends Component {
               </div>
 
               <div className="edit-memory__box edit-memory__box--related">
-                <p className="edit-memory__input-label">Related Moment</p>
+                <p className="edit-memory__input-label">
+                  Related Moment (Optional)
+                </p>
                 <input
                   className="edit-memory__input"
                   type="text"
