@@ -6,6 +6,19 @@ MindCheque is a resource that can be used to deposit your thoughts and memories 
 
 ---
 
+## 📓 Table of Contents
+
+1. [Why MindCheque?](#why)
+2. [Features](#features)
+3. [Tech Stack](#tech)
+4. [Installation](#install)
+5. [Future Plans](#future)
+6. [Contact The Creator](#contact)
+
+---
+
+<a name="why"></a>
+
 ## **🧠 ✅ | Why MindCheque?**
 
 The name **MindCheque** is a play on words.
@@ -16,6 +29,8 @@ Also, in making memory deposits like depositing a 'cheque'.
 
 ---
 
+<a name="features"></a>
+
 ## **💡 | Features**
 
 - The ability to create a new user account and deposit memories in your very own memory bank.
@@ -25,6 +40,8 @@ Also, in making memory deposits like depositing a 'cheque'.
 - A complete MySQL database that holds all users and memories in their respective tables.
 
 ---
+
+<a name="tech"></a>
 
 ## **🖥 | Tech Stack**
 
@@ -43,6 +60,8 @@ In creating MindCheque, I employed near all of the lessons and principles learne
 - Addtional Packages: Axios, SweetAlert2
 
 ---
+
+<a name="install"></a>
 
 ## **💾 | Installation**
 
@@ -87,6 +106,8 @@ you are immersed into the world of **MindCheque**. I hope you enjoy your visit!
 
 ---
 
+<a name="future"></a>
+
 ## **🔮 | Future Plans**
 
 1. **Proper Security and Authentication**
@@ -104,6 +125,8 @@ you are immersed into the world of **MindCheque**. I hope you enjoy your visit!
 - Sharing will not be as easy as social media platforms and will require some method of password or 2-step authentication to ensure that sharing is intentional because of the sensitive information that MindCheque holds.
 
 ---
+
+<a name="contact"></a>
 
 ## **☎️ | Contact the Creator**
 
