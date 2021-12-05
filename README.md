@@ -89,6 +89,20 @@ you are immersed into the world of **MindCheque**. I hope you enjoy your visit!
 
 ## **🔮 | Future Plans**
 
+1. **Proper Security and Authentication**
+
+- Through inclusion of OAuth and JWT, I aim to make this website as secure as I can. It is imperative that people’s memories are kept secure and unseen to others so long as they choose to not share them.
+
+2. **Generated Recommendations Based On User Activity**
+
+- Ideas for new memories to write, motivating users to write another “Proud” memory if they have written one or two “Sad” memories.
+- The more that users interact with MindCheque, the more recommendations MindCheque will inevitably provide to them.
+
+3. **Intentional Sharing To Specific Individuals and/or Licensed Professionals**
+
+- The ability to share your memories in an exportable format (JPEG, PNG, PDF) to whoever you may choose. Could be a very close friends, family member, or a professional such as a therapist who you would like to share your most recent memory deposits with.
+- Sharing will not be as easy as social media platforms and will require some method of password or 2-step authentication to ensure that sharing is intentional because of the sensitive information that MindCheque holds.
+
 ---
 
 ## **☎️ | Contact the Creator**
