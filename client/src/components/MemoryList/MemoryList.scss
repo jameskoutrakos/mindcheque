@@ -96,10 +96,10 @@
   }
 
   &__title {
-    font-size: pxToRem(16);
+    font-size: pxToRem(18);
     font-weight: 700;
     @include tablet-breakpoint {
-      font-size: pxToRem(18);
+      font-size: pxToRem(20);
     }
   }
 
@@ -107,6 +107,16 @@
     font-size: pxToRem(14);
     @include tablet-breakpoint {
       font-size: pxToRem(16);
+    }
+  }
+
+  &__date-created {
+    color: $color-footer;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: pxToRem(12);
+    @include tablet-breakpoint {
+      font-size: pxToRem(14);
     }
   }
 

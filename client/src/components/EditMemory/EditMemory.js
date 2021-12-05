@@ -163,7 +163,7 @@ class EditMemory extends Component {
                 <p className="edit-memory__input-label">
                   How did this memory make you feel?
                 </p>
-                <p className="edit-memory__input-label">
+                <p className="edit-memory__input-label-sub">
                   Select a feeling that best summarizes your feelings around
                   this memory from the list provided.
                 </p>
@@ -190,7 +190,7 @@ class EditMemory extends Component {
                 <p className="edit-memory__input-label">
                   Is this a helpful memory?
                 </p>
-                <p className="edit-memory__input-label">
+                <p className="edit-memory__input-label-sub">
                   This section is to identify if this memory is one that brings
                   positive (Yes) feelings or negative (No) feelings.
                 </p>

@@ -30,6 +30,11 @@ class MemoryList extends Component {
                   className="memory-list__li"
                 >
                   <div>
+                    <p className="memory-list__date-created">
+                      Date Created:{" "}
+                      {memory.dateCreated !== undefined &&
+                        memory.dateCreated.slice(0, 10)}
+                    </p>
                     <p className="memory-list__title">{memory.title}</p>
                     <p className="memory-list__date">
                       Date of Memory:{" "}
