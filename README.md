@@ -95,4 +95,4 @@ you are immersed into the world of **MindCheque**. I hope you enjoy your visit!
 
 This web app was developed, designed, and created by James Koutrakos
 
-You can follow me on GitHub and LinkedIn, and view my portfolio here!
+You can follow me on [GitHub](https://github.com/jameskoutrakos) and [LinkedIn](https://www.linkedin.com/in/jameskoutrakos/), and [view my portfolio here](https://www.jameskoutrakos.com)!
