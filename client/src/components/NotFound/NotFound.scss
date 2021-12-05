@@ -50,18 +50,37 @@
   }
 
   &__title {
-    font-size: pxToRem(48);
     text-align: center;
+    font-size: pxToRem(24);
+    @include large-mobile-breakpoint {
+      font-size: pxToRem(36);
+    }
+    @include tablet-breakpoint {
+      font-size: pxToRem(48);
+    }
   }
 
   &__subtitle {
-    font-size: pxToRem(28);
     text-align: center;
+    font-size: pxToRem(20);
+    @include large-mobile-breakpoint {
+      font-size: pxToRem(24);
+    }
+    @include tablet-breakpoint {
+      font-size: pxToRem(28);
+    }
   }
 
   &__link {
-    font-size: pxToRem(24);
+    font-size: pxToRem(16);
     text-align: center;
+    @include large-mobile-breakpoint {
+      font-size: pxToRem(20);
+    }
+    @include tablet-breakpoint {
+      font-size: pxToRem(24);
+    }
+
     &--underline {
       &:hover {
         text-decoration: underline;

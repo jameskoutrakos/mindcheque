@@ -23,9 +23,16 @@ textarea {
 // Breakpoints and Screen Sizes
 
 $mobile-screensize: 375px;
+$large-mobile-screensize: 500px;
 $tablet-screensize: 768px;
 $desktop-maxwidth: 1025px;
 $desktop-screensize: 1280px;
+
+@mixin large-mobile-breakpoint {
+  @media screen and (min-width: $large-mobile-screensize) {
+    @content;
+  }
+}
 
 @mixin tablet-breakpoint {
   @media screen and (min-width: $tablet-screensize) {
