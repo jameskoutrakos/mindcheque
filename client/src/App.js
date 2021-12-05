@@ -12,6 +12,7 @@ import MemoryDetails from "./components/MemoryDetails/MemoryDetails";
 import MemoryList from "./components/MemoryList/MemoryList";
 import MemoryOverview from "./components/MemoryOverview/MemoryOverview";
 import Footer from "./components/Footer/Footer";
+import NotFound from "./components/NotFound/NotFound";
 
 const host = "http://localhost:8080";
 
@@ -238,6 +239,7 @@ class App extends Component {
               />
             )}
           />
+          <Route path="*" exact={true} component={NotFound} />
         </Switch>
         <Footer />
       </BrowserRouter>

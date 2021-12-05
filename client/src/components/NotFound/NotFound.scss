@@ -1,0 +1,71 @@
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/type-kit" as *;
+
+.not-found {
+  background-color: $color-body;
+  min-height: 80vh;
+  padding: 1rem;
+  @include tablet-breakpoint {
+    padding: 1rem 2rem;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 1rem 0;
+    width: 100%;
+
+    @include tablet-breakpoint {
+      max-width: $desktop-maxwidth;
+    }
+    @include desktop-breakpoint {
+    }
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 25px;
+    background-color: $color-box;
+    width: 100%;
+    min-height: pxToRem(200);
+    &--link {
+      min-height: pxToRem(0);
+      text-decoration: none;
+      color: $color-black;
+      box-shadow: 2.5px 5px $color-box-shadow-black;
+      transition: 0.3s;
+      &:hover {
+        box-shadow: none;
+        color: $color-white;
+        transform: translateX(2.5px) translateY(5px);
+        background-color: $color-add-hover;
+      }
+    }
+  }
+
+  &__title {
+    font-size: pxToRem(48);
+    text-align: center;
+  }
+
+  &__subtitle {
+    font-size: pxToRem(28);
+    text-align: center;
+  }
+
+  &__link {
+    font-size: pxToRem(24);
+    text-align: center;
+    &--underline {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
