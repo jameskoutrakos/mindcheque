@@ -33,7 +33,7 @@
     background-color: $color-box;
     border-radius: 26px;
     margin: 0.5rem 0;
-    box-shadow: 2.5px 5px $color-box-shadow-black;
+    // box-shadow: 2.5px 5px $color-box-shadow-black;
     padding: 1rem;
 
     &--description {
@@ -74,6 +74,7 @@
       color: $color-black;
       transition: 0.3s;
       background-color: $color-button-default;
+      box-shadow: 2.5px 5px $color-box-shadow-black;
       @include tablet-breakpoint {
         flex-grow: 1;
       }
@@ -91,6 +92,7 @@
       transition: 0.3s;
       color: $color-white;
       background-color: $color-edit;
+      box-shadow: 2.5px 5px $color-box-shadow-black;
       @include tablet-breakpoint {
         flex-grow: 1;
         margin-left: 2.5%;
@@ -111,6 +113,7 @@
       padding: 0;
       color: $color-white;
       background-color: $color-delete;
+      box-shadow: 2.5px 5px $color-box-shadow-black;
       @include tablet-breakpoint {
         flex-grow: 1;
       }

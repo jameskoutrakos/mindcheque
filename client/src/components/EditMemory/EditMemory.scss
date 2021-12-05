@@ -97,6 +97,7 @@
     }
 
     &--update {
+      box-shadow: none;
       @include tablet-breakpoint {
         flex-grow: 1;
       }

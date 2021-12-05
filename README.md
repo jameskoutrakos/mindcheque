@@ -18,6 +18,8 @@ Also, in making memory deposits like depositing a 'cheque'.
 
 ## **💡 | Features**
 
+- The ability to create a new user account and deposit memories in your very own memory bank.
+- Personalized experience complete with prompts pulling from information inputted during the sign-up process, as seen throughout the web app.
 - A clean UI with bold colors and subtle animations that guide the user with ease from screen to screen.
 - Intentional UX design, made possible by collecting user research through interviews and user testing.
 - A complete MySQL database that holds all users and memories in their respective tables.

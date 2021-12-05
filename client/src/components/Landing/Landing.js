@@ -4,7 +4,6 @@ import "./Landing.scss";
 import devicesPic from "../../assets/images/devices-with-bottom.png";
 
 import smileBlack from "../../assets/icons/smile-black.svg";
-import memoryBlack from "../../assets/icons/memory-black.svg";
 import nextBlack from "../../assets/icons/next-black.svg";
 
 function Landing() {
@@ -39,22 +38,27 @@ function Landing() {
           src={devicesPic}
           alt="the memory overview page of the mindcheque website showin in an iMac, iPad Pro 11 inch, and iPhone 13 shell. To show off its flexible design."
         />
-        <div className="landing__box landing__box--2">
+        <Link to="/profile" className="landing__box landing__box--3">
           <div className="landing__title-wrapper landing__title-wrapper--underline-2">
-            <h2 className="landing__box-title">Invest in Yourself!</h2>
+            <h2 className="landing__box-title">
+              {" "}
+              <span className="landing__box-title--bold">Sign Up</span> or{" "}
+              <span className="landing__box-title--bold">Log In</span>
+            </h2>
             <img
-              className="landing__img"
-              src={memoryBlack}
-              alt="a memory icon"
+              className="landing__img landing__img--chevron"
+              src={nextBlack}
+              alt="the next icon"
             />
           </div>
           <p className="landing__box-body">
-            Deposit these memories like you’re depositing cheques. Document the
-            good things that happen, every small win, and then return to these
-            memories whenever you feel down or need to remind yourself that you
-            can do it!
+            Start now by creating an account! It's really easy to do too.
           </p>
-        </div>
+          <p className="landing__box-body">
+            Simply click on this box and you will be able to create a new
+            account or log in to your existing account.
+          </p>
+        </Link>
       </article>
 
       <article className="landing__container landing__container--top-row">
@@ -93,7 +97,19 @@ function Landing() {
           </p>
         </div>
 
-        <Link
+        <div className="landing__box landing__box--top-row ">
+          <div className="landing__title-wrapper landing__title-wrapper--underline-3">
+            <h2 className="landing__mini-box-title">Invest in Yourself!</h2>
+          </div>
+          <p className="landing__mini-box-body">
+            Deposit these memories like you’re depositing cheques. Document the
+            good things that happen, every small win, and then return to these
+            memories whenever you feel down or need to remind yourself that you
+            can do it!
+          </p>
+        </div>
+
+        {/*} <Link
           to="/profile"
           className="landing__box landing__box--top-row landing__box--3"
         >
@@ -112,7 +128,7 @@ function Landing() {
             Simply click on this box and you will be able to create a new
             account or log in to your existing account.
           </p>
-        </Link>
+  </Link> */}
       </article>
     </section>
   );
