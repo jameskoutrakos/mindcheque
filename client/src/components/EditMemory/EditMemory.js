@@ -90,7 +90,7 @@ class EditMemory extends Component {
     ) {
       Swal.fire({
         title: "Oops! A field is missing!",
-        text: "Please check all fields for you save your changes.",
+        text: "Please check all fields before you save your changes.",
         icon: "error",
         confirmButtonColor: "#2a7d8c",
       });

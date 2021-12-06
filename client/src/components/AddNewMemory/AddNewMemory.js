@@ -71,7 +71,7 @@ class AddNewMemory extends Component {
                     />
                   </div>
                   <div className="add-memory__text-wrapper">
-                    <p className="add-memory__input-label">Date Of Memory</p>
+                    <p className="add-memory__input-label">Date of Memory</p>
                     <input
                       type="date"
                       className="add-memory__date-text add-memory__input"

@@ -82,10 +82,12 @@ function Landing() {
             <h2 className="landing__mini-box-title">Invest in Yourself!</h2>
           </div>
           <p className="landing__mini-box-body">
-            Deposit these memories like you’re depositing cheques. Document the
-            good things that happen, every small win, and then return to these
-            memories whenever you feel down or need to remind yourself that you
-            can do it!
+            Deposit these memories like you’re depositing cheques.
+          </p>
+          <p className="landing__mini-box-body">
+            Document the good things that happen, every small win, and then
+            return to these memories whenever you feel down or need to remind
+            yourself that you can do it!
           </p>
         </div>
         <div className="landing__box landing__box--top-row ">
