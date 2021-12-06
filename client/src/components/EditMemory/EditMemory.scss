@@ -21,8 +21,6 @@
     @include tablet-breakpoint {
       max-width: $desktop-maxwidth;
     }
-    @include desktop-breakpoint {
-    }
   }
 
   &__form {

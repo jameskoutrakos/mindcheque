@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import "./Landing.scss";
 
 import devicesPic from "../../assets/images/devices-with-bottom.png";
-
 import smileBlack from "../../assets/icons/smile-black.svg";
 import nextBlack from "../../assets/icons/next-black.svg";
 

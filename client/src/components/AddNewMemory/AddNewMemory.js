@@ -70,7 +70,6 @@ class AddNewMemory extends Component {
                       placeholder="Write a title for your memory here."
                     />
                   </div>
-
                   <div className="add-memory__text-wrapper">
                     <p className="add-memory__input-label">Date Of Memory</p>
                     <input
@@ -81,7 +80,6 @@ class AddNewMemory extends Component {
                     />
                   </div>
                 </div>
-
                 <p className="add-memory__input-label">Description</p>
                 <textarea
                   className="add-memory__input"
@@ -96,7 +94,6 @@ class AddNewMemory extends Component {
                   Characters typed: {this.state.description.length} / 5000
                 </p>
               </div>
-
               <div className="add-memory__box add-memory__box--feeling">
                 <p className="add-memory__input-label">
                   How did this memory make you feel?
@@ -121,7 +118,6 @@ class AddNewMemory extends Component {
                   <option value="Depressed">Depressed</option>
                 </select>
               </div>
-
               <div className="add-memory__box add-memory__box--helpful">
                 <p className="add-memory__input-label">
                   Is this a helpful memory?
@@ -139,7 +135,6 @@ class AddNewMemory extends Component {
                   <option value="0">No</option>
                 </select>
               </div>
-
               <div className="add-memory__box add-memory__box--related">
                 <p className="add-memory__input-label">
                   Related Moment (Optional)

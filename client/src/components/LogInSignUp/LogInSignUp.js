@@ -96,13 +96,11 @@ class LogInSignUp extends Component {
               </div>
             </form>
           </article>
-
           <article
             className={`log-in-sign-up__container log-in-sign-up__container--option ${this.toggleSignUpForm()}`}
           >
             <h2>OR</h2>
           </article>
-
           <article
             className={`log-in-sign-up__container ${this.toggleSignUpForm()}`}
           >

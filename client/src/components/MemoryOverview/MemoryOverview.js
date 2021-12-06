@@ -56,7 +56,6 @@ class MemoryOverview extends Component {
                 <div className="memory-overview__img memory-overview__img--smile"></div>
               </div>
             </div>
-
             <div className="memory-overview__wrapper-main">
               <div className="memory-overview__wrapper memory-overview__wrapper--left">
                 <Link
@@ -83,7 +82,6 @@ class MemoryOverview extends Component {
                     Click here to view and/or edit your memory!
                   </p>
                 </Link>
-
                 <Link
                   to={`/profile/${userID}/memories`}
                   className="memory-overview__box memory-overview__box--view"
@@ -96,7 +94,6 @@ class MemoryOverview extends Component {
                   </div>
                 </Link>
               </div>
-
               <div className="memory-overview__wrapper memory-overview__wrapper--right">
                 <Link
                   to={`/profile/${userID}/memories/add-memory`}
@@ -144,7 +141,6 @@ class MemoryOverview extends Component {
                 <div className="memory-overview__img memory-overview__img--smile"></div>
               </div>
             </div>
-
             <div className="memory-overview__wrapper-main">
               <div className="memory-overview__wrapper memory-overview__wrapper--left">
                 <div className="memory-overview__box memory-overview__box--recent">
@@ -168,7 +164,6 @@ class MemoryOverview extends Component {
                     to make a deposit in your memory bank.
                   </p>
                 </div>
-
                 <Link
                   to={`/profile/${userID}/memories`}
                   className="memory-overview__box memory-overview__box--view"
@@ -181,7 +176,6 @@ class MemoryOverview extends Component {
                   </div>
                 </Link>
               </div>
-
               <div className="memory-overview__wrapper memory-overview__wrapper--right">
                 <Link
                   to={`/profile/${userID}/memories/add-memory`}

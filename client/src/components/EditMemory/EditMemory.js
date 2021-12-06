@@ -151,7 +151,6 @@ class EditMemory extends Component {
                       placeholder="Write a title for your memory here."
                     />
                   </div>
-
                   <div className="edit-memory__text-wrapper">
                     <p className="edit-memory__input-label">Date of Memory</p>
                     <input
@@ -164,7 +163,6 @@ class EditMemory extends Component {
                     />
                   </div>
                 </div>
-
                 <p className="edit-memory__input-label">Description</p>
                 <textarea
                   className="edit-memory__input"
@@ -179,7 +177,6 @@ class EditMemory extends Component {
                   Characters typed: {this.state.description.length} / 5000
                 </p>
               </div>
-
               <div className="edit-memory__box edit-memory__box--feeling">
                 <p className="edit-memory__input-label">
                   How did this memory make you feel?
@@ -206,7 +203,6 @@ class EditMemory extends Component {
                   <option value="Depressed">Depressed</option>
                 </select>
               </div>
-
               <div className="edit-memory__box edit-memory__box--helpful">
                 <p className="edit-memory__input-label">
                   Is this a helpful memory?
@@ -226,7 +222,6 @@ class EditMemory extends Component {
                   <option value="0">No</option>
                 </select>
               </div>
-
               <div className="edit-memory__box edit-memory__box--related">
                 <p className="edit-memory__input-label">
                   Related Moment (Optional)
@@ -241,7 +236,6 @@ class EditMemory extends Component {
                 />
               </div>
             </div>
-
             <div className="edit-memory__form-button-container">
               <div
                 onClick={this.handleCancel}
@@ -249,14 +243,12 @@ class EditMemory extends Component {
               >
                 <p className="edit-memory__call-to-action">Cancel Changes</p>
               </div>
-
               <div
                 onClick={this.handleSubmit}
                 className="edit-memory__box edit-memory__box--confirm"
               >
                 <p className="edit-memory__call-to-action">Save Changes</p>
               </div>
-
               <div className="edit-memory__box edit-memory__box--update">
                 <p className="edit-memory__subheader edit-memory__subheader--time-header">
                   Memory was created by you on:{" "}

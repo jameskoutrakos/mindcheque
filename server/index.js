@@ -11,9 +11,6 @@ app.use(cors());
 app.use(express.json());
 app.use("/profile", userRoutes);
 app.use("/memories", memoryRoutes);
-// app.get("/", (req, res) => {
-//   res.send("Hello world!");
-// });
 
 app.listen(PORT, () => {
   console.log("The server is live on port " + PORT);
