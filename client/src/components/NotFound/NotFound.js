@@ -7,7 +7,7 @@ function NotFound() {
     <div className="not-found">
       <div className="not-found__container">
         <div className="not-found__box">
-          <h1 className="not-found__title">Oh poop... 4💩4 Error!</h1>
+          <h1 className="not-found__title">Oh noes... 404 Error!</h1>
           <h1 className="not-found__subtitle">
             Looks like this page wasn't found :(
           </h1>

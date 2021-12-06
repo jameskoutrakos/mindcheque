@@ -143,6 +143,7 @@
     @include tablet-breakpoint {
       margin-bottom: 0rem;
       font-size: pxToRem(28);
+      width: 80%;
     }
   }
 
