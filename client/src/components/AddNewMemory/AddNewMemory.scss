@@ -137,8 +137,11 @@
 
   &__header {
     @include tablet-breakpoint {
-      font-size: pxToRem(28);
+      font-size: pxToRem(18);
       width: 100%;
+    }
+    @include desktop-breakpoint {
+      font-size: pxToRem(28);
     }
   }
 

@@ -140,21 +140,23 @@
   }
 
   &__header {
+    margin-bottom: 0.5rem;
     @include tablet-breakpoint {
+      margin-bottom: 0rem;
       font-size: pxToRem(28);
     }
   }
 
   &__date-text {
+    margin-bottom: 0.5rem;
     @include tablet-breakpoint {
+      margin-bottom: 0rem;
       font-size: pxToRem(18);
     }
   }
 
   &__subheader {
-    @include tablet-breakpoint {
-      font-weight: 600;
-    }
+    font-weight: 700;
   }
 
   &__body {
