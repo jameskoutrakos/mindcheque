@@ -29,7 +29,6 @@ exports.findUser = (req, res) => {
         .send(
           `Ran into an error while trying to insert a new memory to this user: ${err}`
         );
-      console.log("Log In NO WORK: ", req.body);
     });
 };
 
@@ -55,7 +54,6 @@ exports.addNewUser = (req, res) => {
         .send(
           `Ran into an error while trying to insert a new memory to this user: ${err}`
         );
-      console.log("NEW USER NO WORK", req.body);
     });
 };
 
