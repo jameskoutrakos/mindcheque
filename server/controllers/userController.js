@@ -48,8 +48,6 @@ exports.addNewUser = (req, res) => {
         message: "This user has been added successfully",
         data: data,
       });
-      console.log(req.body);
-      console.log(data);
     })
     .catch((err) => {
       res
@@ -118,8 +116,6 @@ exports.addMemoryByUser = (req, res) => {
         message: "This memory to the user has been added successfully",
         data: data,
       });
-      console.log(req.body);
-      console.log(data);
     })
     .catch((err) => {
       res
@@ -127,7 +123,6 @@ exports.addMemoryByUser = (req, res) => {
         .send(
           `Ran into an error while trying to insert a new memory to this user: ${err}`
         );
-      console.log("Didn't work ", req.body);
     });
 };
 
