@@ -72,7 +72,6 @@ class EditMemory extends Component {
     this.setState({
       [e.target.name]: e.target.value,
     });
-    console.log("handleChange", e.target.name);
   };
 
   handleCancel = (e) => {

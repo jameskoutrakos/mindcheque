@@ -75,6 +75,7 @@ class App extends Component {
       .get(`${host}/profile/${userID}`)
       .then((response) => {
         this.setState({ activeUser: response.data[0] });
+        this.setState({ validNewUser: false });
       })
       .catch((error) => {
         console.log(error);
