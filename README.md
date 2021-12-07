@@ -73,7 +73,7 @@ _URL path and port number for back-end: http://localhost.com:8080_
 
 1. Open your terminal and cd into the `/server` folder.
 2. Run `$ npm install` to install all necessary node modules for the server-side.
-3. Open `knexfile.js` and validate the username and password present matches what you use for your MySQL databases (the username should be **root** and the **password** should be rootroot by default).
+3. Open `knexfile.js` and validate the username and password present matches what you use for your MySQL databases (the **username** should be **root** and the **password** should be **rootroot** by default).
 4. Open your MySQL Workbench application and create a new schema titled `mindcheque`. Then perform the following commands from the terminal.
 
 - `$ npx knex migrate:rollback` -> This is to ensure you are starting with a clean slate in your mindcheque schema.
